@@ -4,6 +4,11 @@ This source code is shared **for learning purposes only**. I cloned this from a 
 
 Adding responsiveness and swiftness myself,,, with alot of changes..
 
+
+4th may 2025 added the recent project to the code which is the cryptoNova and the novaSport... will be adding the third on the 5th and starting the mobile responsiveness....
+
+
+
 **Please respect the intent of this resource:**
 - Do not resell or distribute this code as-is for commercial purposes.
 - Before using any part of this code in your own projects, especially commercially, ensure that you’ve modified it to fit your unique needs and **always check any applicable licensing requirements**.
