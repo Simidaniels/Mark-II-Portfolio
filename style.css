@@ -10,6 +10,7 @@
   padding: 0;
   text-decoration: none;
   box-sizing: border-box;
+  user-select: none;
 }
 
 ::-webkit-scrollbar {
@@ -440,6 +441,7 @@ header .container .content .extra-nav a:hover span {
 .about .container .content .profile-container .profile img {
   width: 100%;
   height: 100%;
+  object-fit: cover;
 }
 
 .about .container .content .about-me {
@@ -625,7 +627,7 @@ header .container .content .extra-nav a:hover span {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 33%;
+  width: 40%;
   height: 100%;
   background: var(--gray);
   border-radius: 64px;
@@ -641,7 +643,7 @@ header .container .content .extra-nav a:hover span {
 }
 
 .project .container .content .project-area .projects:hover img {
-  filter: brightness(30%);
+  filter: brightness(25%);
 }
 
 .project .container .content .project-area .projects .desc {

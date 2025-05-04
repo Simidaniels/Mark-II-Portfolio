@@ -1,0 +1,304 @@
+@media (max-width: 580px) {
+/* MOBILE RESPONSIVENESS FOR THE NAVIGATION EMBEDED IN A HAMBURGER MENU */
+  header .container .content {
+    padding: 0 10px;
+    margin: 0 15px;
+  }
+  header .container .content .logo img {
+    width: 8vw;
+  }
+  header .container .content .logo a {
+    font: bold 20px "Work Sans", sans-serif;
+    text-decoration: none;
+    color: #fff;
+  }
+  header .container .content .extra-nav .btn-menu {
+    background: transparent;
+    border: none;
+    display: inline;
+  }
+  header .container .content .extra-nav .btn-menu .icon {
+    fill: #fff;
+    width: 25px;
+    height: 25px;
+  }
+  header .container .content nav {
+    display: none;
+  }
+  header .container .content .extra-nav .join-membership {
+    display: none;
+  }
+/* OPENING HAMBURGER NAV */
+  header .container .content .mobile-nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translateX(100%);
+    width: 100%;
+    height: 100vh;
+    background: #000;
+    transition: transform 0.2s linear;
+    font: bold 16px "Work Sans", sans-serif;
+  }
+  header .container .content .mobile-nav.active {
+    transform: translateX(0);
+    transition: .4s linear;
+  }
+/* CLOSING HAMBURGER NAV */
+  header .container .content .mobile-nav .close-mobile-nav {
+    position: absolute;
+    display: block;
+    right: 15px;
+    top: 15px;
+    background: transparent;
+    border: none;
+  }
+/* HAMBEURGER CLOSER DISPLAY */
+  header .container .content .mobile-nav .close-mobile-nav .icon {
+    fill: #fff;
+    width: 35px;
+    height: 35px;
+  }
+  /* MENU LIST DISPLAY */
+  header .container .content .mobile-nav .nav {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+  }
+/* REMOVING MENU LIST DEFAULT LINK */
+  header .container .content .mobile-nav a {
+      color: #fff;
+      font-size: 1.5rem;
+      font-weight: bold;
+      text-decoration: none;
+  }
+  header .container .content .mobile-nav a:hover {
+      color: rgb(161, 161, 161);
+  }
+  header .container .content .mobile-nav a:active {
+      color: rgb(161, 161, 161);
+  }
+/* RESPONSIVENESS BUTTON DISPLAY */
+  header .container .content .nav button {
+    display: block;
+    background: rgba(237, 225, 225, 0.16);
+    padding: 6px;
+    border: 1px solid #fff;
+    /* border-radius: 25px; */
+    color: #fff;
+    font-weight: 500;
+  }
+  header .container .content .nav button:hover {
+    /* background-color: rgb(35, 32, 32); */
+    transition: .2s linear;
+  }
+  header .container .content .nav button:active {
+    background-color: rgb(83, 83, 83);
+    transition: .1s linear;
+  }
+  .hero-section .hero-container {
+    height: 100vh;
+  }
+  .hero-section .hero-container img {
+    width: 60vw;
+  }
+  .hero-section .hero-container .hero-wrapper .handy {
+    position: absolute;
+    bottom: -5%;
+    left: 15%;
+  }
+  .hero-section .hero-container .hero-wrapper .bally {
+    position: absolute;
+    top: 20%;
+    left: 30%;
+  }
+  .hero-section .hero-container .hero-context-wrapper {
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: space-evenly;
+    height: 100vh;
+    width: 100vw;
+    margin: -10% 0;
+  }
+  .hero-section .hero-container .hero-context-wrapper h1 {
+    font-size: 6rem;
+  }
+  section .supportive-wrapper .supporting-content .supporting-context {
+    font-size: 20px;
+    /* margin: 0 40px; */
+  }
+  .supportive-wrapper .stats-container .fig-cont {
+    padding: 20px 5px;
+  }
+
+  .supportive-wrapper .stats-container .fig-cont .fig {
+    font-size: 20px;
+  }
+
+  .supportive-wrapper .stats-container .fig-cont .fig-txt {
+    font-size: 12px;
+  }
+  section .supportive-wrapper .supporting-content .sup-btn button {
+    color: #fff;
+    padding: 12px 16px;
+    margin: 30px 10px;
+    font-size: 15px;
+    font-weight: 600;
+    border: 1px solid #fff;
+    border-radius: 15px;
+    background: transparent;
+  }
+  section .mentors-wrapper {
+    margin: 20px 20px;
+  }
+  section .mentors-wrapper .card-sub {
+    padding: 3rem 0;
+  }
+  section .mentors-wrapper .card-sub .card-txt {
+    font-size: 1.5em;
+  }
+  section .mentors-wrapper .card-sub .card-hyptxt {
+    font-size: 15px;
+    text-decoration: underline;
+  }
+  section .mentors-wrapper .card-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+    gap: 20px;
+  }
+  section .mentors-wrapper .card-grid .card-wrapper .card-img {
+    width: 100%;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+    
+  section .mentors-wrapper .card-grid .card-name h1 {
+    font-size: 16px;
+  }
+  section .mentors-wrapper .card-grid .card-name p {
+    font-size: 14px;
+    color: #fff;
+  }
+  section .quotation-wrapper .quotation-content {
+    display: flex;
+    flex-direction: column;
+    margin: 6em 2.5em;
+    background: none;
+    border-radius: 0;
+  }
+  section .quotation-wrapper .quotation-content .quotation-context .quote-img {
+    display: none;
+  }
+  section .quotation-wrapper .quotation-content .ign h1 {
+    font-size: 15px;
+  }
+  section .quotation-wrapper .quotation-content .ign p {
+    font-size: 10px;
+  }
+  section .quotation-wrapper .quotation-content .quotation-context .quoted-txt {
+    padding: 0 0 20px 0;
+    font-size: 16px;
+  }    
+  section .price-container .price-wrapper .hd {
+    font-size: 1.5em;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+  }
+  section .price-container .price-bx {
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
+  }
+  section .price-container .price-bx .tpc-hdn .sub-hdn {
+    padding: 10px 0;
+    font-size: 16px;
+  }
+  section .price-container .price-bx .tpc-hdn .tpc-cntxt {
+    line-height: normal;
+    font-size: 12px;
+  }
+  section .price-container .price-bx .chpln {
+    margin-bottom: 15px;
+  } 
+  section .price-container .price-bx .price-blox {
+    padding: 10px 10px;
+    height: 100vh;
+  }
+  section .price-container .price-bx .price-icn img {
+    width: 12vw;
+  }
+  section .price-container .price-bx .price-icn .money {
+    font-size: 15px;
+  }
+  section .price-container .price-bx .price-blox .price-info {
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+    line-height: 3em;
+  }
+  section .contact-container .contact-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 40px;
+    margin: 5em 40px;
+  }
+  section .contact-container .contact-wrapper .info-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 25px; 
+  }
+  section .contact-container .contact-wrapper .contct-adrs .icn-wrap {
+    padding: 4px;
+  }
+  section .contact-container .contact-wrapper .contct-adrs .cntct-icn {
+    width: 1.5em;
+    height: 1.5em;
+  }
+  section .contact-container .contact-wrapper .contct-adrs .h1 {
+    font-size: 16px;
+  }
+  section .contact-container .contact-wrapper .contct-adrs .tx {
+    font-size: 12px;
+  }
+  section .contact-container .contact-wrapper .ipt-adrs {
+    padding: 12px;
+    width: 100%;
+    /* display: flex; */
+    /* flex-direction: row; */
+    /* justify-content: space-between; */
+  }
+  section .contact-container .contact-wrapper .ipt-adrs input {
+    width: auto;
+  }
+  section .contact-container .contact-wrapper .ipt-adrs .sbmt-btn {
+    padding: 10px;
+    border-radius: 50px;
+    width: auto;
+  }
+  footer .ftr-container .ftr-wrapper .ftr-desc .ftr-brnd {
+    display: none;
+  }
+    footer .ftr-container .ftr-wrapper .ftr-desc {
+    display: flex;
+    flex-direction: column;
+  }
+  footer .ftr-container .ftr-wrapper .ftr-desc .pdct-wrapper {
+    padding: 20px 0;
+  }
+  footer .ftr-container .ftr-wrapper .ftr-desc .pdct-wrapper .pdct-hd {
+    font-size: 24px;
+  }
+  footer .ftr-container .ftr-wrapper .ftr-desc .pdct-wrapper .pdct-lst {
+    gap: 20px;
+  }
+  footer .ftr-container .ftr-wrapper .ftr-rsv .ftr-rsvp {
+    font-size: 10px;
+  }
+}
