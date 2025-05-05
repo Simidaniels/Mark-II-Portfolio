@@ -146,6 +146,41 @@ header .container .content .extra-nav a:hover span {
   transition: color 0.3s linear;
 }
 
+
+
+
+
+
+header .container .content .btn-menu, .mobile-nav {
+  display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .hero {
   position: relative;
   min-height: 100vh;
@@ -153,6 +188,7 @@ header .container .content .extra-nav a:hover span {
   justify-content: center;
   align-items: center;
   overflow: hidden;
+  /* z-index: 9999; */
 }
 
 .hero .container .content {
