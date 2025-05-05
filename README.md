@@ -7,7 +7,7 @@ Adding responsiveness and swiftness myself,,, with alot of changes..
 
 4th may 2025 added the recent project to the code which is the cryptoNova and the novaSport... will be adding the third on the 5th and starting the mobile responsiveness....
 
-
+5th may added the 3rd project the the mkII portfolio... would be adding responsivenes to both the protfolio and the third project later in the night..
 
 **Please respect the intent of this resource:**
 - Do not resell or distribute this code as-is for commercial purposes.
