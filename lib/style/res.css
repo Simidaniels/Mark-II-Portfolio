@@ -89,4 +89,84 @@
         background-color: #ff6a00;
         transition: .1s linear;
     }
+    .hero .container .content .text h1 {
+        font: bolder 3rem "IBM Plex Sans", sans-serif;
+        line-height: 5rem;
+    }
+
+    .hero .container .content .text .row-2 {
+        margin-left: 0;
+    }
+
+    .hero .container .content .text .row-2 {
+        color: var(--black);
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: var(--white);
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+        .hero .container .content .short-info {
+            position: absolute;
+            bottom: 5rem;
+            padding: 0 ;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            /* z-index: 9999; */
+        }
+    
+        .hero .container .content .short-info .left-side,
+        .hero .container .content .short-info .right-side {
+            display: flex;
+            flex-direction: column;
+            gap: 0.3rem;
+        }
+    
+        .hero .container .content .short-info .left-side h1 {
+            font-size: 1.2rem;
+        }
+    
+        .hero .container .content .short-info .left-side p {
+            color: var(--gray);
+            font: bold 0.9rem "IBM Plex Sans", sans-serif;
+        }
+    
+        .hero .container .content .short-info .right-side p {
+            color: var(--gray);
+            font-weight: bold;
+        }
+    
+        .hero .container .content .short-info .right-side h1 {
+            display: flex;
+            align-items: center;
+            height: 25px;
+            gap: 0.2rem;
+            font: bold 0.9rem "IBM Plex Sans", sans-serif;
+        }
+    
 }
