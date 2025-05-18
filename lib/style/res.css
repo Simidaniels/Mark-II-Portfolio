@@ -1,4 +1,7 @@
 @media (max-width: 580px) {
+    .container {
+      padding: 1.5rem 2rem;
+    }
 /* MOBILE RESPONSIVENESS FOR THE NAVIGATION EMBEDED IN A HAMBURGER MENU */
     header .container .content nav {
         display: none;
@@ -103,70 +106,46 @@
         -webkit-text-stroke-width: 1px;
         -webkit-text-stroke-color: var(--white);
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    .hero .container .content .short-info {
+        position: absolute;
+        padding: 0 ;
+        width: 80%;
+    }
     
 
+  
 
 
 
-        .hero .container .content .short-info {
-            position: absolute;
-            bottom: 5rem;
-            padding: 0 ;
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            /* z-index: 9999; */
-        }
-    
-        .hero .container .content .short-info .left-side,
-        .hero .container .content .short-info .right-side {
+
+
+
+
+
+
+
+
+    .about {
+        display: none;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        .project .container .content .project-area {
             display: flex;
             flex-direction: column;
-            gap: 0.3rem;
+            height: 200vh;
+            width: 200vw;
         }
-    
-        .hero .container .content .short-info .left-side h1 {
-            font-size: 1.2rem;
-        }
-    
-        .hero .container .content .short-info .left-side p {
-            color: var(--gray);
-            font: bold 0.9rem "IBM Plex Sans", sans-serif;
-        }
-    
-        .hero .container .content .short-info .right-side p {
-            color: var(--gray);
-            font-weight: bold;
-        }
-    
-        .hero .container .content .short-info .right-side h1 {
-            display: flex;
-            align-items: center;
-            height: 25px;
-            gap: 0.2rem;
-            font: bold 0.9rem "IBM Plex Sans", sans-serif;
-        }
-    
 }
