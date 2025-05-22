@@ -142,10 +142,10 @@
 
 
 
-        .project .container .content .project-area {
-            display: flex;
-            flex-direction: column;
-            height: 200vh;
-            width: 200vw;
-        }
+    .project .container .content .project-area {
+        display: flex;
+        flex-direction: column;
+        height: 200vh;
+        width: 200vw;
+    }
 }

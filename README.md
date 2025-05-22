@@ -12,7 +12,9 @@ Navigation responsiveness done, but still having err with the under context layo
 
 Fixed the responsiveness error in the mobile-nav and added its styles...
 
-7th may.. Hero section responsiveness fixed,
+7th may.. Hero section responsiveness fixed...
+
+I haven't been feeling fine due to high fever to get back to the responsiveness..
 
 
 **Please respect the intent of this resource:**
