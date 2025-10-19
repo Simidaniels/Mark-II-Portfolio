@@ -188,6 +188,50 @@ header .container .content .extra-nav .bag:hover {
   transition: 0.1s linear;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+header .container .content .btn-menu,
+.mobile-nav {
+  display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .hero {
   min-height: 100vh;
   position: relative;
