@@ -734,10 +734,14 @@ footer .content {
     transition: transform 0.3s ease;
     z-index: 40;
     overflow-y: auto;
+    visibility: hidden;
+    pointer-events: none;
   }
 
   .mobile-nav.active {
     transform: translate3d(0, 0, 0);
+    visibility: visible;
+    pointer-events: auto;
   }
 
   .close-mobile-nav {
@@ -781,6 +785,7 @@ footer .content {
   .news,
   .join {
     padding: 4rem 0;
+    overflow-x: clip;
   }
 
   .hero-copy h1 {

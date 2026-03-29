@@ -77,11 +77,15 @@
     transform: translate3d(100%, 0, 0);
     transition: transform 0.3s ease;
     overflow-y: auto;
+    visibility: hidden;
+    pointer-events: none;
     z-index: 40;
   }
 
   .mobile-nav.active {
     transform: translate3d(0, 0, 0);
+    visibility: visible;
+    pointer-events: auto;
   }
 
   .close-mobile-nav {
@@ -126,6 +130,7 @@
   .project,
   .contact {
     padding: 4.25rem 0;
+    overflow-x: clip;
   }
 
   .hero-copy h1 {
