@@ -750,10 +750,15 @@ footer .content {
     justify-content: center;
     align-items: center;
     gap: 1.25rem;
+    width: min(100%, 320px);
   }
 
   .mobile-nav .nav a {
+    display: flex;
+    justify-content: center;
+    width: 100%;
     font: 700 1.7rem "Space Grotesk", sans-serif;
+    text-align: center;
   }
 
   .mobile-nav .mobile-cta {
