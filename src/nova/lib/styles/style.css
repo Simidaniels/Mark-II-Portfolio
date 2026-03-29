@@ -652,7 +652,8 @@ footer .content {
 }
 
 .col-right {
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1.5rem;
 }
 
@@ -680,7 +681,7 @@ footer .content {
   }
 
   .col-right {
-    flex-wrap: wrap;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
 
@@ -748,7 +749,7 @@ footer .content {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 1.8rem;
+    gap: 1.25rem;
   }
 
   .mobile-nav .nav a {
@@ -809,7 +810,7 @@ footer .content {
   }
 
   .col-right {
-    flex-direction: column;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
 
@@ -841,5 +842,13 @@ footer .content {
 
   .mobile-nav .nav a {
     font-size: 1.45rem;
+  }
+
+  .col-right {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .col-4 {
+    grid-column: 1 / -1;
   }
 }
