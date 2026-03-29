@@ -3,569 +3,338 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <!-- Google Font -->
+    <meta
+      name="description"
+      content="NOVA BIKE by NOVA STORE. Futuristic electric bikes designed for premium urban mobility."
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Audiowide&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Orbitron:wght@500;700;800&display=swap"
       rel="stylesheet"
     />
-
-    <!-- AOS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-
     <link rel="stylesheet" href="./src/style/indx.css" />
-    <title>Online Store</title>
+    <link rel="stylesheet" href="./src/style/uii.css" />
+    <title>NOVABIKE</title>
   </head>
   <body>
-    <header data-aos="fade-down" data-aos-delay="200">
+    <div class="page-blur blur-1"></div>
+    <div class="page-blur blur-2"></div>
+
+    <header data-aos="fade-down" data-aos-delay="100">
       <div class="container">
         <div class="content">
-          <div data-aos="fade-down-right" data-aos-delay="300" class="logo">
-            <a href="">NOVA<span>BIKE</span></a>
-          </div>
+          <a class="logo" href="#top">NOVA<span>BIKE</span></a>
 
           <nav>
-            <a href="#">Adaptive Power</a>
-            <box-icon
-              type="solid"
-              class="circle"
-              name="circle"
-              data-aos="zoom-in-down"
-              data-aos-delay="300"
-            ></box-icon>
-            <a href="#">Test Ride</a>
-            <box-icon
-              type="solid"
-              class="circle"
-              name="circle"
-              data-aos="zoom-in-down"
-              data-aos-delay="300"
-            ></box-icon>
-            <a href="#">Connect</a>
-            <box-icon
-              type="solid"
-              class="circle"
-              name="circle"
-              data-aos="zoom-in-down"
-              data-aos-delay="300"
-            ></box-icon>
-            <a href="#">Shop</a>
+            <a href="#models">Models</a>
+            <a href="#technology">Technology</a>
+            <a href="#story">Story</a>
+            <a href="#pre-order">Pre-order</a>
           </nav>
 
           <div class="extra-nav">
-            <a href="#">FAQ</a>
-            <button>ORDER NOW</button>
-            <box-icon
-              name="shopping-bag"
-              class="bag"
-              data-aos="fade-down"
-              data-aos-delay="400"
-            ></box-icon>
+            <a class="link-muted" href="#subsidies">Subsidies</a>
+            <a class="btn btn-primary" href="#pre-order">Reserve Now</a>
           </div>
 
+          <button class="btn-menu" id="btn-menu" aria-label="Open menu">
+            <box-icon name="menu-alt-right" class="icon"></box-icon>
+          </button>
 
-
-
-
-
-
-
-
-
-<button class="btn-menu" id="btn-menu">
-  <box-icon name="menu-alt-right" class="icon"></box-icon>
-</button>
-
-<div class="mobile-nav">
-  <button class="close-mobile-nav">
-    <box-icon name="x" class="icon"></box-icon>
-  </button>
-  <div class="nav">
-    <a href="#">Adaptive</a>
-    <a href="#">Test Ride</a>
-    <a href="#">Connect</a>
-    <a href="#">Shop</a>
-    <a href="#">FAQ</a>
-
-    <button>Order Here</button>
-    <box-icon name="shopping-bag" 
-      class="bag" 
-      data-aos="fade-down" 
-      data-aos-delay="400"></box-icon>
-  </div>
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+          <div class="mobile-nav" aria-hidden="true">
+            <button class="close-mobile-nav" aria-label="Close menu">
+              <box-icon name="x" class="icon"></box-icon>
+            </button>
+            <div class="nav">
+              <a href="#models">Models</a>
+              <a href="#technology">Technology</a>
+              <a href="#story">Story</a>
+              <a href="#pre-order">Pre-order</a>
+              <a href="#subsidies">Subsidies</a>
+              <a class="btn btn-primary mobile-cta" href="#pre-order">Reserve Now</a>
+            </div>
+          </div>
         </div>
       </div>
     </header>
 
-    <a href="#" class="to-top"><box-icon name="chevron-up"></box-icon></a>
+    <a href="#top" class="to-top" aria-label="Back to top">
+      <box-icon name="chevron-up"></box-icon>
+    </a>
 
-    <section class="hero">
+    <main id="top">
+      <section class="hero">
+        <div class="container">
+          <div class="content">
+            <div class="hero-copy">
+              <p class="eyebrow" data-aos="fade-right">Future-ready electric mobility</p>
+              <h1 data-aos="fade-up" data-aos-duration="900">
+                NOVABIKE makes city riding feel faster, cleaner, and smarter.
+              </h1>
+              <p class="intro" data-aos="fade-up" data-aos-delay="120">
+                Designed for modern riders who want premium engineering, bold
+                aesthetics, and everyday range without sacrificing style.
+              </p>
+
+              <div class="hero-actions" data-aos="fade-up" data-aos-delay="240">
+                <a class="btn btn-primary" href="#models">Explore Models</a>
+                <a class="btn btn-secondary" href="#technology">See Technology</a>
+              </div>
+
+              <div class="hero-stats" data-aos="fade-up" data-aos-delay="320">
+                <div class="stat">
+                  <strong>120km</strong>
+                  <span>Smart range</span>
+                </div>
+                <div class="stat">
+                  <strong>1.9h</strong>
+                  <span>Fast charge</span>
+                </div>
+                <div class="stat">
+                  <strong>AI Ride</strong>
+                  <span>Adaptive power control</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="hero-visual" data-aos="zoom-in" data-aos-duration="1100">
+              <div class="visual-card">
+                <div class="visual-tag">
+                  <span>Flagship</span>
+                  <span>2026 Edition</span>
+                </div>
+                <img src="./lib/bycycle-1.png" alt="NOVABIKE flagship model" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="feature-strip" id="technology">
+        <div class="container">
+          <div class="feature-grid">
+            <article class="feature-card" data-aos="fade-up" data-aos-delay="100">
+              <span>Adaptive Power</span>
+              <h2>Ride modes that respond to terrain and effort.</h2>
+              <p>Acceleration, assist, and battery delivery tuned in real time.</p>
+            </article>
+            <article class="feature-card" data-aos="fade-up" data-aos-delay="200">
+              <span>Connected Control</span>
+              <h2>GPS, diagnostics, and service tracking built in.</h2>
+              <p>Everything from route data to maintenance alerts in one system.</p>
+            </article>
+            <article class="feature-card" data-aos="fade-up" data-aos-delay="300">
+              <span>Precision Build</span>
+              <h2>Lightweight framing with premium urban durability.</h2>
+              <p>Made to feel agile in motion and refined at every stop.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="models" id="models">
+        <div class="container">
+          <div class="section-heading" data-aos="fade-up">
+            <span>Models</span>
+            <h2>Choose a NOVABIKE tuned for speed, elegance, or all-terrain confidence.</h2>
+          </div>
+
+          <div class="bike-showcase bike-showcase-dark">
+            <div class="bike-copy" data-aos="fade-right">
+              <p class="model-label">Nova Sky</p>
+              <h3>White Star</h3>
+              <p class="model-text">
+                A streamlined city model with aerodynamic lines, low drag
+                handling, and intuitive ride assist for daily movement.
+              </p>
+              <div class="price-row">
+                <strong>$3,697</strong>
+                <span>$4,697</span>
+              </div>
+              <ul class="spec-list">
+                <li>GPS theft tracking and remote lock</li>
+                <li>Smart pedal boost with comfort tuning</li>
+                <li>Doorstep maintenance scheduling</li>
+              </ul>
+              <div class="action-row">
+                <a class="btn btn-primary" href="#pre-order">Reserve</a>
+                <a class="btn btn-secondary" href="#story">Learn More</a>
+              </div>
+            </div>
+            <div class="bike-image" data-aos="fade-left">
+              <img src="./lib/bycycle-2.png" alt="Nova Sky White Star bicycle" />
+            </div>
+          </div>
+
+          <div class="bike-showcase bike-showcase-light">
+            <div class="bike-copy" data-aos="fade-left">
+              <p class="model-label">Nova Drift</p>
+              <h3>Midnight Arc</h3>
+              <p class="model-text">
+                Built for long rides through the city with more comfort, more
+                balance, and a stronger battery profile for extended cruising.
+              </p>
+              <div class="price-row">
+                <strong>$3,997</strong>
+                <span>$4,997</span>
+              </div>
+              <ul class="spec-list">
+                <li>Dual suspension feel for smoother urban travel</li>
+                <li>Night ride lighting with wide-angle visibility</li>
+                <li>Long-form ride analytics in the companion app</li>
+              </ul>
+              <div class="action-row">
+                <a class="btn btn-primary" href="#pre-order">Book Test Ride</a>
+                <a class="btn btn-secondary" href="#subsidies">See Savings</a>
+              </div>
+            </div>
+            <div class="bike-image" data-aos="fade-right">
+              <img src="./lib/bycycle-2-reverse.png" alt="Nova Drift Midnight Arc bicycle" />
+            </div>
+          </div>
+
+          <div class="bike-showcase bike-showcase-dark compact">
+            <div class="bike-copy" data-aos="fade-right">
+              <p class="model-label">Nova Storm</p>
+              <h3>Built for bigger adventures.</h3>
+              <p class="model-text">
+                For riders who want a more aggressive silhouette, stronger
+                range support, and road presence that feels futuristic.
+              </p>
+              <div class="price-row">
+                <strong>$4,697</strong>
+                <span>$5,697</span>
+              </div>
+              <div class="mini-specs">
+                <div>
+                  <strong>78kg</strong>
+                  <span>Reinforced frame</span>
+                </div>
+                <div>
+                  <strong>Turbo</strong>
+                  <span>Instant power mode</span>
+                </div>
+                <div>
+                  <strong>120km</strong>
+                  <span>Extended ride range</span>
+                </div>
+              </div>
+            </div>
+            <div class="bike-image" data-aos="zoom-in">
+              <img src="./lib/bycycle-4.png" alt="Nova Storm bicycle" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="story" id="story">
+        <div class="container">
+          <div class="story-shell">
+            <div class="story-image" data-aos="fade-right">
+              <img src="./lib/about.jpeg" alt="NOVABIKE showroom experience" />
+            </div>
+            <div class="story-copy" data-aos="fade-left">
+              <span>About NOVABIKE</span>
+              <h2>Performance engineering shaped into a cleaner urban machine.</h2>
+              <p>
+                NOVABIKE is built around a simple idea: mobility should feel
+                intelligent, premium, and exciting. Every model combines strong
+                technical thinking with a visual identity that feels modern and
+                forward-looking.
+              </p>
+              <p>
+                From lightweight structures to connected riding systems, the
+                goal is to create bikes that look sharp, move confidently, and
+                fit naturally into the next generation of cities.
+              </p>
+              <a class="btn btn-secondary" href="#pre-order">Start Your Order</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="pre-order" id="pre-order">
+        <div class="container">
+          <div class="cta-shell" data-aos="fade-up">
+            <span>Launch Offer</span>
+            <h2>Pre-order now and secure 10% off the first release batch.</h2>
+            <p>
+              Reserve your preferred model today and get early delivery access,
+              first-wave pricing, and priority setup support.
+            </p>
+            <a class="btn btn-primary" href="#">Reserve a NOVABIKE</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="subsidies" id="subsidies">
+        <div class="container">
+          <div class="subsidy-shell" data-aos="fade-up">
+            <span>Subsidies</span>
+            <h2>Check whether your city or program can reduce the price.</h2>
+            <p>
+              Local clean mobility support can make your switch to electric much
+              more affordable. Start with your area and compare incentive plans.
+            </p>
+            <a class="btn btn-secondary" href="#">Check Savings</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
       <div class="container">
-        <div class="content">
-          <h1
-            class="title"
-            data-aos="fade-down"
-            data-aos-delay="200"
-            data-aos-duration="1000"
-          >
-            SPACE BIKES
-          </h1>
-          <img
-            data-aos="fade-up"
-            data-aos-delay="600"
-            data-aos-duration="1000"
-            src="./lib/bycycle-1.png"
-            alt="bycycle-1"
-          />
-          <div
-            class="short-desc-1"
-            data-aos="fade-right"
-            data-aos-delay="800"
-            data-aos-duration="1000"
-          >
-            <p>FUTURISTIC SPACE BIKE WITH INNOVATIVE SPACE TECHNOLOGY.</p>
-            <hr />
-          </div>
-          <div
-            class="short-desc-2"
-            data-aos="fade-left"
-            data-aos-delay="1000"
-            data-aos-duration="1000"
-          >
-            <p>LOW-KEY ADVENTURE</p>
-            <hr />
+        <div class="footer-shell">
+          <div class="footer-brand">
+            <a class="logo" href="#top">NOVA<span>BIKE</span></a>
+            <p>
+              Electric mobility crafted with bold design, responsive
+              technology, and a premium future-facing feel.
+            </p>
           </div>
 
-          <div
-            class="description"
-            data-aos="fade-up"
-            data-aos-delay="800"
-            data-aos-duration="1000"
-          >
-            <div class="status">
-              <div class="stats">
-                <h1>1.5 h</h1>
-                <p>Charge Time</p>
-              </div>
-              <div class="stats">
-                <h1>110km/h</h1>
-                <p>Max Speed</p>
-              </div>
-              <div class="stats">
-                <h1>70kg</h1>
-                <p>Weight</p>
+          <div class="footer-links">
+            <div>
+              <h3>Explore</h3>
+              <a href="#models">Models</a>
+              <a href="#technology">Technology</a>
+              <a href="#story">Story</a>
+            </div>
+            <div>
+              <h3>Support</h3>
+              <a href="#pre-order">Pre-order</a>
+              <a href="#subsidies">Subsidies</a>
+              <a href="#top">Back to top</a>
+            </div>
+            <div>
+              <h3>Follow</h3>
+              <div class="social-media-container">
+                <a class="social-media" href="#" aria-label="Instagram">
+                  <box-icon color="#f6f3ea" type="logo" name="instagram"></box-icon>
+                </a>
+                <a class="social-media" href="#" aria-label="YouTube">
+                  <box-icon color="#f6f3ea" name="youtube" type="logo"></box-icon>
+                </a>
+                <a class="social-media" href="#" aria-label="Facebook">
+                  <box-icon color="#f6f3ea" name="facebook-circle" type="logo"></box-icon>
+                </a>
               </div>
             </div>
-            <hr />
-            <button>
-              <span
-                >Discover More
-                <box-icon class="arrow" name="arrow-back"></box-icon
-              ></span>
-            </button>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="product-1" id="product">
-      <div class="container">
-        <div class="content">
-          <div class="left-side">
-            <div
-              class="type-disc"
-              data-aos="fade-right"
-              data-aos-delay="200"
-              data-aos-duration="1000"
-            >
-              <h1>Nova-Sky</h1>
-              <p>$1.000 off</p>
-            </div>
-
-            <h1
-              class="name"
-              data-aos="fade-right"
-              data-aos-delay="400"
-              data-aos-duration="1000"
-            >
-              White Star
-            </h1>
-
-            <div
-              class="action-feature-container"
-              data-aos="fade-right"
-              data-aos-delay="600"
-              data-aos-duration="1000"
-            >
-              <div class="action-price">
-                <button>Explore</button>
-
-                <h1><span>$4.697</span>$3.697</h1>
-
-                <a href="#"
-                  >Test Drive
-                  <box-icon fill="#0c0c0c" name="chevron-right"></box-icon
-                ></a>
-              </div>
-
-              <div class="features">
-                <div class="feature">
-                  <p>GPS Tracking</p>
-                  <h1>Never lose track</h1>
-                </div>
-                <div class="feature">
-                  <p>Smart Power Boost</p>
-                  <h1>Effortless Pedaling</h1>
-                </div>
-                <div class="feature">
-                  <p>On-Demand Maintenance</p>
-                  <h1>Repair at Your Doorstep</h1>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div
-            class="right-side"
-            data-aos="fade-left"
-            data-aos-delay="1000"
-            data-aos-duration="1000"
-          >
-            <img src="./lib/bycycle-2.png" alt="bycycle-2" />
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="product-2">
-      <div class="container">
-        <div class="content">
-          <div class="left-side">
-            <div
-              class="type-disc"
-              data-aos="fade-left"
-              data-aos-delay="200"
-              data-aos-duration="1000"
-            >
-              <h1>Nova-Sky</h1>
-              <p>$1.000 off</p>
-            </div>
-
-            <h1
-              class="name"
-              data-aos="fade-left"
-              data-aos-delay="400"
-              data-aos-duration="1000"
-            >
-              White Star
-            </h1>
-
-            <div
-              class="action-feature-container"
-              data-aos="fade-left"
-              data-aos-delay="600"
-              data-aos-duration="1000"
-            >
-              <div class="action-price">
-                <button>Explore</button>
-
-                <h1><span>$4.697</span>$3.697</h1>
-
-                <a href="#"
-                  >Test Drive
-                  <box-icon fill="#0c0c0c" name="chevron-right"></box-icon
-                ></a>
-              </div>
-
-              <div class="features">
-                <div class="feature">
-                  <p>GPS Tracking</p>
-                  <h1>Never lose track</h1>
-                </div>
-                <div class="feature">
-                  <p>Smart Power Boost</p>
-                  <h1>Effortless Pedaling</h1>
-                </div>
-                <div class="feature">
-                  <p>On-Demand Maintenance</p>
-                  <h1>Repair at Your Doorstep</h1>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div
-            class="right-side"
-            data-aos="fade-right"
-            data-aos-delay="1000"
-            data-aos-duration="1000"
-          >
-            <img src="./lib/bycycle-2-reverse.png" alt="bycycle-2" />
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="about" id="about">
-      <div
-        class="left-side"
-        data-aos="fade-right"
-        data-aos-delay="400"
-        data-aos-duration="1000"
-      >
-        <img src="./lib/about.jpeg" alt="about" />
-      </div>
-
-      <div
-        class="right-side"
-        data-aos="fade-left"
-        data-aos-delay="800"
-        data-aos-duration="1000"
-      >
-        <div
-          class="title"
-          data-aos="fade-left"
-          data-aos-delay="400"
-          data-aos-duration="1000"
-        >
-          <h1 class="row-1">
-            About
-            <hr />
-          </h1>
-          <h1 class="row-2">Company</h1>
-        </div>
-        <p data-aos="fade-left" data-aos-delay="600" data-aos-duration="1000">
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae
-          sit omnis quae vel saepe delectus dolores inventore non perspiciatis.
-          Ad laudantium, minus quibusdam illo possimus saepe vel deleniti, amet
-          temporibus voluptates porro rem eaque recusandae, sint magni quidem
-          maxime! Delectus saepe eaque beatae. Eligendi accusantium dolor
-          recusandae est voluptas harum impedit molestias! Odit molestias labore
-          earum culpa, assumenda repellat iusto quo, soluta repellendus
-          architecto blanditiis ducimus vel similique ab. Tempora magni dolore
-          aliquam corrupti deleniti?
-        </p>
-        <button>Read More</button>
-      </div>
-    </section>
-
-    <section class="product-3">
-      <div class="container">
-        <div class="content">
-          <div class="left-side">
-            <div
-              class="type-disc"
-              data-aos="fade-right"
-              data-aos-delay="200"
-              data-aos-duration="1000"
-            >
-              <h1>Nova-Storm</h1>
-              <p>$1.000 off</p>
-            </div>
-
-            <h1
-              class="name"
-              data-aos="fade-right"
-              data-aos-delay="400"
-              data-aos-duration="1000"
-            >
-              Build For Exploring The Space
-            </h1>
-
-            <div
-              class="action-feature-container"
-              data-aos="fade-right"
-              data-aos-delay="600"
-              data-aos-duration="1000"
-            >
-              <div class="action-price">
-                <button>Explore</button>
-
-                <h1><span>$5.697</span>$4.697</h1>
-
-                <a href="#"
-                  >Test Drive
-                  <box-icon fill="#0c0c0c" name="chevron-right"></box-icon
-                ></a>
-              </div>
-            </div>
-          </div>
-
-          <div
-            class="right-side"
-            data-aos="zoom-in"
-            data-aos-delay="1000"
-            data-aos-duration="1000"
-          >
-            <img src="./lib/bycycle-4.png" alt="bycycle-2" />
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="pre-order" id="pre-order">
-      <div
-        class="content"
-        data-aos="fade-up"
-        data-aos-delay="200"
-        data-aos-duration="1000"
-      >
-        <p class="disc">10% OFF</p>
-        <h1 class="title">PRE-ORDER NOW</h1>
-        <p class="desc">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime sit
-          aperiam molestiae provident delectus impedit maiores, nulla asperiores
-          rerum minima. Velit saepe incidunt, reiciendis nesciunt laboriosam
-          facere voluptatem, magni dolor blanditiis rerum, recusandae autem
-          corrupti?
-        </p>
-        <button class="action">
-          <span>ORDER NOW </span>
-        </button>
-      </div>
-    </section>
-
-    <section class="subsidies" id="subsidies">
-      <div
-        class="content"
-        data-aos="fade-up"
-        data-aos-delay="200"
-        data-aos-duration="1000"
-      >
-        <h2>Subsidies</h2>
-        <h1>How much will you save?</h1>
-        <p>Get money off a new Novabike with a local subsidy</p>
-
-        <button class="action">
-          <span>CHECK NOW </span>
-        </button>
-      </div>
-    </section>
-
-    <footer data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
-      <div class="container">
-        <div class="profile">
-          <div class="logo">
-            <a href="">NOVA<span>BIKE</span></a>
-          </div>
-
-          <!-- Short About -->
-          <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex nihil
-            quisquam voluptatum dignissimos perspiciatis sapiente velit corrupti
-            dolorum vel porro.
-          </p>
-
-          <!-- Social Media -->
-          <div class="social-media-container">
-            <div class="social-media">
-              <box-icon color="#fff" type="logo" name="instagram"></box-icon>
-            </div>
-            <div class="social-media">
-              <box-icon color="#fff" name="youtube" type="logo"></box-icon>
-            </div>
-            <div class="social-media">
-              <box-icon
-                color="#fff"
-                name="facebook-circle"
-                type="logo"
-              ></box-icon>
-            </div>
-          </div>
-        </div>
-
-        <div class="link-container">
-          <div class="information">
-            <h1>Information</h1>
-            <ul>
-              <li>
-                <a href="#">Our Company</a>
-              </li>
-              <li>
-                <a href="#">About Us</a>
-              </li>
-              <li>
-                <a href="#">Blog</a>
-              </li>
-              <li>
-                <a href="#">Shop</a>
-              </li>
-            </ul>
-          </div>
-
-          <div class="resource">
-            <h1>Resources</h1>
-            <ul>
-              <li>
-                <a href="#">Support 24/7</a>
-              </li>
-              <li>
-                <a href="#">Help Center</a>
-              </li>
-              <li>
-                <a href="#">Terms & Condition</a>
-              </li>
-              <li>
-                <a href="#">How-to Instructions</a>
-              </li>
-            </ul>
-          </div>
-
-          <div class="navigation">
-            <h1>Navigation</h1>
-            <ul>
-              <li>
-                <a href="#">Home</a>
-              </li>
-              <li>
-                <a href="#product">Product</a>
-              </li>
-              <li>
-                <a href="#about">About</a>
-              </li>
-              <li>
-                <a href="#subsidies">Subsidies</a>
-              </li>
-            </ul>
           </div>
         </div>
       </div>
     </footer>
 
     <script src="./src/script/main.js"></script>
-
-    <!-- Box Icon -->
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
-
-    <!-- AOS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-      AOS.init();
+      AOS.init({
+        once: true,
+        duration: 850,
+      });
     </script>
   </body>
 </html>

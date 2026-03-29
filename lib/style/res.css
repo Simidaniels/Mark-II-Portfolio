@@ -1,173 +1,193 @@
-@media (max-width: 580px) {
-    .container {
-      padding: 1.5rem 2rem;
-    }
-/* MOBILE RESPONSIVENESS FOR THE NAVIGATION EMBEDED IN A HAMBURGER MENU */
-    header .container .content nav {
-        display: none;
-    }
-    header .container .content .extra-nav{
-        display: none;
-    }
-    header .container .content .btn-menu {
-        display: inline;
-        border: none;
-        background: transparent;
-    }
-    header .container .content .btn-menu .icon {
-        fill: #fff;
-        width: 35px;
-        height: 35px;
-    }
-    /* OPENING HAMBURGER NAV */
-    header .container .content .mobile-nav {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        position: fixed;
-        top: 0;
-        left: 0;
-        transform: translateX(100%);
-        width: 100%;
-        height: 100vh;
-        background: #000;
-        transition: transform 0.2s linear;
-        font: bold 16px "Work Sans", sans-serif;
-        z-index: 5;
-    }
-    header .container .content .mobile-nav.active {
-        transform: translateX(0);
-        transition: .4s linear;
-    }
-    /* CLOSING HAMBURGER NAV */
-    header .container .content .mobile-nav .close-mobile-nav {
-        position: absolute;
-        display: block;
-        right: 15px;
-        top: 15px;
-        background: transparent;
-        border: none;
-    }
-    /* HAMBEURGER CLOSER DISPLAY */
-    header .container .content .mobile-nav .close-mobile-nav .icon {
-        fill: #fff;
-        width: 35px;
-        height: 35px;
-    }
-    /* MENU LIST DISPLAY */ 
-    header .container .content .mobile-nav .nav {
-        display: flex;
-        flex-direction: column;
-        gap: 4rem;
-    }
-    /* REMOVING MENU LIST DEFAULT LINK */
-    header .container .content .mobile-nav a {
-        color: #fff;
-        font-size: 1.5rem;
-        font-weight: bold;
-        text-decoration: none;
-    }
-    header .container .content .mobile-nav a:hover {
-        color: rgb(161, 161, 161);
-    }
-    header .container .content .mobile-nav a:active {
-        color: rgb(161, 161, 161);
-    }
-    /* RESPONSIVENESS BUTTON DISPLAY */
-    header .container .content .nav button {
-        /* display: block; */
-        background: rgba(237, 225, 225, 0.16);
-        padding: 10px;
-        border: 1px solid #fff;
-        color: #fff;
-        font-weight: 700;
-    }
-    header .container .content .nav button:hover {
-        background-color: rgb(83, 83, 83);
-        transition: .2s linear;
-        border-radius: 5px;
-    }
-    header .container .content .nav button:active {
-        background-color: #ff6a00;
-        transition: .1s linear;
-    }
-    .hero .container .content .text h1 {
-        font: bolder 3rem "IBM Plex Sans", sans-serif;
-        line-height: 5rem;
-    }
+@media (max-width: 1080px) {
+  .hero .content,
+  .about-grid,
+  .contact-shell,
+  .project-area {
+    grid-template-columns: 1fr;
+  }
 
-    .hero .container .content .text .row-2 {
-        margin-left: 0;
-    }
+  .hero-copy h1,
+  .section-heading h2,
+  .contact-copy h2 {
+    max-width: none;
+  }
 
-    .hero .container .content .text .row-2 {
-        color: var(--black);
-        -webkit-text-stroke-width: 1px;
-        -webkit-text-stroke-color: var(--white);
-    }
-    .hero .container .content .short-info {
-        position: absolute;
-        padding: 0 ;
-        width: 80%;
-    }
-    .about {
-        display: none;
-    }
-    .project .container .content .header button {
-        width: 30%;
-        padding: 10px;
-        font-weight: 600;
-    }
-    .project .container .content .header .title .row-1 {
-        font-size: 1.5rem;
-    }
-    .project .container .content .header .title .row-1 hr {
-        width: 55px;
-    }
-    .project .container .content .header .title .row-2 {
-        font-size: 2rem;     
-    }
-    .project .container .content .project-area {
-        display: flex;
-        flex-direction: column;
-        height: 200vh;
-        width: 200vw;
-   }
-   .contact .container .content .contact-area {
-        display: flex;
-        flex-direction: column;
-   }
-   .contact .container .content .title {
-       font-size: 1rem;
-   }
-   .contact .container .content .title h1 {
-       font-size: 2rem;
-   }
-   .contact .container .content .contact-area {
-       height: 60%;
-   }
-   .contact .container .content .contact-area .left-side {
-       display: none;
-   }
-   .contact .container .content .contact-area .right-side {
-       width: 100%;
-       /* height: 100%; */
-   }
-   .contact .container .content .contact-area .right-side form input::placeholder,
-   .contact .container .content .contact-area .right-side form textarea::placeholder {
-       font-size: 1rem;
-   }
-   .contact .container .content .contact-area .right-side form textarea {
-       height: 100px;
-   }
-   footer .container .content h1 {
-       font-size: 1rem;
-   }
-   footer .container .content .social {
-        display: none;
-   }
-   footer .container .content .social p {
-       font-weight: bold; 
-    }
+  .hero-card,
+  .about-panel,
+  .contact-form-wrap {
+    max-width: 760px;
+  }
+
+  .hero-meta {
+    grid-template-columns: 1fr;
+  }
+
+  .section-heading.split,
+  footer .content {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 720px) {
+  .container {
+    width: min(100% - 32px, 1200px);
+  }
+
+  header {
+    padding: 1rem 0;
+  }
+
+  header nav,
+  .extra-nav {
+    display: none;
+  }
+
+  .btn-menu {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 3rem;
+    height: 3rem;
+    border: 1px solid var(--line);
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.03);
+  }
+
+  .btn-menu .icon,
+  .close-mobile-nav .icon {
+    fill: var(--text);
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  .mobile-nav {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    padding: 1.5rem;
+    background: rgba(4, 10, 18, 0.96);
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+  }
+
+  .mobile-nav.active {
+    transform: translateX(0);
+  }
+
+  .close-mobile-nav {
+    position: absolute;
+    top: 1.4rem;
+    right: 1.4rem;
+    width: 3rem;
+    height: 3rem;
+    border: 1px solid var(--line);
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.03);
+  }
+
+  .mobile-nav .nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .mobile-nav .nav a {
+    font: 700 2rem "IBM Plex Sans", sans-serif;
+  }
+
+  .mobile-nav .mobile-cta {
+    margin-top: 0.5rem;
+    padding: 0.95rem 1.4rem;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    background: linear-gradient(135deg, var(--accent), #ffb36b);
+    color: #141414;
+  }
+
+  .hero,
+  .about,
+  .project,
+  .contact {
+    padding: 4.25rem 0;
+  }
+
+  .hero-copy h1 {
+    font-size: clamp(2.6rem, 14vw, 4.1rem);
+  }
+
+  .hero-copy .intro,
+  .about-story p,
+  .desc p,
+  .contact-copy p {
+    font-size: 0.98rem;
+    line-height: 1.7;
+  }
+
+  .hero-actions,
+  .metrics {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .btn,
+  .extra-nav a,
+  .mobile-nav .mobile-cta {
+    width: 100%;
+  }
+
+  .hero-visual,
+  .about-image {
+    min-height: 360px;
+  }
+
+  .contact-shell {
+    padding: 1rem;
+  }
+
+  .contact-copy,
+  .contact-form-wrap {
+    padding: 0.6rem;
+  }
+}
+
+@media (max-width: 460px) {
+  .container {
+    width: min(100% - 24px, 1200px);
+  }
+
+  .logo {
+    font-size: 1.25rem;
+  }
+
+  .section-heading h2,
+  .contact-copy h2 {
+    font-size: 1.9rem;
+  }
+
+  .hero-copy h1 {
+    font-size: 2.45rem;
+  }
+
+  .hero-meta div,
+  .contact-points div,
+  .stat-card,
+  .desc {
+    padding: 1rem;
+  }
+
+  .projects {
+    border-radius: 24px;
+  }
+
+  .projects a {
+    aspect-ratio: 4 / 4.8;
+  }
+
+  .mobile-nav .nav a {
+    font-size: 1.7rem;
+  }
 }

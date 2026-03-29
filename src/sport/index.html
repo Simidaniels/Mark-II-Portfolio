@@ -1,828 +1,371 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-      <meta charset="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-      <link
-        href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
-        rel="stylesheet"
-      />
-      <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
-
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-      <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-      <!-- DATA AOS -->
-      <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-      <link href="./src/style/main.css" rel="stylesheet" />
-      <link rel="stylesheet" href="./src/style/ui.css">
-      <link rel="website icon" type="png" href="./lib/logo.png">
-      <title>Novasports</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="NOVASPORT reimagined as a premium basketball performance and training brand."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Sora:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link href="./src/style/main.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./src/style/ui.css" />
+    <link rel="website icon" type="png" href="./lib/logo.png" />
+    <title>NOVASPORT</title>
   </head>
-  
-  <body class="overflow-x-hidden">
-    <header data-aos="fade-down" data-aos-duration="1000"      data-aos-delay="200">
-        <div class="container">
-          <div class="content">
-            <div data-aos="fade-down-right" data-aos-duration="1000" data-aos-delay="300"   class="logo">
-              <img src="./lib/logo.png" alt="logo" />
-                <a href="##">NOVASPORT</a>
-            </div>
-             <nav> 
-                <a href="#">Home</a>
-                <a href="#">Gallery</a>
-                <a href="#">Training</a>
-                <a href="#">Pricing</a>
-                <a href="#">Contact</a>
-            </nav>
-            <div class="extra-nav">
-                <a href="##">
-                <button data-aos="fade-down-left" data-aos-duration="1000" data-aos-delay="400" class="join-membership">
-                    JOIN MEMBERSHIP
-                </button></a>
-                <button class="btn-menu" id="btn-menu">
-                    <box-icon name="menu-alt-right" class="icon"></box-icon>
-                </button>
-            </div>
-            <div class="mobile-nav"> 
-                <button class="close-mobile-nav">
-                    <box-icon name="x" class="icon"></box-icon>
-                </button>
-                <div class="nav">
-                    <a href="#">Home</a>
-                    <a href="#">Gallery</a>
-                    <a href="#">Training</a>
-                    <a href="#">Pricing</a>
-                    <a href="#">Contact</a>
-                    <a><button>Join Membership</button></a>
-                </div>
+  <body>
+    <div class="page-light light-1"></div>
+    <div class="page-light light-2"></div>
+
+    <header data-aos="fade-down" data-aos-delay="100">
+      <div class="container">
+        <div class="content">
+          <a class="logo" href="#top">
+            <img src="./lib/logo.png" alt="NOVASPORT logo" />
+            <span>NOVASPORT</span>
+          </a>
+
+          <nav>
+            <a href="#programs">Programs</a>
+            <a href="#coaches">Coaches</a>
+            <a href="#membership">Membership</a>
+            <a href="#contact">Contact</a>
+          </nav>
+
+          <div class="extra-nav">
+            <a class="link-muted" href="#membership">Pricing</a>
+            <a class="btn btn-primary" href="#contact">Join Training</a>
+          </div>
+
+          <button class="btn-menu" id="btn-menu" aria-label="Open menu">
+            <box-icon name="menu-alt-right" class="icon"></box-icon>
+          </button>
+
+          <div class="mobile-nav" aria-hidden="true">
+            <button class="close-mobile-nav" aria-label="Close menu">
+              <box-icon name="x" class="icon"></box-icon>
+            </button>
+            <div class="nav">
+              <a href="#programs">Programs</a>
+              <a href="#coaches">Coaches</a>
+              <a href="#membership">Membership</a>
+              <a href="#contact">Contact</a>
+              <a class="btn btn-primary mobile-cta" href="#contact">Join Training</a>
             </div>
           </div>
         </div>
+      </div>
     </header>
-    <a href="#" class="to-top"><box-icon name="chevron-up"></box-icon></a>
-    <section class="hero-section" id="hero">
-      <!-- <div class=""></div> -->
-      <div class="hero-container">
-        <div class="hero-wrapper">
-          <img
-            src="./lib/hand.png"
-            alt="hand"
-            class="handy"
-            data-aos="fade-up"
-            data-aos-duration="1000"
-            data-aos-delay="200"
-          />
 
-          <img
-            src="./lib/ball.png"
-            alt="ball"
-            class="bally"
-            data-aos="fade-down"
-            data-aos-duration="1000"
-            data-aos-delay="400"
-          />
-        </div>
-          <div class="hero-context-wrapper">
-            <h1
-              class="hero-txt"
-              data-aos="fade-right"
-              data-aos-duration="1000"
-              data-aos-delay="400"
-            >
-              NOVA
-            </h1>
-            <h1
-              class="hero-txt"
-              data-aos="fade-left"
-              data-aos-duration="1000"
-              data-aos-delay="400"
-            >
-              SPORTS
-            </h1>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="supportive-container">
-      <div class="supportive-wrapper">
-        <div class="supporting-content">
-          <h1
-            class="supporting-context"
-            data-aos="fade-down"
-            data-aos-duration="1000"
-            data-aos-delay="400"
-          >
-            <span class="tck">Join</span> a fun and
-            <span class="tck">supportive sports community</span
-            >. We offer personalized training sessions tailored to
-            <span class="tck">your goals</span>, helping you
-            reach <span class="tck">your full potential</span>.
-            Our
-            <span class="tck">flexible scheduling</span> means
-            you can work out whenever it suits you.
-          </h1>
+    <a href="#top" class="to-top" aria-label="Back to top">
+      <box-icon name="chevron-up"></box-icon>
+    </a>
 
-          <!-- Stats -->
-          <div
-            class="stats-container"
-            data-aos="fade-up"
-            data-aos-duration="1000"
-            data-aos-delay="600"
-            >
-            <div class="fig-cont">
-              <h1 class="fig">150+</h1>
-              <p class="fig-txt">Mentorship</p>
-            </div>
-            <div class="fig-cont">
-              <h1 class="fig">350+</h1>
-              <p class="fig-txt">Community</p>
-            </div>
-            <div class="fig-cont">
-              <h1 class="fig">800+</h1>
-              <p class="fig-txt">Membership</p>
-            </div>
-          </div>
-
-          <!-- Action -->
-           <div
-            class="sup-btn"
-            data-aos="fade-up"
-            data-aos-duration="1000"
-            data-aos-delay="800"
-          >
-            <button
-              class="btn-1"
-            >
-              JOIN NOW!
-            </button>
-            <button class="btn-2">
-              WATCH STORY
-            </button>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="mentors-container">
-      <div class="mentors-wrapper">
-        <div class="mentor-cards">
-          <!-- Title -->
-          <div class="card-sub">
-            <h1
-              class="card-txt"
-              data-aos="fade-right"
-              data-aos-duration="1000"
-              data-aos-delay="200">
-              <span>OUR</span> MENTORS
-            </h1>
-            <a
-              href="#"
-              class="card-hyptxt"
-              data-aos="fade-left"
-              data-aos-duration="1000"
-              data-aos-delay="200">
-              See more
-            </a>
-          </div> 
-          <!-- Mentors -->
-          <div class="card-grid">
-            <!-- Mentor Card -->
-            <div
-              class="one-card"
-              data-aos="fade-up"
-              data-aos-duration="1000"
-              data-aos-delay="200">
-              <div class="card-wrapper">
-                <img
-                  src="./lib/mentor.jpeg"
-                  alt="mentor"
-                  class="card-img"
-                />
-              <div
-                  class=""
-                ></div>
-                <box-icon
-                  type="solid"
-                  name="right-top-arrow-circle"
-                  class="card-icn"
-                ></box-icon>
-              </div>
-
-              <div class="card-name">
-                <h1 class="">JOHN SMITH</h1>
-                <p class="">Professional Mentor</p>
-              </div>
-            </div>
-            <!-- Mentor Card -->
-            <div
-              class="one-card"
-              data-aos="fade-up"
-              data-aos-duration="1000"
-              data-aos-delay="400">
-              <div class="card-wrapper">
-                <img
-                  src="./lib/mentor.jpeg"
-                  alt="mentor"
-                  class="card-img"
-                />
-                <div
-                  class=""
-                ></div>
-                <box-icon
-                  type="solid"
-                  name="right-top-arrow-circle"
-                  class="card-icn"
-                ></box-icon>
-              </div>
-              <div class="card-name">
-                <h1 class="">JOHN SMITH</h1>
-                <p class="">Professional Mentor</p>
-              </div>
-            </div>
-            <!-- Mentor Card -->
-            <div
-              class="one-card"
-              data-aos="fade-up"
-              data-aos-duration="1000"
-              data-aos-delay="600"
-            >
-              <div class="card-wrapper">
-                <img
-                  src="./lib/mentor.jpeg"
-                  alt="mentor"
-                  class="card-img"
-                />
-                <div
-                  class=""
-                ></div>
-                <box-icon
-                  type="solid"
-                  name="right-top-arrow-circle"
-                  class="card-icn"
-                ></box-icon>
-              </div>
-              <div class="card-name">
-                <h1 class="">JOHN SMITH</h1>
-                <p class="">Professional Mentor</p>
-              </div>
-            </div> 
-            <!-- Mentor Card -->
-            <div
-              class="one-card"
-              data-aos="fade-up"
-              data-aos-duration="1000"
-              data-aos-delay="800"
-            >
-              <div class="card-wrapper">
-                <img
-                  src="./lib/mentor.jpeg"
-                  alt="mentor"
-                  class="card-img"
-                />
-                <div
-                  class=""
-                ></div>
-                <box-icon
-                  type="solid"
-                  name="right-top-arrow-circle"
-                  class="card-icn"
-                ></box-icon>
-              </div>
-
-              <div class="card-name">
-                <h1 class="">JOHN SMITH</h1>
-                <p class="">Professional Mentor</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="quotation-container">
-      <div class="quotation-wrapper">
-        <div class="quotation-content">
-          <div class="quotation-context">
-            <div
-              data-aos="fade-right"
-              data-aos-duration="1000"
-              data-aos-delay="200"
-            >
-              <img
-                src="./lib/quotation.png"
-                alt="quotation"
-                class="quote-img"
-              />
-              <h1 class="quoted-txt">
-                Novasports has completely changed the way we play basketball. The
-                trainers don't just teach, they inspire! My shooting form,
-                defense, and court awareness have reached new heights. If you're
-                ready to dominate the court, Novasports is where your journey
-                begins!
+    <main id="top">
+      <section class="hero-section">
+        <div class="container">
+          <div class="hero-shell">
+            <div class="hero-copy">
+              <p class="eyebrow" data-aos="fade-right">Basketball performance club</p>
+              <h1 data-aos="fade-up" data-aos-duration="900">
+                Train sharper, compete harder, and grow inside a real sports community.
               </h1>
+              <p class="intro" data-aos="fade-up" data-aos-delay="120">
+                NOVASPORT blends elite basketball coaching, athlete development,
+                and premium training culture for players who want more than
+                casual sessions.
+              </p>
+              <div class="hero-actions" data-aos="fade-up" data-aos-delay="240">
+                <a class="btn btn-primary" href="#programs">Explore Programs</a>
+                <a class="btn btn-secondary" href="#membership">View Membership</a>
+              </div>
+              <div class="hero-stats" data-aos="fade-up" data-aos-delay="320">
+                <div class="stat-card">
+                  <strong>150+</strong>
+                  <span>Guided athletes</span>
+                </div>
+                <div class="stat-card">
+                  <strong>350+</strong>
+                  <span>Community sessions</span>
+                </div>
+                <div class="stat-card">
+                  <strong>800+</strong>
+                  <span>Membership signups</span>
+                </div>
+              </div>
             </div>
-            <div
-              data-aos="fade-right"
-              data-aos-duration="1000"
-              data-aos-delay="400"
-              class="ign"
-              >
-              <h1 class="">MICHAEL JOHNSON</h1>
-              <p class="">Membership</p>
+
+            <div class="hero-visual" data-aos="zoom-in" data-aos-duration="1000">
+              <div class="hero-stage">
+                <img src="./lib/hand.png" alt="Basketball hand pose" class="handy" />
+                <img src="./lib/ball.png" alt="Basketball ball graphic" class="bally" />
+                <div class="hero-wordmark">
+                  <span>NOVA</span>
+                  <span>SPORT</span>
+                </div>
+              </div>
             </div>
-          </div>
-          <div class="member-wrapper">
-            <img
-              src="./lib/membership.png"
-              alt="membership"
-              class="member-img"
-              data-aos="fade-up"
-              data-aos-duration="1000"
-              data-aos-delay="400"
-            />
           </div>
         </div>
-      </div>
-    </section> 
-    <section class="captain-price">
-      <div class="price-container">
-        <div class="price-wrapper">
-          <h1
-            class="hd"
-            data-aos="fade-down"
-            data-aos-duration="1000"
-            data-aos-delay="200"
-          >
-            PRICING PLAN
-          </h1>
+      </section>
+
+      <section class="supportive-container" id="programs">
+        <div class="container">
+          <div class="supportive-shell">
+            <div class="section-heading" data-aos="fade-up">
+              <span>Programs</span>
+              <h2>Structured training built for skill, confidence, and game intelligence.</h2>
+            </div>
+
+            <div class="program-grid">
+              <article class="program-card" data-aos="fade-up" data-aos-delay="100">
+                <span>Skill Sessions</span>
+                <h3>Technical repetition with coach-led correction.</h3>
+                <p>Ball handling, finishing, footwork, shooting rhythm, and decision-making drills.</p>
+              </article>
+              <article class="program-card" data-aos="fade-up" data-aos-delay="200">
+                <span>Performance Blocks</span>
+                <h3>Speed, balance, and conditioning for court movement.</h3>
+                <p>Train the physical side of basketball without losing control and fluidity.</p>
+              </article>
+              <article class="program-card" data-aos="fade-up" data-aos-delay="300">
+                <span>Community Runs</span>
+                <h3>Competitive sessions that sharpen real match habits.</h3>
+                <p>High-energy group play with a supportive atmosphere and clear progression.</p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="mentors-container" id="coaches">
+        <div class="container">
+          <div class="section-heading split" data-aos="fade-up">
+            <div>
+              <span>Coaches</span>
+              <h2>Guidance from mentors who balance discipline, detail, and motivation.</h2>
+            </div>
+            <a class="btn btn-secondary" href="#contact">Talk to the team</a>
+          </div>
+
+          <div class="coach-grid">
+            <article class="coach-card" data-aos="fade-up" data-aos-delay="100">
+              <div class="coach-image">
+                <img src="./lib/mentor.jpeg" alt="Coach Jordan Hale" />
+              </div>
+              <div class="coach-copy">
+                <h3>Jordan Hale</h3>
+                <p>Elite Skills Coach</p>
+              </div>
+            </article>
+            <article class="coach-card" data-aos="fade-up" data-aos-delay="200">
+              <div class="coach-image">
+                <img src="./lib/mentor.jpeg" alt="Coach Marcus Dean" />
+              </div>
+              <div class="coach-copy">
+                <h3>Marcus Dean</h3>
+                <p>Performance Mentor</p>
+              </div>
+            </article>
+            <article class="coach-card" data-aos="fade-up" data-aos-delay="300">
+              <div class="coach-image">
+                <img src="./lib/mentor.jpeg" alt="Coach Avery Stone" />
+              </div>
+              <div class="coach-copy">
+                <h3>Avery Stone</h3>
+                <p>Game IQ Specialist</p>
+              </div>
+            </article>
+            <article class="coach-card" data-aos="fade-up" data-aos-delay="400">
+              <div class="coach-image">
+                <img src="./lib/mentor.jpeg" alt="Coach Elias Grant" />
+              </div>
+              <div class="coach-copy">
+                <h3>Elias Grant</h3>
+                <p>Shot Development Coach</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="quotation-container">
+        <div class="container">
+          <div class="quote-shell" data-aos="fade-up">
+            <div class="quotation-context">
+              <img src="./lib/quotation.png" alt="Quotation mark" class="quote-img" />
+              <h2>
+                NOVASPORT changed the way I train. The sessions are intense,
+                specific, and motivating, and every week I can feel the
+                difference in confidence, pace, and decision-making.
+              </h2>
+              <div class="ign">
+                <h3>Michael Johnson</h3>
+                <p>Performance Membership</p>
+              </div>
+            </div>
+            <div class="member-wrapper">
+              <img src="./lib/membership.png" alt="NOVASPORT membership visual" class="member-img" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="captain-price" id="membership">
+        <div class="container">
+          <div class="section-heading center" data-aos="fade-up">
+            <span>Membership</span>
+            <h2>Flexible plans for developing players and more committed competitors.</h2>
+          </div>
 
           <div class="price-bx">
-            <div
-              class="price-blox"
-              data-aos="fade-right"
-              data-aos-duration="1000"
-              data-aos-delay="400"
-              >
+            <article class="price-blox" data-aos="fade-right">
               <div class="price-icn">
-                <img src="./lib/logo.png" alt="logo" class="" />
+                <img src="./lib/logo.png" alt="NOVASPORT logo" />
                 <p class="money">$20/month</p>
               </div>
-
               <div class="tpc-hdn">
-                <h1 class="sub-hdn">BASIC PLAN</h1>
+                <h3 class="sub-hdn">Starter Plan</h3>
                 <p class="tpc-cntxt">
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                  Iusto velit, optio accusantium tempore repellat incidunt
-                  debitis id quibusdam rem vero omnis dolore quos, quasi ad
-                  mollitia et fuga pariatur eveniet? Repellendus earum minus
-                  totam eveniet!
+                  A strong entry point for players who want guided training,
+                  structured sessions, and a consistent improvement routine.
                 </p>
               </div>
-              <hr class="chpln" />
-              <div class="price-card-content">
-                <div class="entries">
-                  <h1 class="">INCLUDES:</h1>
-                  <div class="price-info">
-                    <div class="pay-chk-icn">
-                      <box-icon
-                        name="check"
-                        class=""
-                      ></box-icon>
-                      <p class="">Personalized Training Plans</p>
-                    </div>
-                    <div class="pay-chk-icn">
-                      <box-icon
-                        name="check"
-                        class=""
-                      ></box-icon>
-                      <p class="">Direct Access to Elite Coaches</p>
-                    </div>
-                    <div class="pay-chk-icn">
-                      <box-icon
-                        name="check"
-                        class=""
-                      ></box-icon>
-                      <p class="">Exclusive Training Facilities</p>
-                    </div>
-                    <div class="pay-chk-icn">
-                      <box-icon
-                        name="check"
-                        class=""
-                      ></box-icon>
-                      <p class="">Join a Supportive Community</p>
-                    </div>
-                    <div class="pay-chk-icn">
-                      <box-icon
-                        name="check"
-                        class=""
-                      ></box-icon>
-                      <p class="">
-                        Exclusive Access to Online Resources
-                      </p>
-                    </div>
-                    <div class="pay-chk-icn">
-                      <box-icon
-                        name="check"
-                        class=""
-                      ></box-icon>
-                      <p class="">Regular Group Training Sessions</p>
-                    </div>
-                  </div>
-                </div>
+              <div class="price-info">
+                <div class="pay-chk-icn"><box-icon name="check"></box-icon><p>Weekly skill sessions</p></div>
+                <div class="pay-chk-icn"><box-icon name="check"></box-icon><p>Coach feedback</p></div>
+                <div class="pay-chk-icn"><box-icon name="check"></box-icon><p>Community runs</p></div>
+                <div class="pay-chk-icn"><box-icon name="check"></box-icon><p>Progress tracking</p></div>
+                <div class="pay-chk-icn"><box-icon name="check"></box-icon><p>Training resources</p></div>
+                <div class="pay-chk-icn"><box-icon name="check"></box-icon><p>Member support</p></div>
               </div>
-              <a href="##">
-                <button class="plan-btn">
-                  CHOOSE PLAN
-                </button>
-              </a>
-            </div>
-            <div
-              class="price-blox"
-              data-aos="fade-left"
-              data-aos-duration="1000"
-              data-aos-delay="400"
-              >
+              <a class="btn btn-secondary plan-btn" href="#contact">Choose Starter</a>
+            </article>
+
+            <article class="price-blox featured" data-aos="fade-left">
               <div class="price-icn">
-                <img src="./lib/logo.png" alt="logo" class="" />
+                <img src="./lib/logo.png" alt="NOVASPORT logo" />
                 <p class="money">$25/month</p>
               </div>
-
               <div class="tpc-hdn">
-                <h1 class="sub-hdn">PREMIUM PLAN</h1>
+                <h3 class="sub-hdn">Performance Plan</h3>
                 <p class="tpc-cntxt">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Aperiam, voluptates fugiat? Soluta, est dolores obcaecati
-                  corrupti eos dicta ducimus nobis error neque reprehenderit,
-                  earum beatae consequuntur delectus sequi, rem labore?
+                  For athletes who want more direct coaching, deeper performance
+                  work, and access to a more complete training environment.
                 </p>
               </div>
-              <hr class="chpln" />
-              <div class="price-card-content">
-                <div class="entries">
-                  <h1 class="">INCLUDES:</h1>
-                  <div class="price-info">
-                    <div class="pay-chk-icn">
-                      <box-icon
-                        name="check"
-                        class=""
-                      ></box-icon>
-                      <p class="">Personalized Training Plans</p>
-                    </div>
-                    <div class="pay-chk-icn">
-                      <box-icon
-                        name="check"
-                        class=""
-                      ></box-icon>
-                      <p class="">Direct Access to Elite Coaches</p>
-                    </div>
-                    <div class="pay-chk-icn">
-                      <box-icon
-                        name="check"
-                        class=""
-                      ></box-icon>
-                      <p class="">Exclusive Training Facilities</p>
-                    </div>
-                    <div class="pay-chk-icn">
-                      <box-icon
-                        name="check"
-                        class=""
-                      ></box-icon>
-                      <p class="">Join a Supportive Community</p>
-                    </div>
-                    <div class="pay-chk-icn">
-                      <box-icon
-                        name="check"
-                        class=""
-                      ></box-icon>
-                      <p class="">
-                        Exclusive Access to Online Resources
-                      </p>
-                    </div>
-                    <div class="pay-chk-icn">
-                      <box-icon
-                        name="check"
-                        class=""
-                      ></box-icon>
-                      <p class="">Regular Group Training Sessions</p>
-                    </div>
-                    <div class="pay-chk-icn">
-                      <box-icon
-                        name="check"
-                        class=""
-                      ></box-icon>
-                      <p class="">Nutritional Guidance</p>
-                    </div>
-                    <div class="pay-chk-icn">
-                      <box-icon
-                        name="check"
-                        class=""
-                      ></box-icon>
-                      <p class="">Mental Toughness Training</p>
-                    </div>
-                    <div class="pay-chk-icn">
-                      <box-icon
-                        name="check"
-                        class=""
-                      ></box-icon>
-                      <p class="">Advanced Skill Development</p>
-                    </div>
-                    <div class="pay-chk-icn">
-                      <box-icon
-                        name="check"
-                        class=""
-                      ></box-icon>
-                      <p class="">Performance Tracking and Analysis</p>
-                    </div>
-                  </div>
-                </div>
+              <div class="price-info">
+                <div class="pay-chk-icn"><box-icon name="check"></box-icon><p>Everything in Starter</p></div>
+                <div class="pay-chk-icn"><box-icon name="check"></box-icon><p>Priority coach access</p></div>
+                <div class="pay-chk-icn"><box-icon name="check"></box-icon><p>Advanced skill blocks</p></div>
+                <div class="pay-chk-icn"><box-icon name="check"></box-icon><p>Conditioning programs</p></div>
+                <div class="pay-chk-icn"><box-icon name="check"></box-icon><p>Performance analysis</p></div>
+                <div class="pay-chk-icn"><box-icon name="check"></box-icon><p>Mental game sessions</p></div>
               </div>
-              <a href="##">
-                <button class="plan-btn">
-                  CHOOSE PLAN
-                </button>
-              </a>
-            </div>
+              <a class="btn btn-primary plan-btn" href="#contact">Choose Performance</a>
+            </article>
           </div>
         </div>
-      </div>
-    </section>
-    <section class="contact-info">
-      <div class="contact-container">
-        <div class="contact-wrapper">
-          <div class="info-wrap">
-            <div
-              class="contct-adrs"
-              data-aos="fade-up"
-              data-aos-duration="1000"
-              data-aos-delay="200"
-              >
-              <div
-                class="icn-wrap"
-                >
-                <box-icon name="home" class="cntct-icn"></box-icon>
-              </div>
-              <div class="">
-                <p class="h1">Address</p>
-                <p class="tx">
-                  456 Elm Avenue, Vancouver, British Columbia V6B 6P5
-                </p>
-              </div>
+      </section>
+
+      <section class="contact-info" id="contact">
+        <div class="container">
+          <div class="contact-shell">
+            <div class="info-wrap">
+              <article class="contct-adrs" data-aos="fade-up" data-aos-delay="100">
+                <div class="icn-wrap"><box-icon name="home" class="cntct-icn"></box-icon></div>
+                <div>
+                  <p class="h1">Address</p>
+                  <p class="tx">Victoria Island, Lagos, Nigeria</p>
+                </div>
+              </article>
+              <article class="contct-adrs" data-aos="fade-up" data-aos-delay="200">
+                <div class="icn-wrap"><box-icon name="phone" type="solid" class="cntct-icn"></box-icon></div>
+                <div>
+                  <p class="h1">Phone</p>
+                  <p class="tx">+234 913 999 8795</p>
+                </div>
+              </article>
+              <article class="contct-adrs" data-aos="fade-up" data-aos-delay="300">
+                <div class="icn-wrap"><box-icon name="envelope" type="solid" class="cntct-icn"></box-icon></div>
+                <div>
+                  <p class="h1">Email</p>
+                  <p class="tx">novasupport@novasports.com</p>
+                </div>
+              </article>
             </div>
-            <div
-              class="contct-adrs"
-              data-aos="fade-up"
-              data-aos-duration="1000"
-              data-aos-delay="400"
-              >
-              <div
-                class="icn-wrap"
-                >
-                <box-icon
-                  name="phone"
-                  type="solid"
-                  class="cntct-icn"
-                ></box-icon>
-              </div>
-              <div class="">
-                <p class="h1">Phone</p>
-                <p class="tx">+234 913 999 8795</p>
-              </div>
+
+            <form class="ipt-adrs" data-aos="fade-up" data-aos-delay="400">
+              <input type="email" placeholder="Email address" />
+              <button type="submit" class="sbmt-btn">Join</button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <div class="footer-shell">
+          <div class="footer-brand">
+            <div class="ftr-logo">
+              <img src="./lib/logo.png" alt="NOVASPORT logo" class="lgo" />
+              <h2>NOVASPORT</h2>
             </div>
-            <div
-              class="contct-adrs"
-              data-aos="fade-up"
-              data-aos-duration="1000"
-              data-aos-delay="600"
-              >
-              <div
-                class="icn-wrap"
-                >
-                <box-icon
-                  name="envelope"
-                  type="solid"
-                  class="cntct-icn"
-                ></box-icon>
-              </div>
-              <div class="">
-                <p class="h1">Email</p>
-                <p class="tx">novasupport@novasports.com</p>
-              </div>
+            <p>
+              Premium basketball development for players who want structure,
+              intensity, and a better competitive edge.
+            </p>
+            <div class="ftr-social-wrap">
+              <a class="scl-icn" href="#" aria-label="Email"><box-icon name="envelope" type="solid"></box-icon></a>
+              <a class="scl-icn" href="#" aria-label="Website"><box-icon name="globe"></box-icon></a>
+              <a class="scl-icn" href="#" aria-label="Phone"><box-icon name="phone" type="solid"></box-icon></a>
+              <a class="scl-icn" href="#top" aria-label="Home"><box-icon name="home" type="solid"></box-icon></a>
             </div>
           </div>
 
-          <div
-            class="ipt-adrs"  
-            data-aos="fade-up"
-            data-aos-duration="1000"
-            data-aos-delay="800"
-            >
-            <input
-              type="email"
-              placeholder="Email Address"
-              class=""
-            />
-            <a href="##">
-              <button class="sbmt-btn">
-                Submit
-              </button>
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-    <footer
-      class="ftr-aos"
-      data-aos="fade-up"
-      data-aos-duration="1000"
-      data-aos-delay="400"
-      >
-      <div class="ftr-container">
-        <div class="ftr-wrapper">
-          <div class="ftr-desc">
-            <!-- Branding and Description -->
-            <div class="ftr-brnd">
-              <!-- Logo -->
-              <div class="ftr-logo">
-                <img
-                  src="./lib/logo.png"
-                  alt="logo"
-                  class="lgo"
-                />
-                <h1 class="ftr-h1">
-                  NOVASPORTS
-                </h1>
-              </div>
-              <!-- Description -->
-              <p class="ftr-p">
-                Level up your game today with expert training and cutting-edge technology.
-              </p>
-              <!-- Social Media & Contact -->
-              <div class="ftr-social-wrap">
-                <div class="scl-icn">
-                  <a href="http://www.gmail.com" target="_blank" rel="noopener noreferrer">
-                    <box-icon name='envelope' type='solid' class="env"></box-icon>
-                  </a>
-                </div>
-                <div class="scl-icn">
-                  <a href="http://www.google.com" target="_blank" rel="noopener noreferrer">
-                    <box-icon name='globe' class="glb"></box-icon>
-                  </a>
-                </div>
-                <div class="scl-icn">
-                  <a href="##">
-                    <box-icon name='phone' type='solid' class="phn"></box-icon>
-                  </a>
-                </div>
-                <div class="scl-icn">
-                  <a href="./index.html">
-                    <box-icon name='home' type='solid' class="hme"></box-icon>
-                  </a>
-                </div>
-                
-              </div>
-            </div>
-            <!-- Product Section -->
+          <div class="footer-links">
             <div class="pdct-wrapper">
-              <h3 class="pdct-hd">Products</h3>
-              <ul class="pdct-lst">
-                <li>
-                  <a
-                    href="#"
-                    class=""
-                    >Powerfull Reports</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    class=""
-                    >Blockchain</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    class=""
-                    >Auto-Backup</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    class=""
-                    >Data Science</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    class=""
-                    >Auto-Scaling Up</a
-                  >
-                </li>
-              </ul>
-            </div> 
-            <!-- Resources Section -->
+              <h3 class="pdct-hd">Programs</h3>
+              <a href="#programs">Skill Sessions</a>
+              <a href="#programs">Performance Blocks</a>
+              <a href="#programs">Community Runs</a>
+            </div>
             <div class="pdct-wrapper">
               <h3 class="pdct-hd">Resources</h3>
-              <ul class="pdct-lst">
-                <li>
-                  <a
-                    href="#"
-                    class=""
-                    >Support 24/7</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    class=""
-                    >Help Center</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    class=""
-                    >How-to Instructions</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    class=""
-                    >Blog & Tips</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    class=""
-                    >About Us</a
-                  >
-                </li>
-              </ul>
+              <a href="#coaches">Coaches</a>
+              <a href="#membership">Membership</a>
+              <a href="#contact">Contact</a>
             </div>
-
-            <!-- Company Section -->
             <div class="pdct-wrapper">
               <h3 class="pdct-hd">Company</h3>
-              <ul class="pdct-lst">
-                <li>
-                  <a
-                    href="#"
-                    class=""
-                    >Privacy and Policy</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    class=""
-                    >Terms and Conditions</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    class=""
-                    >Investor Relations</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    class=""
-                    >Join With Us</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    class=""
-                    >Our Statistics</a
-                  >
-                </li>
-              </ul>
+              <a href="#top">Home</a>
+              <a href="#membership">Pricing</a>
+              <a href="#contact">Join Us</a>
             </div>
           </div>
-          <!-- Copyright -->
-          <div class="ftr-rsv">
-            <p class="ftr-rsvp">
-              All Rights Reserved • Copyright Novasports by SimiDaniels 2025
-            </p>
-          </div>
+        </div>
+
+        <div class="ftr-rsv">
+          <p class="ftr-rsvp">All Rights Reserved. Copyright NOVASPORT 2026.</p>
         </div>
       </div>
     </footer>
-    <script src="/public/js/script.js"></script>
-    <!-- Box Icon -->
+
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
-    <!-- AOS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="./src/script/main.js"></script>
     <script>
-      AOS.init();
+      AOS.init({
+        once: true,
+        duration: 850,
+      });
     </script>
   </body>
 </html>

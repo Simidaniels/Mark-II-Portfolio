@@ -1,3 +1,211 @@
-@media (max-width: 580px) {
-    
+@media (max-width: 1100px) {
+  .hero .content,
+  .bike-showcase,
+  .bike-showcase-light,
+  .story-shell,
+  footer .footer-shell {
+    grid-template-columns: 1fr;
+  }
+
+  .feature-grid,
+  .compact .mini-specs {
+    grid-template-columns: 1fr;
+  }
+
+  .bike-showcase-light .bike-image {
+    order: 2;
+  }
+
+  .bike-showcase-light .bike-copy {
+    order: 1;
+  }
+
+  .hero-copy h1,
+  .section-heading h2,
+  .story-copy h2,
+  .cta-shell h2,
+  .subsidy-shell h2 {
+    max-width: none;
+  }
+
+  .footer-links {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 760px) {
+  .container {
+    width: min(100% - 32px, 1220px);
+  }
+
+  header {
+    padding: 0.95rem 0;
+  }
+
+  header nav,
+  .extra-nav {
+    display: none;
+  }
+
+  .btn-menu {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    border: 1px solid var(--line);
+    background: rgba(255, 255, 255, 0.03);
+  }
+
+  .btn-menu .icon,
+  .close-mobile-nav .icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    fill: var(--text);
+  }
+
+  .mobile-nav {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    padding: 1.5rem;
+    background: rgba(6, 16, 24, 0.97);
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    z-index: 40;
+  }
+
+  .mobile-nav.active {
+    transform: translateX(0);
+  }
+
+  .close-mobile-nav {
+    position: absolute;
+    top: 1.25rem;
+    right: 1.25rem;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    border: 1px solid var(--line);
+    background: rgba(255, 255, 255, 0.03);
+  }
+
+  .mobile-nav .nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.7rem;
+  }
+
+  .mobile-nav .nav a {
+    font: 700 1.7rem var(--orbitron);
+  }
+
+  .mobile-nav .mobile-cta {
+    margin-top: 0.4rem;
+    width: 100%;
+  }
+
+  .hero,
+  .feature-strip,
+  .models,
+  .story,
+  .pre-order,
+  .subsidies {
+    padding: 4rem 0;
+  }
+
+  .hero-copy h1 {
+    font-size: clamp(2.4rem, 12vw, 4rem);
+  }
+
+  .hero-copy .intro,
+  .feature-card p,
+  .model-text,
+  .story-copy p,
+  .cta-shell p,
+  .subsidy-shell p {
+    font-size: 0.98rem;
+  }
+
+  .hero-actions,
+  .hero-stats,
+  .action-row,
+  .price-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+  .visual-card,
+  .bike-showcase,
+  .story-shell,
+  .cta-shell,
+  .subsidy-shell,
+  footer .footer-shell {
+    padding: 1rem;
+  }
+
+  .visual-card img {
+    aspect-ratio: 1 / 0.9;
+  }
+
+  .bike-image,
+  .story-image {
+    min-height: 300px;
+  }
+
+  .footer-links {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    width: min(100% - 24px, 1220px);
+  }
+
+  .logo {
+    font-size: 1.2rem;
+  }
+
+  .hero-copy h1 {
+    font-size: 2.15rem;
+  }
+
+  .section-heading h2,
+  .story-copy h2,
+  .cta-shell h2,
+  .subsidy-shell h2 {
+    font-size: 1.75rem;
+  }
+
+  .feature-card h2 {
+    font-size: 1.1rem;
+  }
+
+  .bike-copy h3 {
+    font-size: 1.75rem;
+  }
+
+  .stat,
+  .feature-card,
+  .compact .mini-specs div {
+    padding: 0.95rem;
+  }
+
+  .to-top {
+    right: 1rem;
+    bottom: 1rem;
+  }
+
+  .mobile-nav .nav a {
+    font-size: 1.45rem;
+  }
 }

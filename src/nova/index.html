@@ -1,415 +1,349 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Google Font 
+    <meta
+      name="description"
+      content="CryptoNova rebranded as a sleek crypto platform for trading, staking, and cross-chain finance."
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />-->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet" />
-    <!-- AOS -->
-    <link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet" /> 
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet" />
     <link rel="stylesheet" href="./lib/styles/style.css" />
-    <link rel="website icon" type="png" href="./lib/images/logo.png">
-        <!-- <link rel="stylesheet" href="./lib/styles/aos.css" /> -->
-    <title>Crypto Web</title>
-</head>
-<body>
-    <header data-aos="fade-down" data-aos-duration="1000" data-aos-delay="200">
-        <div class="container">
-            <div class="content">
-                <div data-aos="fade-down-right" data-aos-duration="1000" data-aos-delay="300" class="logo">
-                    <img src="./lib/images/logo.png" alt="logo" />
-                    <a href="">CRYPTONOVA</a>
-                </div>
-                 <nav> 
-                    <a href="#">Feature</a>
-                    <a href="#">Roadmanp</a>
-                    <a href="#">Ecosystem</a>
-                    <a href="#">Network</a>
-                    <a href="#">Resource</a>
-                </nav>
-                <div class="extra-nav"> 
-                    <button data-aos="fade-down-left" data-aos-duration="1000" data-aos-delay="400" class="get-app">
-                        GET APP
-                    </button>
-                    <button class="btn-menu" id="btn-menu">
-                        <box-icon name="menu-alt-right" class="icon"></box-icon>
-                    </button>
-                </div>
-                <div class="mobile-nav"> 
-                    <button class="close-mobile-nav">
-                        <box-icon name="x" class="icon"></box-icon>
-                    </button>
-                    <div class="nav">
-                        <a href="#">Feature</a>
-                        <a href="#">Roadmanp</a>
-                        <a href="#">Ecosystem</a>
-                        <a href="#">Network</a>
-                        <a href="#">Resource</a>
-                        <button>Get App</button>
-                    </div>
-                </div>
+    <link rel="website icon" type="png" href="./lib/images/logo.png" />
+    <title>CryptoNova</title>
+  </head>
+  <body>
+    <div class="page-orb orb-1"></div>
+    <div class="page-orb orb-2"></div>
+
+    <header data-aos="fade-down" data-aos-delay="100">
+      <div class="container">
+        <div class="content">
+          <a class="logo" href="#top">
+            <img src="./lib/images/logo.png" alt="CryptoNova logo" />
+            <span>CRYPTONOVA</span>
+          </a>
+
+          <nav>
+            <a href="#features">Features</a>
+            <a href="#ecosystem">Ecosystem</a>
+            <a href="#metrics">Metrics</a>
+            <a href="#news">News</a>
+          </nav>
+
+          <div class="extra-nav">
+            <a class="link-muted" href="#join">Community</a>
+            <a class="btn btn-primary" href="#join">Get App</a>
+          </div>
+
+          <button class="btn-menu" id="btn-menu" aria-label="Open menu">
+            <box-icon name="menu-alt-right" class="icon"></box-icon>
+          </button>
+
+          <div class="mobile-nav" aria-hidden="true">
+            <button class="close-mobile-nav" aria-label="Close menu">
+              <box-icon name="x" class="icon"></box-icon>
+            </button>
+            <div class="nav">
+              <a href="#features">Features</a>
+              <a href="#ecosystem">Ecosystem</a>
+              <a href="#metrics">Metrics</a>
+              <a href="#news">News</a>
+              <a class="btn btn-primary mobile-cta" href="#join">Get App</a>
             </div>
+          </div>
         </div>
+      </div>
     </header>
-    <a href="#" class="to-top"><box-icon name="chevron-up"></box-icon></a>
-    <section class="hero">
+
+    <a href="#top" class="to-top" aria-label="Back to top">
+      <box-icon name="chevron-up"></box-icon>
+    </a>
+
+    <main id="top">
+      <section class="hero">
         <div class="container">
-            <div class="content">
-                <div class="background-line">
-                    <div class="line-1" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="200"></div>
-                    <div class="line-2" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400"></div>
-                    <div class="line-3" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="600"></div>
-                    <div class="line-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400"></div>
-                    <div class="line-5" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200"></div>
+          <div class="content">
+            <div class="hero-copy">
+              <p class="eyebrow" data-aos="fade-right">Secure. Fast. Cross-chain.</p>
+              <h1 data-aos="fade-up" data-aos-duration="900">
+                Trade, earn, and move through crypto with more confidence.
+              </h1>
+              <p class="intro" data-aos="fade-up" data-aos-delay="120">
+                CryptoNova is a modern crypto platform designed for simple
+                onboarding, fast execution, portfolio growth, and a smoother
+                path into decentralized finance.
+              </p>
+
+              <form class="input" data-aos="fade-up" data-aos-delay="240">
+                <input type="email" placeholder="Enter your email" />
+                <button type="submit">Start Free</button>
+              </form>
+
+              <div class="hero-stats" data-aos="fade-up" data-aos-delay="320">
+                <div class="stat-card">
+                  <strong>$112M+</strong>
+                  <span>Total value supported</span>
                 </div>
-                <div class="main">
-                    <h2 data-aos="fade-down" data-aos-duration="1000" data-aos-delay="400">
-                        SECURE, FAST, INTUITIVE
-                    </h2>
-                    <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
-                        Step Into the <br /><span>World of Crypto</span>
-                    </h1>
-                    <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
-                        Sign up, deposit, and enjoy a welcome bonus up to $100 in CNX.
-                    </p>
-                    <div class="input" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">
-                        <input type="email" placeholder="Enter your email..." />
-                        <button>Sign Up</button>
-                    </div>
+                <div class="stat-card">
+                  <strong>120+</strong>
+                  <span>Assets tracked</span>
                 </div>
-<!-- UNDERSTOOD -->
-                <div class="light"></div>      
+                <div class="stat-card">
+                  <strong>24/7</strong>
+                  <span>Network access</span>
+                </div>
+              </div>
             </div>
+
+            <div class="hero-panel" data-aos="zoom-in" data-aos-duration="1000">
+              <div class="panel-lines">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+              <div class="panel-card">
+                <div class="panel-top">
+                  <p>Nova Portfolio</p>
+                  <span>Live</span>
+                </div>
+                <h2>+18.4%</h2>
+                <p class="panel-text">7-day portfolio performance across staking, swap, and yield products.</p>
+                <div class="panel-chart"></div>
+              </div>
+            </div>
+          </div>
         </div>
-    </section>
-    <section class="starter">
+      </section>
+
+      <section class="starter" id="features">
         <div class="container">
-            <div class="content">
-                <div class="title" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="200">
-                    <h1>Transform Idle Hardware Into Crypto Income</h1>
-                    <div class="light-1"></div>
-                    <div class="light-2"></div>
-                </div>
-                <div class="row">
-                    <div class="box" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="400">
-                        <div class="box-light"></div>
-                        <h2><span>Start Earning</span> with Blockchain</h2>
-                        <p>
-                            Combine the power of your hardware with our global blockchain
-                            network. Earn revenue from your idle GPUs while supporting
-                            technological innovation.
-                        </p>
-                        <button><span>Get Started</span></button>
-                    </div>
-                    <div class="light-area" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="600">
-                        <div class="light-1"></div>
-                        <div class="light-2"></div>
-                    </div>
-                    <div class="box" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="400">
-                        <div class="box-light"></div>
-                        <h2><span>Turn GPUs</span> Into Passive Crypto Rewards</h2>
-                        <p>
-                            Transform your GPUs into crypto-generating machines. Support
-                            global crypto projects and enjoy optimal returns from your
-                            devices.
-                        </p>
-                        <button><span>Get Started</span></button>
-                    </div>
-                </div>
-            </div>
+          <div class="section-heading" data-aos="fade-up">
+            <span>Features</span>
+            <h2>Core tools that make CryptoNova feel simpler, safer, and more useful.</h2>
+          </div>
+
+          <div class="feature-row">
+            <article class="feature-box" data-aos="fade-right">
+              <h3><span>Smart onboarding</span> for new and active users</h3>
+              <p>
+                Create an account quickly, fund your wallet, and move into
+                buying, holding, and earning without a confusing setup flow.
+              </p>
+              <a class="btn btn-secondary" href="#join">Create Account</a>
+            </article>
+
+            <article class="feature-box center-box" data-aos="zoom-in">
+              <img src="./lib/images/globe.png" alt="CryptoNova global network" />
+            </article>
+
+            <article class="feature-box" data-aos="fade-left">
+              <h3><span>Passive earning</span> through staking and yield routes</h3>
+              <p>
+                Put idle assets to work with curated earning paths built for
+                accessibility, transparency, and better capital movement.
+              </p>
+              <a class="btn btn-secondary" href="#ecosystem">See Products</a>
+            </article>
+          </div>
         </div>
-    </section>
-    <section class="grid">
+      </section>
+
+      <section class="grid" id="ecosystem">
         <div class="container">
-            <div class="content">
-                <div class="title" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="200">
-                    <h1>
-                        Your Gateway to a Secure Crypto Solutions
-                    </h1>
-                    <div class="light-1"></div>
-                    <div class="light-2"></div>
-                </div>
-                <div class="grid-container">
-                    <div class="box box-1" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="200">
-                        <h1><span>Privacy-First</span> Infrastructure</h1>
-                        <p>
-                            Ensure the highest level of security for your blockchain
-                            operations with our privacy-focused, decentralized
-                            infrastructure. Protect sensitive data and transactions with
-                            robust encryption, giving you peace of mind in a rapidly
-                            evolving crypto landscape.
-                        </p>
-                        <div class="light"></div>
-                    </div>
-                    <div class="box box-2" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="400">
-                        <h1><span>Global GPU</span> Connectivity</h1>
-                        <p>
-                            Tap into a global network of GPUs to power your blockchain
-                            projects effortlessly. Our decentralized platform ensures
-                            seamless acces   s to high-performance compute resources, enabling
-                            you to scale your operations anytime, anywhere.
-                        </p>
-                        <div class="light"></div>
-                        <!-- <img src="./lib/images/globe.png" alt="star" class="globe" /> -->
-                    </div>
-                    <div class="box box-3" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="600">
-                        <h1><span>Adaptive</span> Compute Resources</h1>
-                        <p>
-                            Efficiently scale resources to suit your crypto needs with
-                            on-demand solutions. Adaptive Compute Resources (ACR) emerge as a transformative approach to optimize performance while reducing energy
-                            consumption and operational costs.
-                        </p>
-                        <div class="light"></div>
-                    </div>
-                    <div class="box box-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
-                        <h1><span>Environmentally</span> Friendly Mining</h1>
-                        <p>
-                            Contribute to a greener future with GPU mining solutions
-                            designed for energy efficiency. Reduce your environmental
-                            footprint without compromising on performance, making
-                            sustainability a core part of your blockchain operations.
-                        </p>
-                        <div class="light"></div>
-                    </div>
-                    <div class="box box-5" data-aos="fade-uo-left" data-aos-duration="1000" data-aos-delay="600">
-                        <h1><span>Purpose-Built</span> for Blockchain</h1>
-                        <p>
-                            Leverage GPUs optimized for blockchain and crypto advancements.
-                            Designed for peak efficiency, our infrastructure supports
-                            everything from mining to decentralized applications, ensuring
-                            you stay ahead in the crypto revolution.
-                        </p>
-                        <div class="light"></div>
-                    </div>
-                    <div class="box box-6" data-aos="fade-up-right" data-aos-duration="1000" data-aos-delay="200">
-                        <p>
-                        a cryptocurrency token built on Ethereum, Nova Wallet, a self-custodial wallet for the Polkadot ecosystem, or NOVA:
-                        Crypto Decoded, a PBS documentary exploring blockchain technology.
-                        </p>
-                        <button><span>More About CryptoNova</span></button>
-                    </div>
-                </div>
-            </div>
+          <div class="section-heading center" data-aos="fade-up">
+            <span>Ecosystem</span>
+            <h2>Everything you need to explore a more connected crypto workflow.</h2>
+          </div>
+
+          <div class="grid-container">
+            <article class="box" data-aos="fade-up" data-aos-delay="100">
+              <h3><span>Privacy-first</span> wallet architecture</h3>
+              <p>Secure account design, recovery layers, and protection that feel modern instead of intimidating.</p>
+            </article>
+            <article class="box" data-aos="fade-up" data-aos-delay="200">
+              <h3><span>Cross-chain</span> access without heavy friction</h3>
+              <p>Swap, bridge, and manage assets across networks from one cleaner dashboard experience.</p>
+            </article>
+            <article class="box" data-aos="fade-up" data-aos-delay="300">
+              <h3><span>Adaptive</span> portfolio insights</h3>
+              <p>Track performance, balances, and opportunities in a layout built for fast decision-making.</p>
+            </article>
+            <article class="box" data-aos="fade-up" data-aos-delay="400">
+              <h3><span>Yield</span> opportunities with clearer visibility</h3>
+              <p>See staking routes, estimated returns, and asset behavior with less noise and better context.</p>
+            </article>
+            <article class="box" data-aos="fade-up" data-aos-delay="500">
+              <h3><span>DeFi</span> tools for practical growth</h3>
+              <p>Use token swaps, liquidity actions, and asset movement tools that support real portfolio use.</p>
+            </article>
+            <article class="box box-cta" data-aos="fade-up" data-aos-delay="600">
+              <p>CryptoNova brings together onboarding, trading, staking, and ecosystem access in one polished interface.</p>
+              <a class="btn btn-primary" href="#join">More About CryptoNova</a>
+            </article>
+          </div>
         </div>
-    </section>
-    <section class="solution">
+      </section>
+
+      <section class="solution">
         <div class="container">
-            <div class="content">
-                <div class="title">
-                    <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
-                        Powerful Crypto Solutions Built for Growth
-                    </h1>
-                    <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
-                        Take your blockchain ambitions to the next level. Our
-                        decentralized infrastructure delivers unparalleled performance,
-                        adaptability, and environmental responsibility to meet the
-                        evolving needs of the crypto ecosystem.
-                    </p>
-                </div>
-                <div class="row" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
-                    <div class="box">
-                        <div class="text">
-                            <h2>Innovative DeFi and NFT Tools</h2>
-                            <p>
-                                Unlock the full potential of DeFi and NFTs with cutting-edge
-                                technology. Our platform ensures fast, secure, and efficient
-                                operations tailored to modern crypto needs.
-                            </p>
-                        </div>
-                        <button><a href="">Explore Solution</a></button>
-                    </div>
-                    <div class="box">
-                        <div class="text">
-                            <h2>Engineered for Practical Blockchain Use</h2>
-                            <p>
-                                Expand your blockchain's reach with real-world applications.
-                                Our platform bridges the gap between innovation and everyday
-                                use, making crypto more accessible.
-                            </p>
-                        </div>
-                        <button><a href="">Get Insights</a></button>
-                    </div>
-                    <div class="box">
-                        <div class="text">
-                            <h2>Unified Blockchain Connectivity</h2>
-                            <p>
-                                Achieve seamless interoperability with our cross-chain
-                                solutions. Connect networks effortlessly and unlock the
-                                potential of a unified blockchain ecosystem.
-                            </p>
-                        </div>
-                        <button><a href="">Start Now</a></button>
-                    </div>
-                </div>
+          <div class="content">
+            <div class="section-heading center" data-aos="fade-up">
+              <span>Solutions</span>
+              <h2>Products designed for everyday crypto participation and long-term scale.</h2>
             </div>
+            <div class="solution-row">
+              <article class="solution-box" data-aos="fade-up" data-aos-delay="100">
+                <h3>Trading and portfolio flow</h3>
+                <p>Buy, monitor, and reposition assets through a responsive dashboard built around clarity.</p>
+                <a class="btn btn-secondary" href="#join">Explore Trading</a>
+              </article>
+              <article class="solution-box" data-aos="fade-up" data-aos-delay="200">
+                <h3>DeFi and staking products</h3>
+                <p>Move beyond holding with earning tools that support more active capital strategies.</p>
+                <a class="btn btn-secondary" href="#metrics">View Metrics</a>
+              </article>
+              <article class="solution-box" data-aos="fade-up" data-aos-delay="300">
+                <h3>Connected network access</h3>
+                <p>Operate across chains and keep a more unified view of balances, routes, and opportunities.</p>
+                <a class="btn btn-secondary" href="#ecosystem">See Ecosystem</a>
+              </article>
+            </div>
+          </div>
         </div>
-    </section>
-    <section class="network-highlight">
+      </section>
+
+      <section class="network-highlight" id="metrics">
         <div class="container">
-            <div class="content">
-                <div class="title" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="200">
-                    <h1>Key Network Highlights</h1>
-                    <div class="light-1"></div>
-                    <div class="light-2"></div>
-                </div>
-                <div class="row">
-                    <div class="box" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
-                        <div class="box-title">
-                            <div class="name">
-                                <box-icon type="solid" name="coin-stack" class="icon"></box-icon>
-                                <p>Community Strength</p>
-                            </div>
-                            <!-- <p class="percent">+5.53%</p> -->
-                        </div>
-                        <h2>20,150</h2>
-                    </div>
-                    <div class="box" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
-                        <div class="box-title">
-                            <div class="name">
-                                <box-icon type="solid" name="coin-stack" class="icon"></box-icon>
-                                <p>Locked Capital</p>
-                            </div>
-                        </div>
-                        <h2>$112,890,500</h2>
-                    </div>
-                    <div class="box" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">
-                        <div class="box-title">
-                            <div class="name">
-                                <box-icon type="solid" name="coin-stack" class="icon"></box-icon>
-                                <p>Network Marketcap</p>
-                            </div>
-                        </div>
-                        <h2>$320,450,300</h2>
-                    </div>
-                    <div class="box" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="800">
-                        <div class="box-title">
-                            <div class="name">
-                                <box-icon type="solid" name="coin-stack" class="icon"></box-icon>
-                                <p>CryptoNova Price</p>
-                            </div>
-                            <!-- <p class="percent">+5.85%</p> -->
-                        </div>
-                        <h2>$3.60</h2>
-                    </div>
-                </div>
-            </div>
+          <div class="section-heading center" data-aos="fade-up">
+            <span>Metrics</span>
+            <h2>Network highlights that show traction, liquidity, and activity.</h2>
+          </div>
+
+          <div class="metric-row">
+            <article class="metric-box" data-aos="fade-up" data-aos-delay="100">
+              <p>Community Strength</p>
+              <h3>20,150</h3>
+            </article>
+            <article class="metric-box" data-aos="fade-up" data-aos-delay="200">
+              <p>Locked Capital</p>
+              <h3>$112.8M</h3>
+            </article>
+            <article class="metric-box" data-aos="fade-up" data-aos-delay="300">
+              <p>Network Market Cap</p>
+              <h3>$320.4M</h3>
+            </article>
+            <article class="metric-box" data-aos="fade-up" data-aos-delay="400">
+              <p>Nova Token Price</p>
+              <h3>$3.60</h3>
+            </article>
+          </div>
         </div>
-    </section>
-    <section class="news">
+      </section>
+
+      <section class="news" id="news">
         <div class="container">
-            <div class="content">
-                <div class="title" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="200">
-                    <h1>Your <span>Source</span> for <span>CryptoNova News</span></h1>
-                </div>
-                <div class="row">
-                    <div class="card" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="200">
-                        <div class="image">
-                        </div>
-                        <h1>Countdown to Mainnet: <span>Final Phase Underway</span></h1>
-                        <p>CryptoNova Test Grid reaches its third and final stage, setting the foundation for a seamless
-                            Mainnet transition.</p>
-                    </div>
-                    <div class="card card-2" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
-                        <div class="image">
-                        </div>
-                        <h1>AI Art Innovation: <span>Redefining Creativity</span></h1>
-                        <p>CryptoNova and Nova.AI collaborate to deliver AI-powered solutions, unlocking next-level
-                            creativity for artists worldwide.</p>
-                    </div>
-                    <div class="card" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="200">
-                        <div class="image">
-                        </div>
-                        <h1>AI Performance Unveiled: <span>LLM Benchmarks</span></h1>
-                        <p>CryptoNova benchmarking highlights GPU efficiency, optimizing performance for
-                            enterprise-grade AI models.</p>
-                    </div>
-                </div>
-            </div>
+          <div class="section-heading center" data-aos="fade-up">
+            <span>News</span>
+            <h2>Updates from the CryptoNova network, products, and ecosystem expansion.</h2>
+          </div>
+          <div class="news-row">
+            <article class="card" data-aos="fade-up" data-aos-delay="100">
+              <div class="image"></div>
+              <h3>Mainnet readiness enters final rollout</h3>
+              <p>CryptoNova is moving into the final release phase with infrastructure and wallet tooling aligned.</p>
+            </article>
+            <article class="card" data-aos="fade-up" data-aos-delay="200">
+              <div class="image"></div>
+              <h3>Creative tooling expands with Nova AI integrations</h3>
+              <p>New creator workflows are opening across AI-assisted content and token-powered community tools.</p>
+            </article>
+            <article class="card" data-aos="fade-up" data-aos-delay="300">
+              <div class="image"></div>
+              <h3>Performance benchmarks improve portfolio execution</h3>
+              <p>Faster data handling and smarter routing continue to improve user experience across the platform.</p>
+            </article>
+          </div>
         </div>
-    </section>
-    <section class="join">
+      </section>
+
+      <section class="join" id="join">
         <div class="container">
-            <div class="content">
-                <div class="wrapper" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
-                    <div class="light-1"></div>
-                    <div class="light-2"></div>
-                    <div class="wrapper-content">
-                        <div class="logo">
-                            <img src="./lib/images/logo.png" alt="logo">
-                        </div>
-                        <div class="text">
-                            <h1>Powering the Next Wave of Blockchain Innovation</h1>
-                            <p>Leverage cutting-edge crypto strategies and solutions trusted by leading businesses.
-                                Together, we'll redefine the future of decentralized finance.</p>
-                            <button><span>Get Started Now</span></button>
-                        </div>
-                    </div>
-                </div>
+          <div class="join-shell" data-aos="fade-up">
+            <div class="join-logo">
+              <img src="./lib/images/logo.png" alt="CryptoNova logo" />
             </div>
-        </div>
-    </section>
-    <footer data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
-        <div class="container">
-            <div class="content">
-                <div class="col-1">
-                    <div class="logo">
-                        <img src="./lib/images/logo.png" alt="logo">
-                        <a href="">CryptoNova</a>
-                    </div>
-                    <p>&copy; CryptoNova Network 2025 The CryptoNova Network Author Documentation Distributed under CC
-                        BY 4.0</p>
-                    <div class="social">
-                        <a href="##" class="fb"><box-icon name='facebook-circle' type='logo'></box-icon></a>
-                        <a href="##" class="twt"><box-icon name="twitter" type="logo"></box-icon></a>
-                        <a href="##" class="ig"><box-icon name="instagram" type="logo"></box-icon></a>
-                        <a href="##" class="lik"><box-icon name="linkedin" type="logo"></box-icon></a>
-                    </div>
-                </div>
-                <div class="col-right">
-                    <div class="col-2">
-                        <p>Product</p>
-                        <a href="##">Compute</a>
-                        <a href="##">Marketplace</a>
-                        <a href="##">Explorer</a>
-                    </div>
-                    <div class="col-3">
-                        <p>Network</p>
-                        <a href="##">About</a>
-                        <a href="##">Nova Token</a>
-                        <a href="##">Staking</a>
-                    </div>
-                    <div class="col-4">
-                        <p>Resources</p>
-                        <a href="https://google.com">Docs</a>
-                        <a href="##">Brand Assets</a>
-                        <a href="##">Support</a>
-                    </div>
-                </div>
+            <div class="join-text">
+              <h2>Join the next wave of simple, connected crypto finance.</h2>
+              <p>
+                Start with a wallet, track your assets, unlock yield, and
+                explore cross-chain activity through a cleaner digital finance experience.
+              </p>
+              <a class="btn btn-primary" href="#">Get Started Now</a>
             </div>
+          </div>
         </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <div class="content">
+          <div class="col-1">
+            <div class="logo">
+              <img src="./lib/images/logo.png" alt="CryptoNova logo" />
+              <a href="#top">CryptoNova</a>
+            </div>
+            <p>
+              CryptoNova is a modern crypto platform for trading, staking, and
+              ecosystem access with a cleaner user experience.
+            </p>
+            <div class="social">
+              <a href="#" class="fb" aria-label="Facebook"><box-icon name="facebook-circle" type="logo"></box-icon></a>
+              <a href="#" class="twt" aria-label="Twitter"><box-icon name="twitter" type="logo"></box-icon></a>
+              <a href="#" class="ig" aria-label="Instagram"><box-icon name="instagram" type="logo"></box-icon></a>
+              <a href="#" class="lik" aria-label="LinkedIn"><box-icon name="linkedin" type="logo"></box-icon></a>
+            </div>
+          </div>
+          <div class="col-right">
+            <div class="col-2">
+              <p>Product</p>
+              <a href="#features">Wallet</a>
+              <a href="#ecosystem">Marketplace</a>
+              <a href="#metrics">Explorer</a>
+            </div>
+            <div class="col-3">
+              <p>Network</p>
+              <a href="#ecosystem">Ecosystem</a>
+              <a href="#metrics">Nova Token</a>
+              <a href="#join">Staking</a>
+            </div>
+            <div class="col-4">
+              <p>Resources</p>
+              <a href="#news">News</a>
+              <a href="#join">Brand Assets</a>
+              <a href="#join">Support</a>
+            </div>
+          </div>
+        </div>
+      </div>
     </footer>
-    <!-- // So basically i didn't use this, it's so confusing... check trash project ofr used... -->
-    <!-- <script src="script.js"></script> -->
-    <!-- AOS -->
-    <!-- <script src="https://unpkg.com/aos@next/dist/aos.css"></script> -->
-    <!-- Box Icon -->
-    <!-- <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script> -->
-<!-- 
-    <script>
-        AOS.init();
-    </script> -->
+
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
-        AOS.init({
-            duration: 1000,
-            once: true,
-        });
+      AOS.init({
+        duration: 900,
+        once: true,
+      });
     </script>
     <script src="./lib/script/main.js"></script>
     <script src="https://unpkg.com/boxicons@2.0.9/dist/boxicons.js"></script>
-</body>
+  </body>
 </html>
