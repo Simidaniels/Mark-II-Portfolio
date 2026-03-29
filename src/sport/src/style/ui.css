@@ -53,18 +53,25 @@
 
   .mobile-nav {
     position: fixed;
-    inset: 0;
+    top: 0;
+    right: 0;
+    left: auto;
     display: flex;
-    justify-content: center;
-    padding: 1.5rem;
-    background: rgba(9, 9, 9, 0.97);
-    transform: translateX(100%);
+    justify-content: flex-start;
+    width: min(82vw, 360px);
+    max-width: 100%;
+    height: 100dvh;
+    padding: 5.5rem 1.5rem 1.5rem;
+    background: rgba(9, 9, 9, 0.98);
+    box-shadow: -24px 0 60px rgba(0, 0, 0, 0.35);
+    transform: translate3d(100%, 0, 0);
     transition: transform 0.3s ease;
     z-index: 40;
+    overflow-y: auto;
   }
 
   .mobile-nav.active {
-    transform: translateX(0);
+    transform: translate3d(0, 0, 0);
   }
 
   .close-mobile-nav {
@@ -81,8 +88,7 @@
   .mobile-nav .nav {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    align-items: stretch;
     gap: 1.8rem;
     width: min(100%, 320px);
   }
@@ -90,8 +96,9 @@
   .mobile-nav .nav a {
     display: flex;
     justify-content: center;
+    align-items: center;
     width: 100%;
-    font: 700 1.7rem "Sora", sans-serif;
+    font: 700 1.3rem "Sora", sans-serif;
     text-align: center;
   }
 
