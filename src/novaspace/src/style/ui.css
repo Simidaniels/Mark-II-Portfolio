@@ -15,7 +15,8 @@
     display: grid;
   }
 
-  .table-row {
+  .table-row,
+  .chart-grid {
     grid-template-columns: 1fr 1fr;
   }
 }
@@ -25,17 +26,18 @@
   header nav, .extra-nav { display: none; }
   .btn-menu { display: inline-flex; align-items: center; justify-content: center; width: 3rem; height: 3rem; border-radius: 50%; border: 1px solid var(--line); background: rgba(255,255,255,0.03); }
   .btn-menu .icon, .close-mobile-nav .icon { width: 1.5rem; height: 1.5rem; fill: var(--text); }
-  .mobile-nav { position: fixed; top: 0; right: 0; left: auto; display: flex; justify-content: flex-start; width: min(76vw, 320px); max-width: 100%; height: 100dvh; padding: 5.5rem 1.5rem 1.5rem; background: rgba(4,6,18,0.98); box-shadow: -24px 0 60px rgba(0,0,0,0.35); transform: translate3d(100%,0,0); transition: transform 0.3s ease; overflow-y: auto; visibility: hidden; pointer-events: none; z-index: 40; }
+  .mobile-nav { position: fixed; top: 0; right: 0; left: auto; display: flex; justify-content: flex-start; width: min(76vw, 320px); max-width: 100%; height: 100dvh; padding: 5.5rem 1.5rem 1.5rem; background: rgba(4,8,20,0.98); box-shadow: -24px 0 60px rgba(0,0,0,0.35); transform: translate3d(100%,0,0); transition: transform 0.3s ease; overflow-y: auto; visibility: hidden; pointer-events: none; z-index: 40; }
   .mobile-nav.active { transform: translate3d(0,0,0); visibility: visible; pointer-events: auto; }
   .close-mobile-nav { position: absolute; top: 1.25rem; right: 1.25rem; width: 3rem; height: 3rem; border-radius: 50%; border: 1px solid var(--line); background: rgba(255,255,255,0.03); }
   .mobile-nav .nav { display: flex; flex-direction: column; align-items: stretch; gap: 1.25rem; width: min(100%, 320px); }
   .mobile-nav .nav a { display: flex; justify-content: center; align-items: center; width: 100%; text-align: center; font: 700 1.2rem "Space Grotesk", sans-serif; }
-  .hero, .atlas, .planets, .facts, .launch { padding: 4rem 0; overflow-x: clip; }
+  .hero, .products, .planets, .facts, .launch { padding: 4rem 0; overflow-x: clip; }
   .hero-copy h1 { font-size: clamp(2.4rem, 12vw, 4rem); }
   .hero-actions { flex-direction: column; align-items: stretch; }
   .btn { width: 100%; }
-  .planet-grid, .table-row { grid-template-columns: 1fr; }
-  .hero-visual { min-height: 420px; }
+  .planet-grid, .table-row, .chart-grid { grid-template-columns: 1fr; }
+  .hero-screen { min-height: 420px; }
+  .screen-top { align-items: flex-start; flex-direction: column; }
 }
 
 @media (max-width: 480px) {
