@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="NOVALEAP is a futuristic hypercar and performance vehicle concept with a client-facing lineup, comparison tools, and reservation flow."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Oxanium:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./src/style/main.css" />
+    <link rel="stylesheet" href="./src/style/ui.css" />
+    <title>NOVALEAP</title>
+  </head>
+  <body>
+    <div class="page-orb orb-1"></div>
+    <div class="page-orb orb-2"></div>
+    <header data-aos="fade-down" data-aos-delay="100">
+      <div class="container">
+        <div class="content">
+          <a class="logo" href="#top">NOVALEAP</a>
+          <nav>
+            <a href="#garage">Garage</a>
+            <a href="#compare">Compare</a>
+            <a href="#technology">Technology</a>
+            <a href="#reserve">Reserve</a>
+          </nav>
+          <div class="extra-nav">
+            <a class="link-muted" href="#garage">View Models</a>
+            <a class="btn btn-primary" href="#reserve">Book A Consultation</a>
+          </div>
+          <button class="btn-menu" id="btn-menu" aria-label="Open menu">
+            <box-icon name="menu-alt-right" class="icon"></box-icon>
+          </button>
+          <div class="mobile-nav" aria-hidden="true">
+            <button class="close-mobile-nav" aria-label="Close menu">
+              <box-icon name="x" class="icon"></box-icon>
+            </button>
+            <div class="nav">
+              <a href="#garage">Garage</a>
+              <a href="#compare">Compare</a>
+              <a href="#technology">Technology</a>
+              <a class="btn btn-primary mobile-cta" href="#reserve">Book A Consultation</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <a href="#top" class="to-top" aria-label="Back to top">
+      <box-icon name="chevron-up"></box-icon>
+    </a>
+    <main id="top">
+      <section class="hero">
+        <div class="container">
+          <div class="hero-shell">
+            <div class="hero-copy">
+              <p class="eyebrow" data-aos="fade-right">Client-side hypercar lineup</p>
+              <h1 data-aos="fade-up">Performance vehicles presented like a premium digital showroom.</h1>
+              <p class="intro" data-aos="fade-up" data-aos-delay="120">
+                NOVALEAP is built around what a client actually wants to see first:
+                car types, performance data, trim differences, and a cleaner path to
+                compare, configure, and reserve.
+              </p>
+              <div class="hero-actions" data-aos="fade-up" data-aos-delay="220">
+                <a class="btn btn-primary" href="#garage">Browse The Garage</a>
+                <a class="btn btn-secondary" href="#compare">Compare Models</a>
+              </div>
+            </div>
+            <div class="hero-display" data-aos="zoom-in" data-aos-duration="1000">
+              <div class="display-card">
+                <span>Flagship release</span>
+                <strong>NV-X Phantom</strong>
+                <p>Electric hyper GT with adaptive aero and launch telemetry.</p>
+              </div>
+              <div class="display-car"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="garage" id="garage">
+        <div class="container">
+          <div class="section-heading" data-aos="fade-up">
+            <span>Garage Lineup</span>
+            <h2>Different car classes with the info a buyer expects up front.</h2>
+          </div>
+          <div class="garage-list">
+            <article class="car-card" data-aos="fade-up" data-aos-delay="80">
+              <div class="car-media media-red"></div>
+              <div class="car-info">
+                <div class="car-head">
+                  <div>
+                    <span>Track Hypercar</span>
+                    <h3>NV-X Phantom</h3>
+                  </div>
+                  <strong>$420,000</strong>
+                </div>
+                <p>A dramatic all-electric hypercar built for circuit performance, active cooling, and maximum launch response.</p>
+                <div class="spec-row">
+                  <div><small>Power</small><strong>1,180 hp</strong></div>
+                  <div><small>0-60</small><strong>2.1s</strong></div>
+                  <div><small>Top Speed</small><strong>221 mph</strong></div>
+                  <div><small>Range</small><strong>405 mi</strong></div>
+                </div>
+              </div>
+            </article>
+
+            <article class="car-card" data-aos="fade-up" data-aos-delay="160">
+              <div class="car-media media-silver"></div>
+              <div class="car-info">
+                <div class="car-head">
+                  <div>
+                    <span>Grand Tourer</span>
+                    <h3>NV-R Spectra</h3>
+                  </div>
+                  <strong>$265,000</strong>
+                </div>
+                <p>A long-range performance coupe tuned for comfort, speed, and executive-grade digital cabin control.</p>
+                <div class="spec-row">
+                  <div><small>Power</small><strong>860 hp</strong></div>
+                  <div><small>0-60</small><strong>3.0s</strong></div>
+                  <div><small>Top Speed</small><strong>198 mph</strong></div>
+                  <div><small>Range</small><strong>510 mi</strong></div>
+                </div>
+              </div>
+            </article>
+
+            <article class="car-card" data-aos="fade-up" data-aos-delay="240">
+              <div class="car-media media-blue"></div>
+              <div class="car-info">
+                <div class="car-head">
+                  <div>
+                    <span>Urban Performance EV</span>
+                    <h3>NV-S Pulse</h3>
+                  </div>
+                  <strong>$148,000</strong>
+                </div>
+                <p>A compact sports EV with fast charging, smart route intelligence, and city-to-weekend versatility.</p>
+                <div class="spec-row">
+                  <div><small>Power</small><strong>640 hp</strong></div>
+                  <div><small>0-60</small><strong>3.6s</strong></div>
+                  <div><small>Top Speed</small><strong>171 mph</strong></div>
+                  <div><small>Range</small><strong>360 mi</strong></div>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="compare" id="compare">
+        <div class="container">
+          <div class="section-heading center" data-aos="fade-up">
+            <span>Compare</span>
+            <h2>A cleaner way to review trims, performance, and ownership fit.</h2>
+          </div>
+          <div class="compare-table" data-aos="fade-up" data-aos-delay="120">
+            <div class="table-row table-head">
+              <span>Model</span>
+              <span>Best For</span>
+              <span>Drive Mood</span>
+              <span>Seats</span>
+            </div>
+            <div class="table-row">
+              <span>NV-X Phantom</span>
+              <span>Track-first buyers</span>
+              <span>Extreme and aggressive</span>
+              <span>2</span>
+            </div>
+            <div class="table-row">
+              <span>NV-R Spectra</span>
+              <span>Luxury performance travel</span>
+              <span>Fast and composed</span>
+              <span>2+2</span>
+            </div>
+            <div class="table-row">
+              <span>NV-S Pulse</span>
+              <span>Daily performance use</span>
+              <span>Sharp and responsive</span>
+              <span>4</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="technology" id="technology">
+        <div class="container">
+          <div class="tech-shell">
+            <div class="tech-copy" data-aos="fade-right">
+              <span>Technology</span>
+              <h2>Futuristic, but still product-focused and believable for clients.</h2>
+              <p>
+                The interface shifts away from the earlier concept-page rhythm and
+                behaves more like a premium automotive presentation, with spec-led
+                storytelling, refined visuals, and clearer purchase intent.
+              </p>
+              <div class="tech-points">
+                <div>
+                  <strong>Adaptive Aero System</strong>
+                  <p>Live body adjustments for braking, cornering, and high-speed stability.</p>
+                </div>
+                <div>
+                  <strong>Driver Intelligence Layer</strong>
+                  <p>Telemetry dashboards, predictive maintenance, and personalized drive modes.</p>
+                </div>
+                <div>
+                  <strong>Immersive Cabin UX</strong>
+                  <p>Minimal neon cockpit visuals with premium control hierarchy and focus.</p>
+                </div>
+              </div>
+            </div>
+            <div class="tech-visual" data-aos="fade-left">
+              <div class="tech-screen main-screen"></div>
+              <div class="tech-screen side-screen"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="reserve" id="reserve">
+        <div class="container">
+          <div class="reserve-shell" data-aos="fade-up">
+            <span>Reservation Desk</span>
+            <h2>Shortlist a model and move into a premium consultation flow.</h2>
+            <p>
+              Ideal for a car-brand concept, performance showroom, or futuristic
+              vehicle experience that needs more than just a flashy landing page.
+            </p>
+            <a class="btn btn-primary" href="#">Request Your Build Slot</a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="container">
+        <div class="footer-shell">
+          <div>
+            <h2>NOVALEAP</h2>
+            <p>A futuristic sports-car concept with a cleaner client-facing lineup and comparison flow.</p>
+          </div>
+          <div class="footer-links">
+            <a href="#garage">Garage</a>
+            <a href="#compare">Compare</a>
+            <a href="#technology">Technology</a>
+            <a href="#reserve">Reserve</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="./src/script/main.js"></script>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({ once: true, duration: 850 });
+    </script>
+  </body>
+</html>

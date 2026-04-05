@@ -220,8 +220,10 @@
   }
 
   .to-top {
-    right: 1rem;
-    bottom: 1rem;
+    width: 2.6rem;
+    height: 2.6rem;
+    right: 0.6rem;
+    bottom: 0.6rem;
   }
 
   .mobile-nav .nav a {

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="NOVA SPACE, a futuristic solar-system atlas with planet information, exploration data, and a professional sci-fi interface."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./src/style/main.css" />
+    <link rel="stylesheet" href="./src/style/ui.css" />
+    <title>NOVA SPACE</title>
+  </head>
+  <body>
+    <div class="space-glow glow-1"></div>
+    <div class="space-glow glow-2"></div>
+    <header data-aos="fade-down" data-aos-delay="100">
+      <div class="container">
+        <div class="content">
+          <a class="logo" href="#top">NOVA SPACE</a>
+          <nav>
+            <a href="#atlas">Atlas</a>
+            <a href="#planets">Planets</a>
+            <a href="#facts">Data</a>
+            <a href="#contact">Briefing</a>
+          </nav>
+          <div class="extra-nav">
+            <a class="link-muted" href="#facts">Planet Data</a>
+            <a class="btn btn-primary" href="#contact">Open Briefing</a>
+          </div>
+          <button class="btn-menu" id="btn-menu" aria-label="Open menu">
+            <box-icon name="menu-alt-right" class="icon"></box-icon>
+          </button>
+          <div class="mobile-nav" aria-hidden="true">
+            <button class="close-mobile-nav" aria-label="Close menu">
+              <box-icon name="x" class="icon"></box-icon>
+            </button>
+            <div class="nav">
+              <a href="#atlas">Atlas</a>
+              <a href="#planets">Planets</a>
+              <a href="#facts">Data</a>
+              <a class="btn btn-primary mobile-cta" href="#contact">Open Briefing</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <a href="#top" class="to-top" aria-label="Back to top">
+      <box-icon name="chevron-up"></box-icon>
+    </a>
+    <main id="top">
+      <section class="hero">
+        <div class="container">
+          <div class="content">
+            <div class="hero-copy">
+              <p class="eyebrow" data-aos="fade-right">Solar system intelligence</p>
+              <h1 data-aos="fade-up">A professional futuristic interface that maps every planet with clarity.</h1>
+              <p class="intro" data-aos="fade-up" data-aos-delay="120">
+                NOVA SPACE now works more like a premium planetary atlas: cleaner
+                navigation, stronger information design, and a better client-side
+                experience for reviewing every world in our solar system.
+              </p>
+              <div class="hero-actions" data-aos="fade-up" data-aos-delay="240">
+                <a class="btn btn-primary" href="#planets">Explore Planets</a>
+                <a class="btn btn-secondary" href="#facts">View Data Grid</a>
+              </div>
+            </div>
+            <div class="hero-visual" data-aos="zoom-in" data-aos-duration="1000">
+              <div class="hero-core"></div>
+              <div class="planet-dot mercury"></div>
+              <div class="planet-dot venus"></div>
+              <div class="planet-dot earth"></div>
+              <div class="planet-dot mars"></div>
+              <div class="planet-dot jupiter"></div>
+              <div class="planet-dot saturn"></div>
+              <div class="planet-dot uranus"></div>
+              <div class="planet-dot neptune"></div>
+              <div class="orbit orbit-1"></div>
+              <div class="orbit orbit-2"></div>
+              <div class="orbit orbit-3"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="atlas" id="atlas">
+        <div class="container">
+          <div class="section-heading" data-aos="fade-up">
+            <span>Atlas Overview</span>
+            <h2>Every planetary zone organized into a cleaner interface for discovery and comparison.</h2>
+          </div>
+          <div class="atlas-grid">
+            <article class="atlas-card" data-aos="fade-up" data-aos-delay="100">
+              <h3>Inner Worlds</h3>
+              <p>Fast orbiting rocky planets with high heat variance, terrain extremes, and dense exploration interest.</p>
+            </article>
+            <article class="atlas-card" data-aos="fade-up" data-aos-delay="200">
+              <h3>Habitable Focus</h3>
+              <p>Earth remains the reference model for climate balance, water systems, and biosphere intelligence.</p>
+            </article>
+            <article class="atlas-card" data-aos="fade-up" data-aos-delay="300">
+              <h3>Outer Giants</h3>
+              <p>Gas and ice giants shift the scale of the interface with storms, rings, moons, and atmospheric depth.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="planets" id="planets">
+        <div class="container">
+          <div class="section-heading center" data-aos="fade-up">
+            <span>Planet Index</span>
+            <h2>All eight planets presented with quick info, visual hierarchy, and distinct identity.</h2>
+          </div>
+          <div class="planet-grid">
+            <article class="planet-card" data-aos="fade-up" data-aos-delay="40"><div class="planet-visual pv-mercury"></div><h3>Mercury</h3><p>The smallest planet, closest to the Sun, with cratered terrain and brutal temperature swings.</p><div class="planet-meta"><span>Type: Rocky</span><span>Year: 88 days</span></div></article>
+            <article class="planet-card" data-aos="fade-up" data-aos-delay="80"><div class="planet-visual pv-venus"></div><h3>Venus</h3><p>A dense, high-pressure world wrapped in toxic clouds and runaway greenhouse heat.</p><div class="planet-meta"><span>Type: Rocky</span><span>Year: 225 days</span></div></article>
+            <article class="planet-card" data-aos="fade-up" data-aos-delay="120"><div class="planet-visual pv-earth"></div><h3>Earth</h3><p>The only known life-bearing planet, defined by oceans, weather systems, and biosphere balance.</p><div class="planet-meta"><span>Type: Rocky</span><span>Year: 365 days</span></div></article>
+            <article class="planet-card" data-aos="fade-up" data-aos-delay="160"><div class="planet-visual pv-mars"></div><h3>Mars</h3><p>A cold desert world with polar ice, canyon systems, and the strongest human-colony interest.</p><div class="planet-meta"><span>Type: Rocky</span><span>Year: 687 days</span></div></article>
+            <article class="planet-card" data-aos="fade-up" data-aos-delay="200"><div class="planet-visual pv-jupiter"></div><h3>Jupiter</h3><p>The solar system's largest planet, known for crushing storms and the Great Red Spot.</p><div class="planet-meta"><span>Type: Gas giant</span><span>Year: 11.9 yrs</span></div></article>
+            <article class="planet-card" data-aos="fade-up" data-aos-delay="240"><div class="planet-visual pv-saturn"></div><h3>Saturn</h3><p>Iconic for its rings, Saturn pairs atmospheric scale with one of the most elegant silhouettes in space.</p><div class="planet-meta"><span>Type: Gas giant</span><span>Year: 29.5 yrs</span></div></article>
+            <article class="planet-card" data-aos="fade-up" data-aos-delay="280"><div class="planet-visual pv-uranus"></div><h3>Uranus</h3><p>An ice giant rotating on its side, with pale atmospheric layers and unusual seasonal cycles.</p><div class="planet-meta"><span>Type: Ice giant</span><span>Year: 84 yrs</span></div></article>
+            <article class="planet-card" data-aos="fade-up" data-aos-delay="320"><div class="planet-visual pv-neptune"></div><h3>Neptune</h3><p>A distant blue giant with supersonic winds, dark storms, and deep atmospheric drama.</p><div class="planet-meta"><span>Type: Ice giant</span><span>Year: 164.8 yrs</span></div></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="facts" id="facts">
+        <div class="container">
+          <div class="data-shell">
+            <div class="split-copy" data-aos="fade-right">
+              <span>Planetary Data</span>
+              <h2>A sharper information layout for distance, moons, atmosphere, and visual identity.</h2>
+              <p>
+                This interface leans into professional data presentation, so the
+                page feels less like the earlier concept pages and more like a
+                polished sci-fi product or educational platform.
+              </p>
+              <div class="feature-list">
+                <div><strong>Mercury to Mars</strong><p>Rocky worlds with surface-driven study, mineral interest, and terrain variation.</p></div>
+                <div><strong>Jupiter and Saturn</strong><p>Massive gas giants with powerful storms, wide moon systems, and cinematic scale.</p></div>
+                <div><strong>Uranus and Neptune</strong><p>Ice giants with colder atmospheres, distant orbits, and striking blue signatures.</p></div>
+              </div>
+            </div>
+            <div class="data-table" data-aos="fade-left">
+              <div class="table-row table-head">
+                <span>Planet</span>
+                <span>Moons</span>
+                <span>Atmosphere</span>
+                <span>Distance From Sun</span>
+              </div>
+              <div class="table-row"><span>Mercury</span><span>0</span><span>Very thin</span><span>57.9M km</span></div>
+              <div class="table-row"><span>Venus</span><span>0</span><span>CO2 heavy</span><span>108.2M km</span></div>
+              <div class="table-row"><span>Earth</span><span>1</span><span>Nitrogen / Oxygen</span><span>149.6M km</span></div>
+              <div class="table-row"><span>Mars</span><span>2</span><span>Thin CO2</span><span>227.9M km</span></div>
+              <div class="table-row"><span>Jupiter</span><span>95</span><span>Hydrogen / Helium</span><span>778.5M km</span></div>
+              <div class="table-row"><span>Saturn</span><span>146</span><span>Hydrogen / Helium</span><span>1.43B km</span></div>
+              <div class="table-row"><span>Uranus</span><span>27</span><span>Hydrogen / Methane</span><span>2.87B km</span></div>
+              <div class="table-row"><span>Neptune</span><span>14</span><span>Hydrogen / Methane</span><span>4.5B km</span></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="launch" id="contact">
+        <div class="container">
+          <div class="launch-shell" data-aos="fade-up">
+            <span>Mission Briefing</span>
+            <h2>Built for futuristic presentations, planet-based experiences, and polished client demos.</h2>
+            <p>Ideal for space-tech concepts, astronomy platforms, sci-fi products, and high-end educational interfaces.</p>
+            <a class="btn btn-primary" href="#">Open Stellar Brief</a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="container">
+        <div class="footer-shell">
+          <div>
+            <h2>NOVA SPACE</h2>
+            <p>A futuristic solar-system atlas designed around all planets, clearer data, and stronger visual polish.</p>
+          </div>
+          <div class="footer-links">
+            <a href="#atlas">Atlas</a>
+            <a href="#planets">Planets</a>
+            <a href="#facts">Data</a>
+            <a href="#contact">Briefing</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="./src/script/main.js"></script>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({ once: true, duration: 850 });
+    </script>
+  </body>
+</html>

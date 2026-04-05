@@ -448,6 +448,95 @@ footer .content p {
   overflow: hidden;
 }
 
+.fashion-preview {
+  background:
+    radial-gradient(circle at top right, rgba(255, 138, 61, 0.18), transparent 24%),
+    linear-gradient(160deg, #171111 0%, #24191a 45%, #131011 100%);
+}
+
+.fashion-preview-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 0.9rem;
+  width: 100%;
+  height: 100%;
+  padding: 1.5rem;
+  background:
+    linear-gradient(180deg, transparent 0%, rgba(18, 15, 16, 0.18) 45%, rgba(18, 15, 16, 0.84) 100%);
+}
+
+.fashion-preview-card span {
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 0.74rem;
+  color: var(--accent-soft);
+}
+
+.fashion-preview-card strong {
+  font: 700 2.4rem "IBM Plex Sans", sans-serif;
+}
+
+.fashion-preview-card p {
+  max-width: 20rem;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.leap-preview {
+  background:
+    radial-gradient(circle at top right, rgba(79, 216, 255, 0.18), transparent 24%),
+    linear-gradient(160deg, #081018 0%, #0e1b29 45%, #090d15 100%);
+}
+
+.leap-preview-card,
+.space-preview-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 0.9rem;
+  width: 100%;
+  height: 100%;
+  padding: 1.5rem;
+}
+
+.leap-preview-card {
+  background:
+    linear-gradient(180deg, transparent 0%, rgba(8, 16, 24, 0.18) 45%, rgba(8, 16, 24, 0.84) 100%);
+}
+
+.space-preview {
+  background:
+    radial-gradient(circle at top right, rgba(115, 223, 255, 0.16), transparent 22%),
+    linear-gradient(160deg, #070914 0%, #10162c 45%, #070a12 100%);
+}
+
+.space-preview-card {
+  background:
+    linear-gradient(180deg, transparent 0%, rgba(4, 6, 18, 0.18) 45%, rgba(4, 6, 18, 0.84) 100%);
+}
+
+.leap-preview-card span,
+.space-preview-card span {
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 0.74rem;
+  color: var(--accent-soft);
+}
+
+.leap-preview-card strong,
+.space-preview-card strong {
+  font: 700 2.2rem "IBM Plex Sans", sans-serif;
+}
+
+.leap-preview-card p,
+.space-preview-card p {
+  max-width: 20rem;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+
 .projects img {
   width: 100%;
   height: 100%;
