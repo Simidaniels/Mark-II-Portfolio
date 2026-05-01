@@ -1,14 +1,17 @@
 @media (max-width: 1080px) {
   .hero .content,
   .about-grid,
+  .resume-shell,
   .contact-shell,
-  .project-area {
+  .project-area,
+  .skills-grid {
     grid-template-columns: 1fr;
   }
 
   .hero-copy h1,
   .section-heading h2,
-  .contact-copy h2 {
+  .contact-copy h2,
+  .resume-copy h2 {
     max-width: none;
   }
 
@@ -116,7 +119,7 @@
     text-align: center;
   }
 
-  .mobile-nav .mobile-cta {
+  .mobile-theme-toggle {
     margin-top: 0.25rem;
     padding: 0.95rem 1.4rem;
     border: 1px solid var(--line);
@@ -127,6 +130,8 @@
 
   .hero,
   .about,
+  .resume,
+  .skills,
   .project,
   .contact {
     padding: 4.25rem 0;
@@ -152,8 +157,8 @@
   }
 
   .btn,
-  .extra-nav a,
-  .mobile-nav .mobile-cta {
+  .theme-toggle,
+  .mobile-theme-toggle {
     width: 100%;
     max-width: 320px;
   }
@@ -164,6 +169,12 @@
   }
 
   .contact-shell {
+    padding: 1rem;
+  }
+
+  .resume-shell,
+  .resume-copy,
+  .resume-card {
     padding: 1rem;
   }
 
@@ -183,7 +194,8 @@
   }
 
   .section-heading h2,
-  .contact-copy h2 {
+  .contact-copy h2,
+  .resume-copy h2 {
     font-size: 1.9rem;
   }
 

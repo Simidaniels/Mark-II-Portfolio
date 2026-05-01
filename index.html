@@ -30,11 +30,14 @@
           <nav>
             <a href="#about">About</a>
             <a href="#project">Projects</a>
+            <a href="#skills">Skills</a>
             <a href="#contact">Contact</a>
           </nav>
 
           <div class="extra-nav">
-            <a href="#contact"><span>Book a Call</span></a>
+            <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to light mode" aria-pressed="false">
+              <box-icon name="sun" class="icon"></box-icon>
+            </button>
           </div>
 
           <button class="btn-menu" id="btn-menu" aria-label="Open menu">
@@ -48,8 +51,12 @@
             <div class="nav">
               <a href="#about">About</a>
               <a href="#project">Projects</a>
+              <a href="#skills">Skills</a>
               <a href="#contact">Contact</a>
-              <a class="mobile-cta" href="#contact">Book a Call</a>
+              <button class="mobile-theme-toggle" id="mobile-theme-toggle" type="button" aria-label="Switch to light mode" aria-pressed="false">
+                <box-icon name="sun" class="icon"></box-icon>
+                <span>Light Mode</span>
+              </button>
             </div>
           </div>
         </div>
@@ -175,6 +182,89 @@
         </div>
       </section>
 
+      <section class="resume" id="resume">
+        <div class="container">
+          <div class="resume-shell" data-aos="fade-up" data-aos-duration="950">
+            <div class="resume-copy">
+              <span>Resume</span>
+              <h2>A dedicated spot for experience, skills, and project history.</h2>
+              <p>
+                Your resume can live here as a direct download so visitors,
+                clients, or recruiters can open it without asking you for it.
+              </p>
+            </div>
+
+            <div class="resume-card" data-aos="fade-left" data-aos-delay="150" data-aos-duration="950">
+              <div class="resume-card-top">
+                <span>Document</span>
+                <strong>My Resume.docx</strong>
+              </div>
+              <p>
+                Download a copy of my resume for experience, skills, and recent
+                project history.
+              </p>
+              <div class="resume-actions">
+                <a class="btn btn-primary" href="./My%20Resume.docx" download="Danny-Resume.docx">Resume</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="skills" id="skills">
+        <div class="container">
+          <div class="section-heading split" data-aos="fade-up">
+            <div>
+              <span>Skills</span>
+              <h2>Tools and technologies I use to build clean, modern web experiences.</h2>
+            </div>
+          </div>
+
+          <div class="skills-grid">
+            <article class="skill-card" data-aos="fade-up" data-aos-delay="100">
+              <span>Frontend Core</span>
+              <strong>HTML5</strong>
+              <p>Semantic structure for polished, responsive interfaces.</p>
+            </article>
+            <article class="skill-card" data-aos="fade-up" data-aos-delay="150">
+              <span>Frontend Core</span>
+              <strong>JavaScript</strong>
+              <p>Interactive behaviors, DOM logic, and user-facing polish.</p>
+            </article>
+            <article class="skill-card" data-aos="fade-up" data-aos-delay="200">
+              <span>Framework</span>
+              <strong>React</strong>
+              <p>Component-driven UI systems built for speed and clarity.</p>
+            </article>
+            <article class="skill-card" data-aos="fade-up" data-aos-delay="250">
+              <span>Typed Development</span>
+              <strong>TypeScript</strong>
+              <p>Safer, more scalable frontend code with better maintainability.</p>
+            </article>
+            <article class="skill-card" data-aos="fade-up" data-aos-delay="300">
+              <span>Framework</span>
+              <strong>Next.js</strong>
+              <p>Modern React apps with routing, performance, and production structure.</p>
+            </article>
+            <article class="skill-card" data-aos="fade-up" data-aos-delay="350">
+              <span>Styling</span>
+              <strong>Tailwind</strong>
+              <p>Fast UI styling with utility-first control and consistent spacing.</p>
+            </article>
+            <article class="skill-card" data-aos="fade-up" data-aos-delay="400">
+              <span>Version Control</span>
+              <strong>Git</strong>
+              <p>Clean project history, collaboration flow, and iterative development.</p>
+            </article>
+            <article class="skill-card" data-aos="fade-up" data-aos-delay="450">
+              <span>Collaboration</span>
+              <strong>GitHub</strong>
+              <p>Repo management, sharing, and team-friendly development workflows.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
       <section class="project" id="project">
         <div class="container">
           <div class="section-heading split" data-aos="fade-up">
@@ -182,7 +272,6 @@
               <span>Featured Work</span>
               <h2>Six concepts that show range, layout control, and brand feel.</h2>
             </div>
-            <a class="btn btn-secondary" href="#contact">Need something like this?</a>
           </div>
 
           <div class="project-area">
@@ -237,6 +326,7 @@
               </div>
             </article>
 
+            <!--
             <article class="projects project-fashion" data-aos="fade-up" data-aos-delay="400">
               <a class="fashion-preview" href="./src/fashion/index.html" target="_blank" rel="noreferrer">
                 <div class="fashion-preview-card">
@@ -278,7 +368,9 @@
                 </p>
               </div>
             </article>
+            -->
 
+            <!--
             <article class="projects" data-aos="fade-up" data-aos-delay="600">
               <a class="space-preview" href="./src/novaspace/index.html" target="_blank" rel="noreferrer">
                 <div class="space-preview-card">
@@ -299,6 +391,7 @@
                 </p>
               </div>
             </article>
+            -->
 
           </div>
         </div>
