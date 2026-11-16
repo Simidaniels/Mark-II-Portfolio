@@ -18,7 +18,7 @@ import { cn } from "@/lib/utils";
  * MARK II — Cybernetic Superdad mascot companion.
  * Single flattened PNG, animated coherently: idle float, breathing scale,
  * pointer parallax (fine pointers only), scroll drift-out past the hero,
- * a hover/tap 360° spin and a hover/tap greeting. GSAP is not used here
+ * and a hover/tap greeting. GSAP is not used here
  * (it owns hero type). The "plate" (about) variant shows the cute mascot.
  */
 export function Mascot({
@@ -33,7 +33,6 @@ export function Mascot({
   const rootRef = useRef<HTMLDivElement>(null);
   const inView = useInView(rootRef, { amount: 0.15 });
   const [greeted, setGreeted] = useState(false);
-  const [spin, setSpin] = useState(0);
   const cooldownRef = useRef(0);
 
   /* ── Pointer parallax (springs, transform-only) ─────────────── */
@@ -73,14 +72,8 @@ export function Mascot({
     window.setTimeout(() => setGreeted(false), 2100);
   };
 
-  /* Full 360° turn per hover — every entrance spins one revolution. */
-  const spin360 = () => {
-    if (reduce) return;
-    setSpin((v) => v + 1);
-  };
   const activate = () => {
     greet();
-    spin360();
   };
 
   const idle =
@@ -153,15 +146,10 @@ export function Mascot({
             transition={{ duration: 1.15, delay: 0.45, ease: [0.16, 1, 0.3, 1] }}
             className="flex h-full items-end"
           >
-            {/* 360° hover spin — one full turn per activation */}
-            <motion.div
-              className="flex h-full items-end"
-              style={{ transformPerspective: 1100 }}
-              animate={reduce ? undefined : { rotateY: spin * 360 }}
-              transition={{ duration: 1.5, ease: [0.22, 1, 0.36, 1] }}
-            >
+            {/* Static image — no spin */}
+            <div className="flex h-full items-end">
               <Image
-                src="/images/mark-ii-mascot.png"
+                src="/images/portrait/mark-ii-mascot.png"
                 alt="Superdad — MARK II cybernetic mascot, white robotic armour, black visor with glowing yellow eyes, NOVA shoulder branding, waving with a Hi! speech bubble"
                 width={1024}
                 height={1536}
@@ -170,7 +158,7 @@ export function Mascot({
                 className="h-full w-auto select-none object-contain object-bottom drop-shadow-[0_24px_50px_rgba(0,0,0,0.55)]"
                 draggable={false}
               />
-            </motion.div>
+            </div>
           </motion.div>
         </motion.div>
 
