@@ -17,12 +17,12 @@ export const timeline: TimelineEntry[] = [
     tags: ["Physics", "Federal University Oye-Ekiti"],
   },
   {
-    period: "2024 — 2025",
-    title: "Full-stack product engineering",
-    organisation: "Independent product builds",
+    period: "2025 — 2026",
+    title: "Frontend concept engineering",
+    organisation: "Self-directed concept studies",
     summary:
-      "Designed and shipped RallyPro (club management SaaS), NebulaWallet (crypto dashboard), TalentFlow LMS, RINE Marketplace (customer + vendor experiences), Chucks Kitchen and Paws & Pets — spanning frontend architecture, backend services, databases and deployment.",
-    tags: ["Next.js", "TypeScript", "Node.js", "Laravel", "PostgreSQL", "Convex"],
+      "Designed and built six concept studies in interface craft — Nova Crypto, Nova Sport and Nova Bike (2025), then Nova Fashion, NovaLeap and Nova Finance (2026) — each a complete branded single-page experience spanning art direction, responsive layout, scroll choreography and mobile navigation engineering.",
+    tags: ["HTML5", "CSS3", "JavaScript", "AOS", "Art Direction"],
   },
   {
     period: "2023 — 2024",

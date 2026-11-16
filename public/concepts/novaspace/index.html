@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Nova Finance is a futuristic digital finance concept with portfolio views, payment tools, market intelligence, and client-side fintech presentation."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./src/style/main.css" />
+    <link rel="stylesheet" href="./src/style/ui.css" />
+    <title>Nova Finance</title>
+  </head>
+  <body>
+    <div class="space-glow glow-1"></div>
+    <div class="space-glow glow-2"></div>
+    <header data-aos="fade-down" data-aos-delay="100">
+      <div class="container">
+        <div class="content">
+          <a class="logo" href="#top">NOVA FINANCE</a>
+          <nav>
+            <a href="#products">Products</a>
+            <a href="#dashboard">Dashboard</a>
+            <a href="#insights">Insights</a>
+            <a href="#contact">Contact</a>
+          </nav>
+          <div class="extra-nav">
+            <a class="link-muted" href="#insights">Market Brief</a>
+            <a class="btn btn-primary" href="#contact">Book A Call</a>
+          </div>
+          <button class="btn-menu" id="btn-menu" aria-label="Open menu">
+            <box-icon name="menu-alt-right" class="icon"></box-icon>
+          </button>
+          <div class="mobile-nav" aria-hidden="true">
+            <button class="close-mobile-nav" aria-label="Close menu">
+              <box-icon name="x" class="icon"></box-icon>
+            </button>
+            <div class="nav">
+              <a href="#products">Products</a>
+              <a href="#dashboard">Dashboard</a>
+              <a href="#insights">Insights</a>
+              <a class="btn btn-primary mobile-cta" href="#contact">Book A Call</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <a href="#top" class="to-top" aria-label="Back to top">
+      <box-icon name="chevron-up"></box-icon>
+    </a>
+    <main id="top">
+      <section class="hero">
+        <div class="container">
+          <div class="content">
+            <div class="hero-copy">
+              <p class="eyebrow" data-aos="fade-right">Next-gen client finance</p>
+              <h1 data-aos="fade-up">A futuristic finance interface built for wealth, payments, and clear decision-making.</h1>
+              <p class="intro" data-aos="fade-up" data-aos-delay="120">
+                Nova Finance is a premium fintech concept that blends market
+                intelligence, digital banking, and portfolio visibility into one
+                polished client-side experience.
+              </p>
+              <div class="hero-actions" data-aos="fade-up" data-aos-delay="240">
+                <a class="btn btn-primary" href="#products">Explore Products</a>
+                <a class="btn btn-secondary" href="#dashboard">See Dashboard</a>
+              </div>
+            </div>
+            <div class="hero-visual" data-aos="zoom-in" data-aos-duration="1000">
+              <div class="hero-screen">
+                <div class="screen-top">
+                  <span>Net worth</span>
+                  <strong>$4.28M</strong>
+                  <small>+12.4% this quarter</small>
+                </div>
+                <div class="chart-grid">
+                  <div class="chart-card chart-main"></div>
+                  <div class="chart-card chart-side"></div>
+                </div>
+                <div class="screen-ticks">
+                  <span>Wealth</span>
+                  <span>Payments</span>
+                  <span>Growth</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="products" id="products">
+        <div class="container">
+          <div class="section-heading" data-aos="fade-up">
+            <span>Product Suite</span>
+            <h2>Financial tools arranged the way a premium client would expect to browse them.</h2>
+          </div>
+          <div class="atlas-grid">
+            <article class="atlas-card" data-aos="fade-up" data-aos-delay="80">
+              <h3>Private Banking</h3>
+              <p>High-trust account management, premium cards, transfer control, and tailored relationship support.</p>
+            </article>
+            <article class="atlas-card" data-aos="fade-up" data-aos-delay="160">
+              <h3>Wealth Portfolio</h3>
+              <p>Multi-asset views for equities, crypto, funds, and cash positions with cleaner performance tracking.</p>
+            </article>
+            <article class="atlas-card" data-aos="fade-up" data-aos-delay="240">
+              <h3>Business Treasury</h3>
+              <p>Cash movement, invoice scheduling, and liquidity planning for founders, operators, and finance teams.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="planets" id="dashboard">
+        <div class="container">
+          <div class="section-heading center" data-aos="fade-up">
+            <span>Client Dashboard</span>
+            <h2>Professional modules for assets, cards, transfers, and real-time account activity.</h2>
+          </div>
+          <div class="planet-grid">
+            <article class="planet-card" data-aos="fade-up" data-aos-delay="40"><div class="planet-visual pv-wallet"></div><h3>Asset Wallets</h3><p>Track available cash, reserve balances, and currency positions inside a calm high-tech interface.</p><div class="planet-meta"><span>Live balance</span><span>Multi-currency</span></div></article>
+            <article class="planet-card" data-aos="fade-up" data-aos-delay="80"><div class="planet-visual pv-cards"></div><h3>Card Control</h3><p>Premium debit and virtual cards with spending limits, freeze actions, and smart merchant controls.</p><div class="planet-meta"><span>Instant freeze</span><span>Security layers</span></div></article>
+            <article class="planet-card" data-aos="fade-up" data-aos-delay="120"><div class="planet-visual pv-transfers"></div><h3>Transfer Center</h3><p>Domestic and international payments with fast routing, beneficiary review, and approval logic.</p><div class="planet-meta"><span>SWIFT ready</span><span>Approval flow</span></div></article>
+            <article class="planet-card" data-aos="fade-up" data-aos-delay="160"><div class="planet-visual pv-reports"></div><h3>Performance Reports</h3><p>Quarterly movement, realized gains, and benchmark summaries translated into cleaner visuals.</p><div class="planet-meta"><span>PDF exports</span><span>Trend view</span></div></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="facts" id="insights">
+        <div class="container">
+          <div class="data-shell">
+            <div class="split-copy" data-aos="fade-right">
+              <span>Market Intelligence</span>
+              <h2>Sharper financial presentation with signals, allocation data, and decision support.</h2>
+              <p>
+                Nova Finance is less about abstract concept visuals and more about
+                how a sophisticated digital finance product should actually feel:
+                calm, premium, intelligent, and easy to trust.
+              </p>
+              <div class="feature-list">
+                <div><strong>Portfolio Allocation</strong><p>Clear views across cash, equities, alternatives, and digital assets.</p></div>
+                <div><strong>Risk Monitoring</strong><p>Threshold alerts, exposure snapshots, and better downside visibility.</p></div>
+                <div><strong>Client Reports</strong><p>Elegant summaries for meetings, reviews, and quarterly communication.</p></div>
+              </div>
+            </div>
+            <div class="data-table" data-aos="fade-left">
+              <div class="table-row table-head">
+                <span>Category</span>
+                <span>Allocation</span>
+                <span>Performance</span>
+                <span>Status</span>
+              </div>
+              <div class="table-row"><span>Cash Reserve</span><span>22%</span><span>Stable</span><span>Liquid</span></div>
+              <div class="table-row"><span>Equities</span><span>38%</span><span>+8.6%</span><span>Growing</span></div>
+              <div class="table-row"><span>Private Funds</span><span>18%</span><span>+5.1%</span><span>Locked</span></div>
+              <div class="table-row"><span>Digital Assets</span><span>12%</span><span>+16.2%</span><span>Volatile</span></div>
+              <div class="table-row"><span>Real Assets</span><span>10%</span><span>+4.3%</span><span>Defensive</span></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="launch" id="contact">
+        <div class="container">
+          <div class="launch-shell" data-aos="fade-up">
+            <span>Advisory Access</span>
+            <h2>Built for modern finance concepts, premium dashboards, and polished client demos.</h2>
+            <p>Ideal for wealth-tech, digital banking, fintech startups, or any high-trust financial brand presentation.</p>
+            <a class="btn btn-primary" href="#">Schedule A Strategy Call</a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="container">
+        <div class="footer-shell">
+          <div>
+            <h2>NOVA FINANCE</h2>
+            <p>A futuristic finance concept designed around premium client experience, data clarity, and digital trust.</p>
+          </div>
+          <div class="footer-links">
+            <a href="#products">Products</a>
+            <a href="#dashboard">Dashboard</a>
+            <a href="#insights">Insights</a>
+            <a href="#contact">Contact</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="./src/script/main.js"></script>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({ once: true, duration: 850 });
+    </script>
+  </body>
+</html>

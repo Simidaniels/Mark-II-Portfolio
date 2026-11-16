@@ -91,9 +91,10 @@ export function About() {
             <Reveal delay={0.16}>
               <p className="mt-6 max-w-xl leading-relaxed text-fog">
                 Away from the editor I&apos;m usually dissecting how well-built
-                products hold together — the database schema under a clean UI,
-                the deployment behind a smooth demo. RallyPro, NebulaWallet and
-                TalentFlow are the current exhibits in that ongoing study.
+                products hold together — the layout under a clean UI, the
+                choreography under a scroll. Nova Bike, Nova Crypto and Nova
+                Sport — three of the concept studies in this gallery — are
+                the current exhibits.
               </p>
             </Reveal>
 

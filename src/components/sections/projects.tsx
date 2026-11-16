@@ -9,12 +9,12 @@ import { cn } from "@/lib/utils";
 
 /** Grid span map — varied rhythm, shared system. */
 const spans: Record<string, string> = {
-  rallypro: "lg:col-span-7",
-  nebulawallet: "lg:col-span-5",
-  talentflow: "lg:col-span-4",
-  "rine-marketplace": "lg:col-span-8",
-  "chucks-kitchen": "lg:col-span-6",
-  "paws-and-pets": "lg:col-span-6",
+  "nova-crypto": "lg:col-span-5",
+  "nova-sport": "lg:col-span-7",
+  "nova-bike": "lg:col-span-7",
+  "nova-fashion": "lg:col-span-5",
+  novaleap: "lg:col-span-6",
+  "nova-finance": "lg:col-span-6",
 };
 
 /** Elegant placeholder exhibit — clearly labelled, never fabricated UI. */
@@ -142,8 +142,9 @@ export function Projects() {
           />
           <Reveal className="max-w-xs pb-2" y={20}>
             <p className="text-sm leading-relaxed text-fog">
-              Six shipped builds across SaaS, fintech, education, marketplaces
-              and commerce — each with a full case study.
+              Six concept studies across fintech, sports, mobility, fashion and
+              automotive — each rebuilt as a full case study, with the original
+              page available to launch.
             </p>
           </Reveal>
         </div>

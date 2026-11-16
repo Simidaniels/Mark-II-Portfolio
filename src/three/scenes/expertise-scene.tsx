@@ -83,11 +83,11 @@ function SatelliteNode({
           <NodeGeometry id={id} />
           <meshStandardMaterial
             color={selected ? "#241d05" : STEEL}
-            emissive={selected || hovered ? ACCENT : "#0b0d11"}
-            emissiveIntensity={selected ? 1.5 : hovered ? 0.9 : 0.4}
+            emissive={selected || hovered ? ACCENT : "#141a24"}
+            emissiveIntensity={selected ? 1.1 : hovered ? 0.75 : 0.6}
             flatShading
-            metalness={0.75}
-            roughness={0.3}
+            metalness={0.28}
+            roughness={0.42}
           />
         </mesh>
         {/* invisible larger hit target for touch */}
@@ -129,11 +129,11 @@ function Universe({
       <mesh>
         <icosahedronGeometry args={[0.52, 1]} />
         <meshStandardMaterial
-          color="#141821"
+            color="#151a23"
           emissive={ACCENT}
-          emissiveIntensity={1.15}
-          metalness={0.85}
-          roughness={0.25}
+          emissiveIntensity={0.22}
+          metalness={0.08}
+          roughness={0.6}
           flatShading
         />
       </mesh>
@@ -187,10 +187,10 @@ export default function ExpertiseScene({
       aria-hidden="true"
       style={{ position: "absolute", inset: 0 }}
     >
-      <ambientLight intensity={0.35} color="#2c3342" />
+      <ambientLight intensity={0.5} color="#2c3342" />
       <directionalLight position={[4, 3.5, 5]} intensity={1.25} color="#fff2d9" />
       <directionalLight position={[-4.5, 1.5, -3]} intensity={0.7} color="#8fb0ff" />
-      <pointLight position={[0, 0, 0]} intensity={9} distance={6.5} color="#f5c518" />
+      <pointLight position={[0, 0.8, 1.8]} intensity={1.3} distance={4.5} color="#f5c518" />
       <Universe selected={selected} onSelect={onSelect} simplified={simplified} reduced={reduced} />
     </Canvas>
   );

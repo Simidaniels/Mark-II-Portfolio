@@ -4,7 +4,7 @@ import { Reveal } from "@/components/ui/reveal";
 
 const resumeFacts = [
   { icon: GraduationCap, label: "Education", value: "BSc Physics — FUOYE, 2025" },
-  { icon: Hammer, label: "Shipped", value: "06 full-stack products" },
+  { icon: Hammer, label: "Portfolio", value: "06 concept studies — fintech to mobility" },
   { icon: Layers, label: "Stack", value: "Next.js · TS · Node · Laravel · PostgreSQL" },
 ] as const;
 

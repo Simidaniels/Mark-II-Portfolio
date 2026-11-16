@@ -6,7 +6,7 @@ import { Float } from "@react-three/drei";
 import * as THREE from "three";
 
 const ACCENT = new THREE.Color("#f5c518");
-const STEEL = new THREE.Color("#161a21");
+const STEEL = new THREE.Color("#151a23");
 
 /**
  * The MARK II Digital Core — a faceted graphite heart wrapped in a
@@ -50,7 +50,7 @@ export function DigitalCore({
 
     if (coreMaterial.current) {
       coreMaterial.current.emissiveIntensity =
-        0.55 + Math.sin(t * 1.15) * 0.22;
+        0.1 + Math.sin(t * 1.15) * 0.05;
     }
   });
 
@@ -62,10 +62,10 @@ export function DigitalCore({
         <meshStandardMaterial
           ref={coreMaterial}
           color={STEEL}
-          metalness={0.88}
-          roughness={0.28}
+          metalness={0.08}
+          roughness={0.62}
           emissive={ACCENT}
-          emissiveIntensity={0.55}
+          emissiveIntensity={0.1}
           flatShading
         />
       </mesh>
@@ -87,7 +87,7 @@ export function DigitalCore({
         <meshStandardMaterial
           color="#2a2108"
           emissive={ACCENT}
-          emissiveIntensity={2.4}
+          emissiveIntensity={1.8}
           roughness={0.4}
           metalness={0.2}
         />
@@ -100,9 +100,9 @@ export function DigitalCore({
           <meshStandardMaterial
             color={ACCENT}
             emissive={ACCENT}
-            emissiveIntensity={1.35}
-            metalness={0.4}
-            roughness={0.35}
+            emissiveIntensity={1.15}
+            metalness={0.15}
+            roughness={0.4}
           />
         </mesh>
         {/* Satellite nodes ride the ring */}
@@ -115,9 +115,9 @@ export function DigitalCore({
             <meshStandardMaterial
               color="#101318"
               emissive={ACCENT}
-              emissiveIntensity={1.1}
-              metalness={0.7}
-              roughness={0.3}
+              emissiveIntensity={0.9}
+              metalness={0.25}
+              roughness={0.4}
               flatShading
             />
           </mesh>
@@ -132,8 +132,8 @@ export function DigitalCore({
             color="#e8e4d8"
             emissive="#e8e4d8"
             emissiveIntensity={0.4}
-            metalness={0.6}
-            roughness={0.4}
+            metalness={0.15}
+            roughness={0.45}
             transparent
             opacity={0.85}
           />
@@ -147,9 +147,9 @@ export function DigitalCore({
             <meshStandardMaterial
               color="#0d0f14"
               emissive="#9fb6ff"
-              emissiveIntensity={1.4}
-              roughness={0.3}
-              metalness={0.5}
+              emissiveIntensity={1.1}
+              roughness={0.35}
+              metalness={0.2}
             />
           </mesh>
         ))}

@@ -3,313 +3,329 @@ import type { Project } from "@/types";
 /**
  * MARK II — project registry.
  *
- * Honesty rules applied here:
- * - No invented metrics, users, revenue or production claims.
- * - URLs that have not been verified are omitted (never faked).
- * - Collaboration status is omitted unless known.
- * - Screenshots: real captures go in `public/images/projects/<slug>/`;
- *   until provided, the case study renders a clearly-labelled
- *   "screenshot pending" exhibit instead of a fabricated UI.
+ * These are the six concept studies from the previous iteration of this
+ * site, restored as full case studies. They are design/engineering concept
+ * pages — not client work and not shipped products — and every entry says
+ * so. The standalone pages are served from /public/concepts/<dir>/ and
+ * linked from each case study.
+ *
+ * Honesty rules applied:
+ * - No invented metrics, users, or production claims (brand figures shown
+ *   inside the concept pages are fictional set-dressing for the narrative).
+ * - URLs that do not exist are omitted rather than faked.
+   * - Role and collaboration are stated exactly as they happened.
  */
 
 export const projects: Project[] = [
   {
-    slug: "rallypro",
+    slug: "nova-crypto",
     index: "01",
-    name: "RallyPro",
-    category: "SaaS / Sports Technology",
+    name: "Nova Crypto",
+    category: "Concept Study — Crypto / Fintech",
     year: "2025",
     status: "live",
-    tagline: "Club operations, unified.",
+    tagline: "A fintech identity, from zero.",
     summary:
-      "A sports club management platform designed to help clubs run administrators, members, court reservations and day-to-day operations through one digital system.",
-    role: "Product engineer — frontend, backend & application architecture",
-    stack: [
-      "Next.js",
-      "React",
-      "TypeScript",
-      "Tailwind CSS",
-      "REST APIs",
-      "Prisma",
-      "PostgreSQL",
-    ],
-    liveUrl: undefined, // pending owner verification
-    githubUrl: undefined, // pending owner verification
-    featured: true,
-    accent: "#f5c518",
+      "CryptoNova is a fictional crypto-platform concept exploring how a trust-first fintech brand could feel: dark surfaces, cool neon accents, disciplined typography and a product story spanning onboarding, staking and ecosystem access.",
+    role: "Design & frontend development (concept)",
+    collaboration: "Solo",
+    stack: ["HTML5", "CSS3", "JavaScript", "AOS"],
+    liveUrl: "/concepts/nova/index.html",
+    githubUrl: "https://github.com/Simidaniels/Mark-II-Portfolio",
+    image: "/concepts/nova/lib/images/card-news.png",
+    accent: "#7dd3fc",
     caseStudy: {
       problem:
-        "Sports clubs often juggle administration, membership and court scheduling across disconnected spreadsheets, chat threads and paper logs. RallyPro centralises those workflows into a single role-aware platform so club staff can manage members, reservations and operations without stitching tools together.",
+        "Crypto landing pages default to noise — charts flying, glow everywhere, nothing legible. The brief I set myself: could a fintech concept feel engineered and calm while still being unmistakably crypto? I wanted to prove that brand discipline, not decoration, carries a complex product story.",
       roleDetail:
-        "End-to-end product engineering: schema and API design, authentication and access control, the reservation workflow, member and administrator management, and the Next.js application architecture that ties them together.",
+        "Solo concept study: art direction, page design and frontend build. I also re-rendered the page twice — the first version skewed template-generic, so I rebuilt it with a tighter grid, cooler palette and a clearer product narrative (onboarding → earn → ecosystem).",
       contributions: [
-        "Designed and implemented authentication and role-based access control for administrators and members",
-        "Built club administration tooling for managing members, roles and club operations",
-        "Implemented court reservation workflows with server-side validation and conflict-aware scheduling rules",
-        "Architected the Next.js application structure, API integration layer and data models",
-        "Shipped a responsive Tailwind CSS interface used by both administrators and members",
+        "Art-directed and built the complete single-page experience — hero, features, ecosystem, metrics, community and news sections",
+        "Designed the dark fintech visual system: cool neon accent discipline, Space Grotesk/Inter pairing and glow used sparingly as hierarchy",
+        "Rebuilt the mobile navigation overlays after repeated real-world drawer bugs across the concept set (see challenges)",
+        "Implemented AOS scroll choreography and Boxicons iconography with reduced-motion-friendly fallbacks",
       ],
       architecture: [
-        "Next.js App Router application with server-rendered routes and client interactivity islands",
-        "REST API layer consumed by the frontend for club, member and reservation domains",
-        "Relational schema (Prisma + PostgreSQL) modelling clubs, administrators, members and reservations",
-        "Role-based access control enforced on the server for every privileged mutation",
+        "Static single-page build — no framework, no build step, deployable anywhere static files are served",
+        "Hand-rolled CSS design system: custom properties for the palette, spacing and elevation scale",
+        "AOS for scroll-reveal timing; vanilla JS for the sticky header, mobile drawer and scroll state",
+        "Boxicons via web component for iconography",
       ],
       features: [
-        "Authentication and role-based access control",
-        "Club administration dashboard",
-        "Member management and onboarding flows",
-        "Court reservation workflows with validation",
-        "Unified operations surface for club staff",
+        "Dark fintech visual identity",
+        "Product narrative: onboarding, staking, ecosystem",
+        "Metrics and news sections with editorial rhythm",
+        "Mobile drawer navigation with overlay handling",
+        "AOS-driven scroll reveals",
       ],
       challenges: [
         {
           challenge:
-            "Reservation systems live or die on conflict handling — two members booking the same court in the same slot.",
+            "The mobile drawer kept misbehaving across the concept set — overlays lingering, widths fighting the viewport, pages scrollable underneath.",
           solution:
-            "Server-side validation treats the reservation write as the source of truth: availability is checked and committed atomically at the API layer, with the UI surfacing actionable errors instead of silent failures.",
+            "Fixed systematically across all pages: the drawer now owns a single source of truth for open state, locks body scroll, closes on overlay tap and Escape, and clamps its width on small screens. Tracked in three fix commits.",
         },
         {
           challenge:
-            "Administrators and members need completely different capabilities within one product.",
+            "Making a fictional product believable — 112M locked capital, 20K community — without tipping into dishonesty.",
           solution:
-            "Role-based access control is enforced server-side on every privileged route and mutation; the client uses the same roles only to shape the interface, never to authorise.",
+            "All figures are set-dressing inside the concept and labelled as design content; the page sells the design discipline, not fabricated traction.",
         },
       ],
     },
   },
   {
-    slug: "nebulawallet",
+    slug: "nova-sport",
     index: "02",
-    name: "NebulaWallet",
-    category: "Fintech / Cryptocurrency",
+    name: "Nova Sport",
+    category: "Concept Study — Sports / Club Experience",
     year: "2025",
     status: "live",
-    tagline: "Digital asset clarity.",
+    tagline: "Elite basketball training, digitized.",
     summary:
-      "A cryptocurrency dashboard focused on digital asset information and wallet-related experiences, built for fast, legible market scanning.",
-    role: "Product engineer — frontend & real-time data layer",
-    stack: ["Next.js", "React", "Convex"],
-    liveUrl: undefined,
-    githubUrl: undefined,
-    accent: "#8ab4ff",
+      "NOVASPORT is a fictional basketball-performance club concept: programs, coaches, membership pricing and community — presented with the intensity of the training floor rather than template fitness-site energy.",
+    role: "Design & frontend development (concept)",
+    collaboration: "Solo",
+    stack: ["HTML5", "CSS3", "JavaScript", "AOS"],
+    liveUrl: "/concepts/sport/index.html",
+    githubUrl: "https://github.com/Simidaniels/Mark-II-Portfolio",
+    image: "/concepts/sport/lib/mentor.jpeg",
+    accent: "#f97316",
     caseStudy: {
       problem:
-        "Crypto markets move constantly and wallet information is usually scattered across explorers and exchange UIs. NebulaWallet consolidates asset information into one dashboard built for quick, confident scanning.",
+        "Sports club sites either shout (all energy, no information) or read like spreadsheets (all membership tiers, no emotion). Nova Sport tests whether a single page can carry elite-club atmosphere and still answer the buyer question: what will I get, and what will it cost?",
       roleDetail:
-        "Frontend and real-time data engineering: the dashboard information architecture, React component system and the Convex-backed data layer.",
+        "Solo concept study: art direction, content architecture and frontend build — programs, coach bios, pricing tiers, testimonial and contact, wired into one high-energy single page.",
       contributions: [
-        "Built the portfolio dashboard interface for browsing digital asset information",
-        "Modelled wallet-related data access patterns on Convex with reactive queries",
-        "Designed the information hierarchy for fast asset comparison and scanning",
+        "Designed and built the full club experience — programs grid, coach roster, two-tier membership pricing and contact block",
+        "Art-directed the monochrome 'athlete in shadow' photography system with ember-orange accents",
+        "Built the responsive membership pricing tables and coach cards with hover-state emphasis",
+        "Carried over the shared mobile drawer fixes from the re-render cycle",
       ],
       architecture: [
-        "Next.js application shell with React client components for interactive dashboard regions",
-        "Convex as the real-time database and query layer — reactive subscriptions keep balances and lists live without polling",
-        "Component-driven UI with strict TypeScript across data boundaries",
+        "Static single-page build with a shared CSS foundation across the concept set",
+        "CSS custom properties for the ember/monochrome palette",
+        "AOS reveals tuned for high-contrast imagery; Boxicons iconography",
       ],
       features: [
-        "Asset overview dashboard",
-        "Reactive data updates via Convex subscriptions",
-        "Wallet-related information surfaces",
-        "Responsive, dense-but-legible data layout",
+        "Program cards: skill sessions, performance blocks, community runs",
+        "Coach roster with role descriptions",
+        "Two-tier membership pricing with feature lists",
+        "Dark editorial photography treatment",
+        "AOS scroll choreography",
       ],
       challenges: [
         {
           challenge:
-            "Live-feeling financial data without a heavy polling loop draining the client.",
+            "Photography-led hero sections collapse on mobile if type and image fight for the same pixels.",
           solution:
-            "Convex reactive queries push updates to subscribed components only when underlying data changes — no interval polling, no redundant renders.",
+            "Switched the hero to a stacked composition under 768px — portrait becomes a band above the copy — keeping the impact without clipping the face or the headline.",
         },
       ],
     },
   },
   {
-    slug: "talentflow",
+    slug: "nova-bike",
     index: "03",
-    name: "TalentFlow LMS",
-    category: "Education Technology",
-    year: "2024",
+    name: "Nova Bike",
+    category: "Concept Study — Electric Mobility",
+    year: "2025",
     status: "live",
-    tagline: "Learning, structured.",
+    featured: true,
+    tagline: "Future-ready electric mobility.",
     summary:
-      "A learning management platform designed to support digital learning experiences and structured course management for learners and instructors.",
-    role: "Product engineer — frontend & platform UI",
-    stack: ["Next.js", "TypeScript", "Tailwind CSS"],
-    liveUrl: undefined,
-    githubUrl: undefined,
-    accent: "#7ef0c4",
+      "NOVABIKE is a fictional electric-mobility concept: a city e-bike brand with model lineup, pricing, ride technology, pre-order flow and subsidy checker — built like a product launch page, not a catalog.",
+    role: "Design & frontend development (concept)",
+    collaboration: "Solo",
+    stack: ["HTML5", "CSS3", "JavaScript", "AOS"],
+    liveUrl: "/concepts/store/index.html",
+    githubUrl: "https://github.com/Simidaniels/Mark-II-Portfolio",
+    image: "/concepts/store/lib/bycycle-2.png",
+    accent: "#2dd4bf",
     caseStudy: {
       problem:
-        "Digital learning products tend to fragment the learner journey across enrolment, content, progress and review. TalentFlow organises those stages into a single, structured learning experience.",
+        "Electric mobility sits between spec sheet and showroom. The concept asked: can a single static page sell three bike models — with pricing, pre-orders and subsidy logic — and still feel like a premium launch rather than an e-commerce grid?",
       roleDetail:
-        "Frontend and platform engineering: the learner-facing interface, course management surfaces and the typed Next.js codebase.",
+        "Solo concept study: brand direction, information architecture and frontend build — models, technology, story, pre-order and subsidy sections composed as one editorial scroll.",
       contributions: [
-        "Built the learner-facing course and learning experience interface",
-        "Structured the typed Next.js codebase with reusable course components",
-        "Implemented responsive Tailwind layouts for course content across devices",
+        "Designed and built the complete product experience — hero, technology pillars, model lineup (Sky / Drift / Storm), pre-order and subsidies",
+        "Art-directed product photography on pure black with studio-style rim lighting",
+        "Priced three fictional trims with coherent anchoring ($3,697 / $3,997 / $4,697 launch batch)",
+        "Wired AOS reveals and the shared mobile drawer fixes across the page",
       ],
       architecture: [
-        "Next.js with TypeScript end-to-end — strict types across routing, data and components",
-        "Component library approach in Tailwind CSS for course, lesson and progress surfaces",
-        "App Router routing structure organised around learner journeys",
+        "Static single-page build, same shared foundation as the concept set",
+        "CSS custom properties for the teal/graphite palette and elevation ramp",
+        "Section-driven scroll: Technology → Models → Story → Pre-order, with anchor nav",
       ],
       features: [
-        "Course catalogue and enrolment surfaces",
-        "Structured lesson / module presentation",
-        "Learner progress surfaces",
-        "Instructor-side course management views",
+        "Model lineup with distinct positioning (city / long-range / adventure)",
+        "Launch-batch pricing with anchor strike-throughs",
+        "Technology pillars: adaptive power, connected control, precision build",
+        "Pre-order and subsidy-check narrative sections",
+        "Full mobile responsiveness across the lineup grid",
       ],
       challenges: [
         {
           challenge:
-            "Long-form educational content must stay readable and structured across phone, tablet and desktop.",
+            "Three product models, each with pricing and features, risk reading like a pricing table and losing all brand atmosphere.",
           solution:
-            "A restrained, single-column reading layout with consistent vertical rhythm, paired with a persistent course outline, keeps orientation clear on every viewport.",
+            "Sequenced the page as a launch narrative instead — emotion first (hero, technology), proof second (models), action last (pre-order) — with the lineup rendered as large editorial cards rather than table rows.",
         },
       ],
     },
   },
   {
-    slug: "rine-marketplace",
+    slug: "nova-fashion",
     index: "04",
-    name: "RINE Marketplace",
-    category: "E-commerce / Marketplace",
-    year: "2024",
+    name: "Nova Fashion",
+    category: "Concept Study — Luxury Editorial",
+    year: "2026",
     status: "live",
-    tagline: "Two storefronts, one ecosystem.",
+    tagline: "Quiet confidence, in pixels.",
     summary:
-      "A marketplace ecosystem featuring separate customer and vendor experiences — discovery for buyers, tooling for sellers.",
-    role: "Product engineer — frontend & marketplace workflows",
-    stack: ["Next.js", "Material UI", "Laravel", "PHP", "MySQL"],
-    liveUrl: undefined,
-    githubUrl: undefined,
-    accent: "#ffb07c",
+      "NOVA FASHION is a luxury-fashion concept: editorial direction, collection storytelling and lookbook presentation for a fictional seasonal launch — built around mood, restraint and rhythm rather than product grids.",
+    role: "Design & frontend development (concept)",
+    collaboration: "Solo",
+    stack: ["HTML5", "CSS3", "JavaScript", "AOS"],
+    liveUrl: "/concepts/fashion/index.html",
+    githubUrl: "https://github.com/Simidaniels/Mark-II-Portfolio",
+    accent: "#e8b4bc",
     caseStudy: {
       problem:
-        "Marketplaces serve two audiences with opposing goals: customers want effortless discovery; vendors want control. RINE separates the two experiences while sharing one commerce ecosystem and fulfilment flow.",
+        "Fashion e-commerce defaults to catalog. This concept asked whether a digital editorial — typography-led, spacious, restrained — could sell the feeling of a luxury collection before it ever showed a product grid.",
       roleDetail:
-        "Frontend engineering on the marketplace surfaces and integration with the Laravel backend powering vendor and customer domains.",
+        "Solo concept study: editorial direction, page design and frontend build. Collections, editorial direction, highlights and journal sections composed as a campaign, not a store.",
       contributions: [
-        "Built customer-facing marketplace and discovery interfaces in Next.js",
-        "Built vendor-facing storefront management views",
-        "Integrated the frontend with Laravel REST APIs across both experiences",
-        "Applied Material UI to unify the two surfaces under one design language",
+        "Designed and built the full editorial experience — hero campaign, collections, editorial direction, highlights and journal",
+        "Art-directed the serif/mono type pairing and dusty-rose palette for a 'digital fashion campaign' register",
+        "Built collection cards as mood pieces with numbered editions (Atelier Neutrals / Evening Noir / Soft Atelier)",
+        "Kept the mobile experience editorial — stacked imagery, generous type scale, no broken grids",
       ],
       architecture: [
-        "Next.js frontend applications consuming a Laravel + PHP REST API",
-        "MySQL relational schema for products, vendors, orders and customers",
-        "Material UI design system shared between customer and vendor surfaces",
+        "Static single-page build on the shared concept-set foundation",
+        "CSS custom properties for the rose/bone/ink palette",
+        "Editorial section rhythm with generous vertical whitespace bands",
       ],
       features: [
-        "Customer storefront and product discovery",
-        "Vendor storefront and catalog management",
-        "Order and checkout flows",
-        "Separate role-aware experiences for buyers and sellers",
+        "Campaign-first hero with collection positioning",
+        "Three collection editions with distinct moods",
+        "Editorial direction and highlights sections",
+        "Journal-style notes section",
+        "Typography-led responsive layout",
       ],
       challenges: [
         {
           challenge:
-            "One brand, two products: buyer and vendor experiences need different information density and workflows.",
+            "Editorial layouts are fragile without art direction assets — fashion needs photography to breathe.",
           solution:
-            "Shared Material UI foundations with distinct layout systems per role — airy discovery layouts for customers, dense operational tables for vendors.",
+            "Designed type-and-space-first: oversized serif headlines, hairline rules and numbered editions carry the identity, so the page holds even before final imagery lands.",
         },
       ],
     },
   },
   {
-    slug: "chucks-kitchen",
+    slug: "novaleap",
     index: "05",
-    name: "Chucks Kitchen",
-    category: "Restaurant / Web Development",
-    year: "2024",
+    name: "NovaLeap",
+    category: "Concept Study — Hypercar Showroom",
+    year: "2026",
     status: "live",
-    tagline: "Flavour, plated in HTML.",
+    tagline: "A client-side car showroom.",
     summary:
-      "A modern restaurant website designed to present the brand and its offerings with warmth and clarity.",
-    role: "Frontend developer — design & build",
-    stack: ["React", "Vite", "JavaScript"],
-    liveUrl: undefined,
-    githubUrl: undefined,
-    accent: "#ff8a80",
+      "NOVALEAP is a fictional hypercar concept: a client-facing lineup with per-model garage entries, a comparison matrix, technology pillars and a reservation desk — spec-led storytelling, not neon racing fantasy.",
+    role: "Design & frontend development (concept)",
+    collaboration: "Solo",
+    stack: ["HTML5", "CSS3", "JavaScript", "AOS"],
+    liveUrl: "/concepts/novaleap/index.html",
+    githubUrl: "https://github.com/Simidaniels/Mark-II-Portfolio",
+    accent: "#a78bfa",
     caseStudy: {
       problem:
-        "An independent restaurant needed a digital presence as considered as its plates — one that communicates the menu, atmosphere and brand rather than a generic template feel.",
+        "Car sites split between fantasy (all drama) and dealer portals (all logistics). NovaLeap tests whether a fictional hypercar brand can speak to an actual buyer: models, numbers, comparison and a reservation path — with drama spent only where it converts.",
       roleDetail:
-        "End-to-end frontend development: design direction, build and responsive delivery with React + Vite.",
+        "Solo concept study: product framing, comparison-table information design and frontend build — garage, compare matrix, technology and reservation desk.",
       contributions: [
-        "Designed and built the full responsive restaurant website",
-        "Implemented menu presentation and brand storytelling sections",
-        "Delivered lightweight, fast static delivery with Vite",
+        "Designed and built the full showroom — hero, garage lineup (NV-X Phantom / NV-R Spectra / NV-S Pulse), compare table and reservation desk",
+        "Wrote coherent spec sheets per model (power, 0–60, top speed, range, price) with consistent formatting",
+        "Built a comparison matrix covering buyer-relevant attributes: best-for, drive mood, seating",
+        "Shifted the aesthetic from 'racing fantasy' to 'premium automotive presentation' in the re-render pass",
       ],
       architecture: [
-        "React SPA bundled with Vite for fast loads and simple hosting",
-        "Component-scoped styling with a warm, editorial type-led visual system",
+        "Static single-page build on the shared concept-set foundation",
+        "Spec data rendered as structured content, not images — easy to re-theme per model",
+        "Anchor navigation: Garage → Compare → Technology → Reserve",
       ],
       features: [
-        "Brand-led hero and atmosphere presentation",
-        "Menu showcase",
-        "Reservations / contact pathways",
-        "Fully responsive, image-forward layout",
+        "Three-model garage with full spec sheets",
+        "Comparison matrix across buyer attributes",
+        "Technology pillars: adaptive aero, driver intelligence, cabin UX",
+        "Reservation desk with consultation framing",
+        "Responsive spec tables",
       ],
       challenges: [
         {
           challenge:
-            "Restaurant sites live or die on appetite appeal — imagery and typography carry the entire experience.",
+            "Spec tables are dense; phones are narrow. Buyers won't pinch-zoom a 0–60 column.",
           solution:
-            "Large editorial photography slots, warm neutral palette and generous negative space put the food first while keeping the page unmistakably the brand's own.",
+            "Reframed specs as label/value pairs stacked per model on mobile, preserving sortable two-column comparison only on desktop where the width exists.",
         },
       ],
     },
   },
   {
-    slug: "paws-and-pets",
+    slug: "nova-finance",
     index: "06",
-    name: "Paws & Pets",
-    category: "E-commerce",
-    year: "2023",
+    name: "Nova Finance",
+    category: "Concept Study — Wealth / Private Banking",
+    year: "2026",
     status: "live",
-    tagline: "Everything your companion deserves.",
+    tagline: "Calm money, clearly shown.",
     summary:
-      "A pet store platform focused on product discovery and online shopping experiences for pet owners.",
-    role: "Frontend developer — storefront experience",
-    stack: ["Next.js"],
-    liveUrl: undefined,
-    githubUrl: undefined,
-    accent: "#c9a8ff",
+      "Nova Finance is a fictional private-banking concept: wealth dashboard, portfolio allocation, card controls and client reports — designed to feel calm, premium and trustworthy rather than loud fintech.",
+    role: "Design & frontend development (concept)",
+    collaboration: "Solo",
+    stack: ["HTML5", "CSS3", "JavaScript", "AOS"],
+    liveUrl: "/concepts/novaspace/index.html",
+    githubUrl: "https://github.com/Simidaniels/Mark-II-Portfolio",
+    accent: "#93c5fd",
     caseStudy: {
       problem:
-        "Pet owners shop for dozens of recurring categories. Paws & Pets organises the catalogue around discovery and repeat purchase rather than a flat product grid.",
+        "Private wealth interfaces signal value with subtlety — or with clipart yachts. This concept tests whether restraint (fine grids, quiet type, one accent) can make a fictional balance sheet feel trustworthy and premium.",
       roleDetail:
-        "Frontend development of the storefront experience: catalogue, product and shopping surfaces in Next.js.",
+        "Solo concept study: information design, dashboard composition and frontend build — products, dashboard, insights and advisory sections.",
       contributions: [
-        "Built the storefront and product discovery experience",
-        "Implemented category-led browsing for pet supplies",
-        "Delivered responsive shopping flows in Next.js",
+        "Designed and built the full private-banking concept — hero, product suite, client dashboard, allocation insights and advisory CTA",
+        "Composed the asset-allocation display (22/38/18/12/10 split) as structured data, not flat art",
+        "Art-directed the 'calm high-tech' register: hairline rules, mono numerals, one restrained accent",
+        "Built the responsive dashboard modules: asset wallets, card control, transfer center, reports",
       ],
       architecture: [
-        "Next.js storefront with server-rendered catalogue routes",
-        "Component structure organised around category, product and cart domains",
+        "Static single-page build on the shared concept-set foundation",
+        "Dashboard modules composed as CSS grid cards with consistent density",
+        "Dark navy-ink palette with desaturated blue accent",
       ],
       features: [
-        "Category-led product discovery",
-        "Product detail surfaces",
-        "Shopping and cart flows",
-        "Responsive, friendly retail visual system",
+        "Private banking product suite (banking / wealth / treasury)",
+        "Client dashboard modules: wallets, card control, transfers, reports",
+        "Portfolio allocation with per-slice performance labels",
+        "Advisory CTA with call scheduling framing",
+        "Typography-first responsive layout",
       ],
       challenges: [
         {
           challenge:
-            "Large, repetitive catalogues overwhelm shoppers; categories must feel browsable, not like a database.",
+            "Financial dashboards invite feature-creep — every module screaming for attention equally.",
           solution:
-            "Human-legible category groupings with consistent card anatomy keep scanning effort low across hundreds of SKUs.",
+            "Enforced a strict three-tier hierarchy: one headline figure (net worth), four supporting modules, one action path (advisory). Everything else defers to that reading order.",
         },
       ],
     },
   },
 ];
 
-export const featuredProject = projects.find((p) => p.featured) ?? projects[0];
+export const featuredProject =
+  projects.find((p) => p.featured) ?? projects[0];
 
 export const getProject = (slug: string) =>
   projects.find((p) => p.slug === slug);

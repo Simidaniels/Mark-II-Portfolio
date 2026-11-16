@@ -93,36 +93,36 @@ const docDefinition = {
     skillRow("Infra", "Vercel, Render, Railway, Cloudflare R2"),
     skillRow("Tools", "Git, GitHub, VS Code, Docker"),
 
-    section("Selected Projects"),
+    section("Selected Projects — Concept Studies"),
     ...project(
-      "RallyPro",
-      "Sports club management platform — authentication, role-based access control, club administration, member management and court reservation workflows on a unified Next.js platform.",
-      "Next.js · TypeScript · REST APIs · Prisma · PostgreSQL"
+      "Nova Bike (NOVABIKE)",
+      "Fictionally branded electric-mobility launch page — model lineup, spec sheets, pre-order and subsidy narrative. Solo design & build.",
+      "HTML5 · CSS3 · JavaScript · AOS"
     ),
     ...project(
-      "NebulaWallet",
-      "Cryptocurrency dashboard for digital asset information and wallet-related experiences with a reactive Convex data layer.",
-      "Next.js · React · Convex"
+      "Nova Crypto (CryptoNova)",
+      "Crypto-platform concept exploring a trust-first fintech identity — onboarding, staking and ecosystem narrative. Solo design & build.",
+      "HTML5 · CSS3 · JavaScript · AOS"
     ),
     ...project(
-      "TalentFlow LMS",
-      "Learning management platform supporting digital learning experiences and structured course management.",
-      "Next.js · TypeScript · Tailwind CSS"
+      "Nova Sport (NOVASPORT)",
+      "Basketball performance-club concept — programs, coaches, membership pricing and community. Solo design & build.",
+      "HTML5 · CSS3 · JavaScript · AOS"
     ),
     ...project(
-      "RINE Marketplace",
-      "Marketplace ecosystem with separate customer and vendor experiences — discovery for buyers, tooling for sellers.",
-      "Next.js · Material UI · Laravel · MySQL"
+      "Nova Fashion",
+      "Luxury editorial fashion concept — collections, campaign direction and lookbook-style storytelling. Solo design & build.",
+      "HTML5 · CSS3 · JavaScript · AOS"
     ),
     ...project(
-      "Chucks Kitchen",
-      "Restaurant website presenting the brand and its offerings with a warm, editorial visual system.",
-      "React · Vite"
+      "NovaLeap",
+      "Hypercar showroom concept — garage lineup, spec-led comparison matrix and reservation desk. Solo design & build.",
+      "HTML5 · CSS3 · JavaScript · AOS"
     ),
     ...project(
-      "Paws & Pets",
-      "Pet store platform focused on product discovery and online shopping experiences.",
-      "Next.js"
+      "Nova Finance",
+      "Private-banking concept — wealth dashboard, portfolio allocation and client reports, calm and premium. Solo design & build.",
+      "HTML5 · CSS3 · JavaScript · AOS"
     ),
 
     section("Education"),

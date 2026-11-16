@@ -38,7 +38,9 @@
     "@types/three": "^0.187.0",
     "eslint": "^9",
     "eslint-config-next": "16.4.6",
+    "lighthouse": "^13.6.0",
     "pdfmake": "^0.3.14",
+    "puppeteer-core": "^25.17.0",
     "tailwindcss": "4.3.3",
     "typescript": "^5"
   }

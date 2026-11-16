@@ -72,6 +72,7 @@ export default async function CaseStudyPage({
   const position = projects.findIndex((p) => p.slug === project.slug);
   const prev = projects[(position - 1 + projects.length) % projects.length];
   const next = projects[(position + 1) % projects.length];
+  const isConcept = project.liveUrl?.startsWith("/concepts/");
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -125,7 +126,7 @@ export default async function CaseStudyPage({
                 rel="noreferrer"
                 className="inline-flex items-center gap-2 rounded-full bg-accent px-6 py-3 font-mono text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-void transition-all hover:bg-accent-hi"
               >
-                Visit live
+                {isConcept ? "Launch concept" : "Visit live"}
                 <ExternalLink className="size-4" aria-hidden />
               </a>
             ) : (
