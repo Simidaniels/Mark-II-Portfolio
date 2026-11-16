@@ -1,0 +1,47 @@
+{
+  "name": "mark-ii-portfolio",
+  "version": "2.0.0",
+  "private": true,
+  "description": "MARK II — The Digital Laboratory. Interactive 3D developer portfolio for Danny (Daniel Adepitan), software developer based in Lagos, Nigeria.",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint",
+    "typecheck": "tsc --noEmit",
+    "generate:resume": "node scripts/generate-resume.mjs"
+  },
+  "dependencies": {
+    "@hookform/resolvers": "^7.0.6",
+    "@react-three/drei": "^10.7.9",
+    "@react-three/fiber": "^9.8.2",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "gsap": "^3.15.1",
+    "lenis": "^1.3.27",
+    "lucide-react": "^1.73.0",
+    "motion": "^14.14.0",
+    "next": "16.4.6",
+    "react": "19.3.0",
+    "react-dom": "19.3.0",
+    "react-hook-form": "^7.92.0",
+    "resend": "^6.38.1",
+    "tailwind-merge": "^3.7.0",
+    "three": "^0.187.0",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@tailwindcss/turbopack": "4.3.3",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "@types/three": "^0.187.0",
+    "eslint": "^9",
+    "eslint-config-next": "16.4.6",
+    "lighthouse": "^13.6.0",
+    "pdfmake": "^0.3.14",
+    "puppeteer-core": "^25.17.0",
+    "tailwindcss": "4.3.3",
+    "typescript": "^5"
+  }
+}
