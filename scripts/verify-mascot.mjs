@@ -24,14 +24,19 @@ try {
   await sleep(2200);
   await page.screenshot({ path: join(OUT, "01-hero-desktop.png") });
 
-  // Greeting interaction
-  const mascot = await page.$('[aria-label*="MARK II mascot"]');
+  // Greeting interaction + 360° spin
+  const mascot = await page.$('[aria-label*="Superdad mascot"]');
   if (mascot) {
+    await mascot.hover();
+    await sleep(400);
+    await page.screenshot({ path: join(OUT, "02-spin-mid.png") });
     await mascot.click();
     await sleep(500);
     await page.screenshot({ path: join(OUT, "02-greeting.png") });
-    const greetingShown = await page.evaluate(() => document.body.innerText.includes("HELLO, HUMAN") || document.body.innerText.includes("Hello, human"));
+    const greetingShown = await page.evaluate(() => /superdad/i.test(document.body.innerText));
     console.log("greeting visible on click:", greetingShown);
+    await sleep(1400);
+    await page.screenshot({ path: join(OUT, "02-spin-end.png") });
   } else {
     console.log("mascot button NOT found");
   }
@@ -55,7 +60,7 @@ try {
   await mobile.screenshot({ path: join(OUT, "05-hero-mobile.png") });
   const h = await mobile.evaluate(() => ({
     overflowX: document.documentElement.scrollWidth > document.documentElement.clientWidth,
-    mascotVisible: Boolean(document.querySelector('[aria-label*="MARK II mascot"]')),
+    mascotVisible: Boolean(document.querySelector('[aria-label*="Superdad mascot"]')),
   }));
   console.log("mobile:", JSON.stringify(h));
 

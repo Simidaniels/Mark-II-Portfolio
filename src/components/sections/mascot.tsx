@@ -15,10 +15,11 @@ import {
 import { cn } from "@/lib/utils";
 
 /**
- * MARK II — Cybernetic mascot companion.
+ * MARK II — Cybernetic Superdad mascot companion.
  * Single flattened PNG, animated coherently: idle float, breathing scale,
  * pointer parallax (fine pointers only), scroll drift-out past the hero,
- * and a hover/tap greeting. GSAP is not used here (it owns hero type).
+ * a hover/tap 360° spin and a hover/tap greeting. GSAP is not used here
+ * (it owns hero type). The "plate" (about) variant shows the cute mascot.
  */
 export function Mascot({
   variant = "hero",
@@ -32,6 +33,7 @@ export function Mascot({
   const rootRef = useRef<HTMLDivElement>(null);
   const inView = useInView(rootRef, { amount: 0.15 });
   const [greeted, setGreeted] = useState(false);
+  const [spin, setSpin] = useState(0);
   const cooldownRef = useRef(0);
 
   /* ── Pointer parallax (springs, transform-only) ─────────────── */
@@ -71,6 +73,16 @@ export function Mascot({
     window.setTimeout(() => setGreeted(false), 2100);
   };
 
+  /* Full 360° turn per hover — every entrance spins one revolution. */
+  const spin360 = () => {
+    if (reduce) return;
+    setSpin((v) => v + 1);
+  };
+  const activate = () => {
+    greet();
+    spin360();
+  };
+
   const idle =
     !reduce && inView
       ? { y: [0, -13, 0], rotate: [0, 1.1, -0.8, 0], scale: [1, 1.013, 1] }
@@ -86,12 +98,12 @@ export function Mascot({
           style={{ background: "radial-gradient(circle, rgba(245,197,24,0.16) 0%, transparent 70%)" }}
         />
         <Image
-          src="/images/mark-ii-mascot.png"
-          alt="MARK II cybernetic mascot — white robotic armour, black visor with yellow lighting, waving hello"
-          width={1024}
-          height={1536}
+          src="/images/portrait/cute-mascot.webp"
+          alt="Cute MARK II mascot — rounded white and black helmet, glowing amber visor and ear discs, waving hello"
+          width={1038}
+          height={961}
           sizes="(max-width: 1024px) 92vw, 33vw"
-          className="relative h-full w-auto object-contain object-bottom"
+          className="relative h-full w-full object-contain object-bottom p-4 sm:p-6"
         />
       </div>
     );
@@ -118,14 +130,14 @@ export function Mascot({
       <motion.div
         className="relative flex h-full w-full cursor-pointer items-end justify-center outline-none"
         style={reduce ? undefined : { rotateX: tiltX, rotateY: tiltY, x: driftX, y: driftY, transformStyle: "preserve-3d" }}
-        onPointerEnter={greet}
-        onClick={greet}
+        onPointerEnter={activate}
+        onClick={activate}
         onKeyDown={(e) => {
-          if (e.key === "Enter" || e.key === " ") greet();
+          if (e.key === "Enter" || e.key === " ") activate();
         }}
         role="button"
         tabIndex={0}
-        aria-label="MARK II mascot — activate to say hello"
+        aria-label="MARK II Superdad mascot — activate to say hello"
         aria-pressed={greeted}
       >
         {/* Idle float + breathing */}
@@ -141,16 +153,24 @@ export function Mascot({
             transition={{ duration: 1.15, delay: 0.45, ease: [0.16, 1, 0.3, 1] }}
             className="flex h-full items-end"
           >
-            <Image
-              src="/images/mark-ii-mascot.png"
-              alt="MARK II cybernetic mascot — white robotic armour, black visor with glowing yellow eyes, NOVA shoulder branding, waving with a Hi! speech bubble"
-              width={1024}
-              height={1536}
-              priority
-              sizes="(max-width: 640px) 58vw, (max-width: 1024px) 40vw, 44vw"
-              className="h-full w-auto select-none object-contain object-bottom drop-shadow-[0_24px_50px_rgba(0,0,0,0.55)]"
-              draggable={false}
-            />
+            {/* 360° hover spin — one full turn per activation */}
+            <motion.div
+              className="flex h-full items-end"
+              style={{ transformPerspective: 1100 }}
+              animate={reduce ? undefined : { rotateY: spin * 360 }}
+              transition={{ duration: 1.5, ease: [0.22, 1, 0.36, 1] }}
+            >
+              <Image
+                src="/images/mark-ii-mascot.png"
+                alt="Superdad — MARK II cybernetic mascot, white robotic armour, black visor with glowing yellow eyes, NOVA shoulder branding, waving with a Hi! speech bubble"
+                width={1024}
+                height={1536}
+                priority
+                sizes="(max-width: 640px) 58vw, (max-width: 1024px) 40vw, 44vw"
+                className="h-full w-auto select-none object-contain object-bottom drop-shadow-[0_24px_50px_rgba(0,0,0,0.55)]"
+                draggable={false}
+              />
+            </motion.div>
           </motion.div>
         </motion.div>
 
@@ -164,9 +184,9 @@ export function Mascot({
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.85, y: -8 }}
               transition={{ type: "spring", stiffness: 320, damping: 20 }}
-              className="pointer-events-none absolute left-2 top-2 rounded-xl border border-accent/50 bg-void/90 px-4 py-2 font-mono text-[0.62rem] font-semibold uppercase tracking-[0.2em] text-accent shadow-[0_0_36px_-8px_rgba(245,197,24,0.35)] backdrop-blur-sm sm:left-0 sm:top-1/4"
+              className="pointer-events-none absolute left-2 top-2 max-w-[12.5rem] rounded-xl border border-accent/50 bg-void/90 px-4 py-2 font-mono text-[0.62rem] font-semibold uppercase leading-relaxed tracking-[0.18em] text-accent shadow-[0_0_36px_-8px_rgba(245,197,24,0.35)] backdrop-blur-sm sm:left-0 sm:top-1/4"
             >
-              Hello, human.
+              Hello Human, I am Superdad.
               <span className="block text-[0.52rem] font-normal text-bone/80">Welcome to MARK II.</span>
             </motion.div>
           )}
