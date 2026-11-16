@@ -2,7 +2,6 @@
 
 import { useEffect, useRef } from "react";
 import dynamic from "next/dynamic";
-import gsap from "gsap";
 import { ArrowDown, ArrowDownRight, Download, MapPin } from "lucide-react";
 import { useReducedMotion } from "motion/react";
 import { useWebGLSupported } from "@/hooks/use-webgl-supported";
@@ -20,30 +19,39 @@ export function Hero() {
   const rootRef = useRef<HTMLElement>(null);
 
   // Coordinated entrance choreography — GSAP owns these elements;
-  // Motion is not used on them (one animation system per element).
+  // it is loaded on demand so the main bundle stays lean.
   useEffect(() => {
     if (reduce || !rootRef.current) return;
-    const ctx = gsap.context(() => {
-      const tl = gsap.timeline({ defaults: { ease: "expo.out" } });
-      tl.from("[data-hero='label']", { y: 24, opacity: 0, duration: 0.9 })
-        .from(
-          "[data-hero='line']",
-          { yPercent: 118, rotate: 3.5, duration: 1.15, stagger: 0.09 },
-          "-=0.55"
-        )
-        .from("[data-hero='copy']", { y: 26, opacity: 0, duration: 0.9 }, "-=0.7")
-        .from(
-          "[data-hero='cta']",
-          { y: 20, opacity: 0, duration: 0.7, stagger: 0.08 },
-          "-=0.6"
-        )
-        .from(
-          "[data-hero='meta']",
-          { opacity: 0, duration: 0.6, stagger: 0.08 },
-          "-=0.45"
-        );
-    }, rootRef);
-    return () => ctx.revert();
+    let cleanup: (() => void) | undefined;
+    let cancelled = false;
+    void import("gsap").then(({ default: gsap }) => {
+      if (cancelled || !rootRef.current) return;
+      const ctx = gsap.context(() => {
+        const tl = gsap.timeline({ defaults: { ease: "expo.out" } });
+        tl.from("[data-hero='label']", { y: 24, opacity: 0, duration: 0.9 })
+          .from(
+            "[data-hero='line']",
+            { yPercent: 118, rotate: 3.5, duration: 1.15, stagger: 0.09 },
+            "-=0.55"
+          )
+          .from("[data-hero='copy']", { y: 26, opacity: 0, duration: 0.9 }, "-=0.7")
+          .from(
+            "[data-hero='cta']",
+            { y: 20, opacity: 0, duration: 0.7, stagger: 0.08 },
+            "-=0.6"
+          )
+          .from(
+            "[data-hero='meta']",
+            { opacity: 0, duration: 0.6, stagger: 0.08 },
+            "-=0.45"
+          );
+      }, rootRef);
+      cleanup = () => ctx.revert();
+    });
+    return () => {
+      cancelled = true;
+      cleanup?.();
+    };
   }, [reduce]);
 
   return (
