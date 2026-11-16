@@ -1,26 +1,154 @@
 @import "tailwindcss";
 
+/* ─────────────────────────────────────────────────────────────
+   MARK II — The Digital Laboratory · Design System
+   Deep void backgrounds, warm bone typography, one signal accent.
+   ───────────────────────────────────────────────────────────── */
+
+@theme {
+  /* Surfaces */
+  --color-void: #06070a;
+  --color-charcoal: #0c0e13;
+  --color-graphite: #11141b;
+  --color-steel: #181c24;
+  --color-edge: #1f242e;
+  --color-line: rgb(236 233 226 / 0.08);
+  --color-line-strong: rgb(236 233 226 / 0.16);
+
+  /* Ink */
+  --color-bone: #ece9e2;
+  --color-fog: #b9bcc2;
+  --color-muted: #878d97;
+
+  /* Signal accent — laboratory amber */
+  --color-accent: #f5c518;
+  --color-accent-hi: #ffd84d;
+  --color-accent-dim: #8f7014;
+  --color-accent-soft: rgb(245 197 24 / 0.12);
+
+  /* Type */
+  --font-display: var(--font-space-grotesk), "Space Grotesk", system-ui, sans-serif;
+  --font-sans: var(--font-plex-sans), "IBM Plex Sans", system-ui, sans-serif;
+  --font-mono: var(--font-plex-mono), "IBM Plex Mono", ui-monospace, monospace;
+
+  /* Motion */
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* Radii — restrained, technical */
+  --radius-card: 1.25rem;
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  color-scheme: dark;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+html {
+  scroll-behavior: smooth;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
   }
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-void);
+  color: var(--color-bone);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  overflow-x: clip;
+}
+
+::selection {
+  background: var(--color-accent);
+  color: #06070a;
+}
+
+/* Visible, consistent focus for keyboard users */
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* Slim graphite scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-void);
+}
+::-webkit-scrollbar-thumb {
+  background: #232833;
+  border-radius: 8px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #2e3440;
+}
+
+/* ── Editorial utilities ───────────────────────────────────── */
+
+@utility text-balance {
+  text-wrap: balance;
+}
+
+/* Giant stroked outline type (MARK II editorial device) */
+@utility text-outline {
+  -webkit-text-stroke: 1.2px rgb(236 233 226 / 0.22);
+  color: transparent;
+}
+
+/* Mono technical label, e.g. "SYS.01 — NAVIGATION" */
+@utility tech-label {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+}
+
+/* Hairline frame corner — technical blueprint corners */
+@utility frame-corners {
+  position: relative;
+}
+
+/* Fine blueprint grid backdrop */
+@utility blueprint-grid {
+  background-image:
+    linear-gradient(var(--color-line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--color-line) 1px, transparent 1px);
+  background-size: 72px 72px;
+}
+
+/* Film grain — very subtle, CSS-only */
+@utility grain {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E");
+  background-size: 180px 180px;
+}
+
+/* Ambient radial glow behind the 3D stage */
+@utility stage-glow {
+  background: radial-gradient(
+    ellipse 70% 55% at 50% 42%,
+    rgb(245 197 24 / 0.07) 0%,
+    rgb(120 140 180 / 0.05) 38%,
+    transparent 72%
+  );
+}
+
+/* ─────────────────────────────────────────────────────────────
+   Reduced motion — collapse all animation & transitions
+   ───────────────────────────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
