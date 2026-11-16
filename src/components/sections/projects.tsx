@@ -7,114 +7,123 @@ import { Reveal } from "@/components/ui/reveal";
 import type { Project } from "@/types";
 import { cn } from "@/lib/utils";
 
-/** Grid span map — varied rhythm, shared system. */
-const spans: Record<string, string> = {
-  "nova-crypto": "lg:col-span-5",
-  "nova-sport": "lg:col-span-7",
-  "nova-bike": "lg:col-span-7",
-  "nova-fashion": "lg:col-span-5",
-  novaleap: "lg:col-span-6",
-  "nova-finance": "lg:col-span-6",
-};
-
-/** Elegant placeholder exhibit — clearly labelled, never fabricated UI. */
-function ExhibitPlate({ project }: { project: Project }) {
+/* ── Collection card ─────────────────────────────────────────── */
+function CollectionCard({
+  eyebrow,
+  title,
+  tagline,
+  image,
+  imagePosition = "50% 40%",
+  href,
+  cta,
+  accent,
+  tags,
+  className,
+}: {
+  eyebrow: string;
+  title: string;
+  tagline: string;
+  image: string;
+  imagePosition?: string;
+  href: string;
+  cta: string;
+  accent: string;
+  tags: string[];
+  className?: string;
+}) {
   return (
-    <div
-      aria-hidden
-      className="absolute inset-0 flex items-center justify-center overflow-hidden"
-      style={{
-        background: `radial-gradient(120% 90% at 78% 12%, ${project.accent}1f 0%, transparent 55%)`,
-      }}
+    <Link
+      href={href}
+      aria-label={`${title} — open collection`}
+      className={cn(
+        "group relative flex min-h-[20rem] flex-col justify-end overflow-hidden border border-line transition-colors duration-500 hover:border-white/20 sm:min-h-[26rem]",
+        className
+      )}
     >
-      <div className="blueprint-grid absolute inset-0 opacity-40" />
-      {/* Orbital ornament */}
-      <svg
-        viewBox="0 0 300 300"
-        className="relative h-[78%] w-auto max-w-none transition-transform duration-700 ease-out group-hover:scale-110"
-        fill="none"
-      >
-        <ellipse cx="150" cy="150" rx="128" ry="42" stroke={project.accent} strokeOpacity="0.55" transform="rotate(-16 150 150)" />
-        <ellipse cx="150" cy="150" rx="128" ry="42" stroke="#ece9e2" strokeOpacity="0.18" strokeDasharray="2 7" transform="rotate(22 150 150)" />
-        <polygon points="150,96 200,126 200,186 150,216 100,186 100,126" stroke="#ece9e2" strokeOpacity="0.6" fill="#10131a" fillOpacity="0.9" strokeWidth="1.4" />
-        <circle cx="150" cy="156" r="16" fill={project.accent} fillOpacity="0.92" />
-        <circle cx="278" cy="128" r="4" fill={project.accent} />
-        <circle cx="24" cy="190" r="3" fill="#9fb6ff" fillOpacity="0.9" />
-      </svg>
-      <p className="absolute right-4 top-4 font-mono text-[0.52rem] uppercase tracking-[0.26em] text-muted">
-        Plate {project.index} — visual pending
-      </p>
-    </div>
+      <Image
+        src={image}
+        alt={title}
+        fill
+        sizes="(max-width: 1024px) 100vw, 58vw"
+        className="object-cover transition-transform duration-[1.2s] ease-out group-hover:scale-[1.04]"
+        style={{ objectPosition: imagePosition }}
+      />
+      <div
+        aria-hidden
+        className="absolute inset-0"
+        style={{
+          background: `linear-gradient(180deg, rgba(6,7,10,0.05) 0%, rgba(6,7,10,0.55) 55%, rgba(6,7,10,0.94) 100%), linear-gradient(120deg, rgba(6,7,10,0.35) 0%, transparent 60%)`,
+        }}
+      />
+      <div className="relative p-6 sm:p-7">
+        <p
+          className="font-mono text-[0.55rem] uppercase tracking-[0.28em]"
+          style={{ color: accent }}
+        >
+          {eyebrow}
+        </p>
+        <h3 className="mt-2 font-display text-4xl font-bold uppercase leading-[0.9] tracking-tight text-bone sm:text-6xl">
+          {title}
+        </h3>
+        <p className="mt-3 max-w-sm text-[0.8rem] leading-snug text-fog">{tagline}</p>
+        <ul className="mt-4 flex flex-wrap gap-1.5">
+          {tags.map((t) => (
+            <li
+              key={t}
+              className="rounded-full border border-white/15 bg-black/45 px-2.5 py-1 font-mono text-[0.52rem] uppercase tracking-[0.14em] text-bone/90 backdrop-blur-sm"
+            >
+              {t}
+            </li>
+          ))}
+        </ul>
+        <p
+          className="mt-5 inline-flex items-center gap-2 font-mono text-[0.62rem] font-bold uppercase tracking-[0.22em]"
+          style={{ color: accent }}
+        >
+          {cta}
+          <ArrowRight size={13} className="transition-transform duration-300 group-hover:translate-x-1.5" aria-hidden />
+        </p>
+      </div>
+    </Link>
   );
 }
 
-function Exhibit({ project }: { project: Project }) {
-  const stack = project.stack.slice(0, 3);
+/* ── Compact library tile ────────────────────────────────────── */
+function LibraryTile({ project }: { project: Project }) {
   return (
     <Link
       href={`/projects/${project.slug}`}
-      aria-label={`Open case study for ${project.name}`}
-      className="group relative flex h-full min-h-[22rem] w-full flex-col overflow-hidden border border-line bg-graphite transition-colors duration-500 hover:border-accent/35 sm:min-h-[26rem]"
+      aria-label={`${project.name} — case study`}
+      className="group flex h-full flex-col overflow-hidden border border-line bg-graphite transition-colors duration-400 hover:border-accent/35"
     >
-      {/* Visual layer */}
-      <div className="relative flex-1">
+      <div className="relative h-24 w-full overflow-hidden sm:h-28">
         {project.image ? (
           <Image
             src={project.image}
-            alt={`${project.name} — product screenshot`}
+            alt={`${project.name} cover`}
             fill
-            className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03]"
-            sizes="(max-width: 1024px) 100vw, 58vw"
+            sizes="(max-width: 768px) 33vw, 14vw"
+            className="object-cover object-[50%_20%] transition-transform duration-700 group-hover:scale-110"
           />
         ) : (
-          <ExhibitPlate project={project} />
+          <div aria-hidden className="blueprint-grid size-full bg-void" />
         )}
-        {/* Index watermark */}
         <span
           aria-hidden
-          className="absolute bottom-2 left-4 font-display text-7xl font-bold leading-none text-bone/[0.07] transition-colors duration-500 group-hover:text-accent/15 sm:text-8xl"
+          className="absolute left-2 top-2 font-mono text-[0.5rem] uppercase tracking-[0.22em] text-bone/70"
         >
           {project.index}
         </span>
       </div>
-
-      {/* Meta deck */}
-      <div className="relative border-t border-line bg-charcoal/90 p-5 backdrop-blur-sm sm:p-6">
-        <div className="flex items-center justify-between gap-3 font-mono text-[0.56rem] uppercase tracking-[0.22em] text-muted">
-          <span className="text-accent">{project.category}</span>
-          <span>{project.year}</span>
-        </div>
-        <div className="mt-2 flex items-end justify-between gap-4">
-          <div>
-            <h3 className="font-display text-2xl font-bold uppercase leading-none tracking-tight text-bone transition-colors duration-300 group-hover:text-accent sm:text-3xl">
-              {project.name}
-            </h3>
-            <p className="mt-2 font-sans text-[0.8rem] leading-snug text-fog">
-              {project.tagline}
-            </p>
-          </div>
-          <span
-            aria-hidden
-            className="flex size-11 shrink-0 items-center justify-center rounded-full border border-line-strong text-fog transition-all duration-400 group-hover:border-accent group-hover:bg-accent group-hover:text-void"
-          >
-            <ArrowRight className="size-4 -rotate-45 transition-transform duration-400 group-hover:rotate-0" />
-          </span>
-        </div>
-        <ul className="mt-4 flex flex-wrap gap-1.5">
-          {stack.map((tech) => (
-            <li
-              key={tech}
-              className="rounded-full border border-line bg-void/60 px-2.5 py-1 font-mono text-[0.55rem] uppercase tracking-[0.14em] text-fog"
-            >
-              {tech}
-            </li>
-          ))}
-          {project.stack.length > stack.length && (
-            <li className="rounded-full border border-line bg-void/60 px-2.5 py-1 font-mono text-[0.55rem] uppercase tracking-[0.14em] text-muted">
-              +{project.stack.length - stack.length}
-            </li>
-          )}
-        </ul>
+      <div className="flex flex-1 items-center justify-between gap-2 p-2.5">
+        <span className="font-display text-[0.68rem] font-bold uppercase leading-tight tracking-wide text-bone transition-colors group-hover:text-accent sm:text-[0.72rem]">
+          {project.name}
+        </span>
+        <ArrowUpRight
+          size={13}
+          className="shrink-0 text-muted transition-all duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-accent"
+          aria-hidden
+        />
       </div>
     </Link>
   );
@@ -124,7 +133,7 @@ export function Projects() {
   return (
     <section
       id="projects"
-      aria-label="Selected projects"
+      aria-label="Selected work"
       className="relative scroll-mt-20 border-t border-line bg-void py-20 sm:py-28"
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-10">
@@ -136,30 +145,66 @@ export function Projects() {
               <>
                 Selected
                 <br />
-                <span className="text-accent">exhibits.</span>
+                <span className="text-accent">collections.</span>
               </>
             }
           />
           <Reveal className="max-w-xs pb-2" y={20}>
             <p className="text-sm leading-relaxed text-fog">
-              Six concept studies across fintech, sports, mobility, fashion and
-              automotive — each rebuilt as a full case study, with the original
-              page available to launch.
+              Two bodies of work: the NOVA product family — six engineered
+              concept systems — and DESIGN BROOKS, a real client product
+              live in production.
             </p>
           </Reveal>
         </div>
 
+        {/* ── Collections row ─────────────────────────────── */}
         <div className="mt-10 grid gap-4 sm:gap-5 lg:grid-cols-12">
-          {projects.map((project) => (
-            <Reveal key={project.slug} className={cn("flex", spans[project.slug])} y={48}>
-              <Exhibit project={project} />
-            </Reveal>
-          ))}
+          <Reveal className="flex lg:col-span-7" y={44}>
+            <CollectionCard
+              eyebrow="COLLECTION 01 — THE NOVA FAMILY"
+              title="Nova Core"
+              tagline="Crypto Nova · Nova Store · Nova Leap — plus Sport, Fashion and Finance. Six engineered concept systems, one universe."
+              image="/images/nova/novaleap-hero.jpg"
+              imagePosition="50% 55%"
+              href="/collections/nova-core"
+              cta="Open the family"
+              accent="#7dd3fc"
+              tags={["Crypto Nova", "Nova Store", "Nova Leap", "+ 3 more"]}
+              className="w-full"
+            />
+          </Reveal>
+          <Reveal className="flex lg:col-span-5" y={44} delay={0.08}>
+            <CollectionCard
+              eyebrow="COLLECTION 02 — CLIENT WORK"
+              title="Design Brooks"
+              tagline="A real architectural studio product — public website, admin console and private client document portal. Live."
+              image="/images/design-brooks/house.jpg"
+              imagePosition="50% 30%"
+              href="/collections/design-brooks"
+              cta="Open the engagement"
+              accent="#f97316"
+              tags={["Public Site", "Admin Console", "Client Portal"]}
+              className="w-full"
+            />
+          </Reveal>
         </div>
 
-        <p className="mt-8 flex items-center justify-center gap-2 text-center font-mono text-[0.6rem] uppercase tracking-[0.24em] text-muted">
-          Every exhibit opens into a full case study
-          <ArrowUpRight className="size-3.5 text-accent" aria-hidden />
+        {/* ── Full library strip ─────────────────────────────── */}
+        <div className="mt-8">
+          <p className="tech-label flex items-center justify-between">
+            <span>FULL LIBRARY — INDIVIDUAL EXHIBITS</span>
+            <span className="text-accent">07</span>
+          </p>
+          <div className="mt-3 grid grid-cols-2 gap-2 sm:grid-cols-4 sm:gap-3 lg:grid-cols-7">
+            {projects.map((project) => (
+              <LibraryTile key={project.slug} project={project} />
+            ))}
+          </div>
+        </div>
+
+        <p className="mt-8 text-center font-mono text-[0.58rem] uppercase tracking-[0.26em] text-muted">
+          Other projects — forthcoming · not yet published
         </p>
       </div>
     </section>

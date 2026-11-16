@@ -1,7 +1,7 @@
-import Image from "next/image";
 import { ArrowDownRight } from "lucide-react";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { Reveal } from "@/components/ui/reveal";
+import { Mascot } from "@/components/sections/mascot";
 
 const focusAreas = [
   {
@@ -59,18 +59,11 @@ export function About() {
               <span aria-hidden className="absolute -bottom-px -left-px size-5 border-b-2 border-l-2 border-accent" />
               <span aria-hidden className="absolute -bottom-px -right-px size-5 border-b-2 border-r-2 border-accent" />
               <div className="relative aspect-[4/5] w-full overflow-hidden bg-void">
-                <Image
-                  src="/images/portrait/danny.png"
-                  alt="Portrait of Daniel 'Danny' Adepitan, software developer, in a red shirt against a dark backdrop"
-                  fill
-                  sizes="(max-width: 1024px) 92vw, 33vw"
-                  className="object-cover object-[50%_18%]"
-                  priority={false}
-                />
+                <Mascot variant="plate" />
               </div>
               <figcaption className="flex items-center justify-between px-1 pt-3 font-mono text-[0.58rem] uppercase tracking-[0.2em] text-muted">
-                <span>FIG.01 — The developer</span>
-                <span className="text-accent">DANNY.EXE</span>
+                <span>FIG.01 — MARK II, online</span>
+                <span className="text-accent">THE COMPANION</span>
               </figcaption>
             </figure>
           </Reveal>

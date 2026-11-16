@@ -7,6 +7,7 @@ import { useReducedMotion } from "motion/react";
 import { useWebGLSupported } from "@/hooks/use-webgl-supported";
 import { SceneErrorBoundary, CoreFallback } from "@/components/three/scene-error-boundary";
 import { Button } from "@/components/ui/button";
+import { Mascot } from "@/components/sections/mascot";
 
 const HeroScene = dynamic(() => import("@/three/scenes/hero-scene"), {
   ssr: false,
@@ -61,16 +62,16 @@ export function Hero() {
       aria-label="Introduction"
       className="relative flex min-h-dvh scroll-mt-20 flex-col overflow-hidden bg-void"
     >
-      {/* ── 3D volume ─────────────────────────────────────────── */}
-      <div className="absolute inset-0 lg:left-[38%]">
+      {/* ── 3D volume — ambient environment, mascot holds focus ── */}
+      <div className="absolute inset-0 opacity-55 lg:left-[38%] lg:opacity-70">
         {webgl ? (
           <SceneErrorBoundary
-            fallback={<CoreFallback className="absolute inset-0 opacity-80" />}
+            fallback={<CoreFallback className="absolute inset-0 opacity-70" />}
           >
             <HeroScene />
           </SceneErrorBoundary>
         ) : (
-          <CoreFallback className="absolute inset-0 opacity-80" />
+          <CoreFallback className="absolute inset-0 opacity-70" />
         )}
       </div>
 
@@ -85,18 +86,11 @@ export function Hero() {
       />
       <div aria-hidden className="stage-glow pointer-events-none absolute inset-0" />
 
-      {/* Lab readout — decorative corners */}
-      <p
-        aria-hidden
-        className="pointer-events-none absolute right-5 top-24 hidden font-mono text-[0.58rem] leading-relaxed tracking-[0.2em] text-muted md:block lg:right-10"
-      >
-        LAT 6.5244° N<br />
-        LON 3.3792° E<br />
-        <span className="text-accent">●</span> CORE STABLE
-      </p>
+      {/* ── Mascot — the MARK II identity ─────────────────────── */}
+      <Mascot scrollTarget={rootRef} />
 
       {/* ── Copy ──────────────────────────────────────────────── */}
-      <div className="relative z-10 mx-auto flex w-full max-w-7xl flex-1 flex-col justify-center px-4 pb-28 pt-28 sm:px-6 sm:pt-32 lg:px-10">
+      <div className="relative z-10 mx-auto flex w-full max-w-7xl flex-1 flex-col justify-center px-4 pb-24 pt-2 sm:px-6 sm:pt-6 lg:px-10 lg:pb-28 lg:pt-32">
         <div className="max-w-3xl">
           <p data-hero="label" className="tech-label flex items-center gap-3">
             <span className="inline-block h-px w-10 bg-accent" aria-hidden />

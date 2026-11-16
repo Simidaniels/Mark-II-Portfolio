@@ -19,8 +19,16 @@ export interface Project {
   stack: string[];
   liveUrl?: string;
   githubUrl?: string;
-  /** Optional screenshot path (public/images/projects/<slug>/...). When unset, a labelled exhibit plate renders instead. */
+  /** Optional cover path (public/images/nova/...). When unset, a labelled exhibit plate renders instead. */
   image?: string;
+  /** Secondary in-page visual for the imagery section. */
+  secondaryImage?: string;
+  /** Hero composition personality used by the case-study template. */
+  heroVariant?: "split" | "bleed" | "editorial";
+  /** One-line product positioning (what this is). */
+  positioning: string;
+  /** Who this product speaks to. */
+  audience: string;
   featured?: boolean;
   accent: string;
   /** Case study body — structured, honest, no invented metrics. */
@@ -29,7 +37,10 @@ export interface Project {
     roleDetail: string;
     contributions: string[];
     architecture: string[];
+    /** Capabilities implemented in the concept build — verified, not claimed beyond. */
     features: string[];
+    /** Proposed / potential direction — concept, not yet built. Labelled as such on the page. */
+    proposed: string[];
     challenges: { challenge: string; solution: string }[];
   };
 }
