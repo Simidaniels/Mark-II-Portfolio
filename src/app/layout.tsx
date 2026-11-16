@@ -3,6 +3,7 @@ import { Space_Grotesk, IBM_Plex_Sans, IBM_Plex_Mono } from "next/font/google";
 import { site } from "@/data/site";
 import { SmoothScroll } from "@/components/layout/smooth-scroll";
 import { Navbar } from "@/components/navigation/navbar";
+import { RouteProgress } from "@/components/navigation/route-progress";
 import { Footer } from "@/components/layout/footer";
 import "./globals.css";
 
@@ -119,6 +120,7 @@ export default function RootLayout({
           Skip to content
         </a>
         <SmoothScroll>
+          <RouteProgress />
           <Navbar />
           <main id="main-content">{children}</main>
           <Footer />
